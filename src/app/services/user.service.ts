@@ -2,11 +2,12 @@
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import {Injectable} from '@angular/core';
+import {environment} from '../../environments/environment';
 
 @Injectable()
 export class UserService {
 
-  private userUrl = 'http://localhost:8060/glearn/api/test/user';
+  private userUrl = environment.apiUrl + '/api/test/user';
 
   constructor(private http: HttpClient) { }
 

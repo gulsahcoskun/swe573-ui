@@ -5,6 +5,7 @@ import { JwtResponse } from './jwt-response';
 import { AuthLoginInfo } from './login-info';
 import { SignUpInfo } from './signup-info';
 import {Observable} from 'rxjs/Observable';
+import {environment} from '../../environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -14,8 +15,8 @@ const httpOptions = {
 @Injectable()
 export class AuthService {
 
-  private loginUrl = 'http://localhost:8060/glearn/api/auth/signin';
-  private signupUrl = 'http://localhost:8060/glearn/api/auth/signup';
+  private loginUrl = environment.apiUrl + '/api/auth/signin';
+  private signupUrl = environment.apiUrl + '/api/auth/signup';
 
   constructor(private http: HttpClient) {
   }

@@ -6,7 +6,13 @@
     <ul class="nav navbar-nav" routerLinkActive="active">
       <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
       <li *ngIf="authority === 'user'" class="nav-item">
-        <a class="nav-link" routerLink="user">User Board</a>
+        <a class="nav-link" routerLink="learn">Learn</a>
+      </li>
+      <li *ngIf="authority === 'user'" class="nav-item">
+        <a class="nav-link" routerLink="teach">Teach</a>
+      </li>
+      <li *ngIf="authority === 'user'" class="nav-item">
+        <a class="nav-link" routerLink="track">Track</a>
       </li>
       <li *ngIf="!authority" class="nav-item">
         <a class="nav-link" routerLink="auth/login">Login</a>

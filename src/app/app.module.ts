@@ -15,6 +15,12 @@ import { httpInterceptorProviders } from './auth/auth-interceptor';
 import {UserService} from './services/user.service';
 import {TokenStorageService} from './auth/token-storage.service';
 import {AuthService} from './auth/auth.service';
+import { TeachComponent } from './teach/teach.component';
+import { TrackComponent } from './track/track.component';
+import { LearnComponent } from './learn/learn.component';
+import { CreateComponent } from './teach/create/create.component';
+
+import { MatButtonModule, MatIconModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -22,13 +28,18 @@ import {AuthService} from './auth/auth.service';
     LoginComponent,
     UserComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    TeachComponent,
+    TrackComponent,
+    LearnComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule, MatIconModule
   ],
   providers: [httpInterceptorProviders,UserService,TokenStorageService,AuthService],
   bootstrap: [AppComponent]
