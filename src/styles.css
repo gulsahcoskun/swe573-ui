@@ -1,4 +1,9 @@
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "assets/css/riliwan-rabo.css";
+@import "assets/css/style.css";
+@import "assets/css/form.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
 
 body {
     font-family: Roboto, Arial, sans-serif;
@@ -13,3 +18,4 @@ body {
     font-size: 8pt;
     float: right;
 }
+
