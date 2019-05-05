@@ -10,14 +10,14 @@ import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 })
 export class TopicComponent implements OnInit {
 
-    content: Content = {};
+    private content: Content;
     info: any;
     wikis: Array<any>;
     selectedKeyword: string;
     keywordList: Array<any>;
     questionList: Array<any>;
     optionList: Array<any>;
-    newQuestion: Question = {};
+    private newQuestion: Question;
 
     constructor(private token: TokenStorageService,public dialog: MatDialog) {
     }
@@ -28,6 +28,9 @@ export class TopicComponent implements OnInit {
             username: this.token.getUsername(),
             authorities: this.token.getAuthorities()
         };
+
+        this.content = new Content();
+        this.newQuestion = new Question();
     }
 
     onSubmit() {

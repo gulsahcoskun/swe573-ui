@@ -30,6 +30,7 @@ export class Keyword {
     status: number;
 
 
+
 }
 
 
@@ -37,6 +38,8 @@ export class Question {
     questionText: string;
     order: number;
     options: Option[];
+
+
 
 }
 
@@ -46,5 +49,6 @@ export class Option {
     isAnswer: boolean;
     order: number;
     status: number;
+
 
 }
