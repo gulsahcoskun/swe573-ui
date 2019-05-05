@@ -1,3 +1,14 @@
-<p>
-  create works!
-</p>
+<div class="container">
+
+   <br/>
+
+   <nav mat-tab-nav-bar>
+      <a mat-tab-link [routerLink]="['/teach/create/material']">Create Material</a>
+      <a mat-tab-link [routerLink]="['/teach/create/topic']">Create Topic</a>
+   </nav>
+
+
+   <router-outlet></router-outlet>
+
+
+</div>

@@ -1,0 +1,66 @@
+<div *ngIf="info.token; else loggedOut">
+
+    <div class="container">
+
+        <br/>
+        <h2>Topic Information</h2>
+        <br/>
+
+        <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+
+            <div class="form-group">
+                <input id="title" name="title" class="form-control" placeholder="Title"
+                       required [(ngModel)]="content.title" #title="ngModel"/>
+                <div *ngIf="title.invalid && (title.dirty || title.touched)" class="alert alert-danger">
+                    <div *ngIf="title.errors.required">Material title is required.</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input id="image" name="image" class="form-control" placeholder="Image"
+                       required [(ngModel)]="content.image" #image="ngModel"/>
+                <div *ngIf="image.invalid && (image.dirty || image.touched)" class="alert alert-danger">
+                    <div *ngIf="image.errors.required">Material image is required.</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <app-ngx-editor id="explanation" name="explanation" [placeholder]="'Enter explanation here...'"
+                                [spellcheck]="true"
+                                [(ngModel)]="content.explanation" #explanation="ngModel"></app-ngx-editor>
+            </div>
+
+            <section style="background-color: #fafafa; padding: 1em">
+                <mat-form-field>
+                    <input matInput placeholder="Keyword" name="keyword" [(ngModel)]="keyword">
+                </mat-form-field>
+                <button mat-button (click)="searchWiki(keyword)">🔎 Search Wikidata</button>
+
+                <select id="foundWikis" [(ngModel)]="selectedKeyword" name="selectedWiki">
+                    <option *ngFor="let wiki of wikis" [value]="wiki">{{wiki}}</option>
+                </select>
+
+                <button mat-button (click)="addKeyword()">➕ Add Keyword</button>
+
+            </section>
+
+            <br />
+
+            <section style="background-color: #fafafa; padding: 1em">
+                <button mat-raised-button (click)="openDialog()">➕ Add Question</button>
+                <br/>
+                Questions added:
+            </section>
+
+
+            <br/>
+
+            <div class="form-group">
+                <button class="btn btn-primary" [disabled]="f.form.pristine || f.form.invalid">Create Topic</button>
+            </div>
+
+        </form>
+
+
+    </div>
+</div>

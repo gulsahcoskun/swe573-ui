@@ -1,1 +1,12 @@
-<a href="teach/create"><button mat-raised-button color="warn">Create New Material</button></a>
+<div *ngIf="info.token; else loggedOut">
+    <div class="container">
+        <nav mat-tab-nav-bar>
+            <a mat-tab-link [routerLink]="['/teach/create']">Create</a>
+            <a mat-tab-link [routerLink]="['/teach/update']">Update</a>
+        </nav>
+
+
+        <router-outlet></router-outlet>
+
+    </div>
+</div>

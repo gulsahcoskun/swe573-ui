@@ -1,0 +1,23 @@
+<nav class="navbar is-warning">
+    <div class="container">
+
+        <!-- logo-->
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">🐝 G-LEARN
+            </a>
+        </div>
+
+        <!--menu -->
+        <div class="navbar-menu">
+            <div class="navbar-end">
+                <a *ngIf="authority === 'user'" class="navbar-item" href="learn" >📚 LEARN</a>
+                <a *ngIf="authority === 'user'" href="teach" class="navbar-item">📝 TEACH</a>
+                <a *ngIf="authority === 'user'" href="track" class="navbar-item">🛤 TRACK</a>
+                <a *ngIf="!authority" href="auth/login" class="navbar-item">LOGIN</a>
+                <a *ngIf="authority === 'user'" (click)="logout()" class="navbar-item">LOG OUT</a>
+            </div>
+        </div>
+
+
+    </div>
+</nav>

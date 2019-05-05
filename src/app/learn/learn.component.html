@@ -1,3 +1,15 @@
-<p>
-  learn works!
-</p>
+<div *ngIf="info.token; else loggedOut">
+    <div class="container">
+        <h1>My Materials</h1>
+
+        <br/>
+
+        <h4>In Progress</h4>
+
+        <br/>
+
+        <h4>Completed</h4>
+
+        <br/>
+    </div>
+</div>

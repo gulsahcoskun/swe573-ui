@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {TokenStorageService} from '../auth/token-storage.service';
+import {Material} from '../model/material';
 
 @Component({
-  selector: 'app-teach',
-  templateUrl: './teach.component.html',
-  styleUrls: ['./teach.component.css']
+  selector: 'app-material-detail',
+  templateUrl: './material-detail.component.html',
+  styleUrls: ['./material-detail.component.css']
 })
-export class TeachComponent implements OnInit {
-  info: any;
+export class MaterialDetailComponent implements OnInit {
+
+    info: any;
+    material: Material;
 
     constructor(private token: TokenStorageService) {
     }
@@ -18,8 +21,6 @@ export class TeachComponent implements OnInit {
             username: this.token.getUsername(),
             authorities: this.token.getAuthorities()
         };
-
     }
-
 
 }

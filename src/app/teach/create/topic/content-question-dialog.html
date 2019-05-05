@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>New Question</h1>
+<div mat-dialog-content>
+    <p>❓ Write Question Here</p>
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.questionText">
+    </mat-form-field>
+
+    <p>✅ Write Options Here</p>
+    <mat-form-field>
+        <button mat-button (click)="addOption()">➕ Add Option</button>
+    </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data.questionText" cdkFocusInitial>Add</button>
+</div>

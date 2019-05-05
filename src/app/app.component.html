@@ -1,7 +1,10 @@
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+<!--
+<nav class="navbar navbar-dark bg-dark mb-5">
+  <div class="navbar-expand mr-auto">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">GLearn</a>
+      <a class="navbar-brand" href="#">
+        <img src="/assets/images/glearn-p.png" width="50" height="50">
+      </a>
     </div>
     <ul class="nav navbar-nav" routerLinkActive="active">
       <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
@@ -20,6 +23,16 @@
     </ul>
   </div>
 </nav>
+-->
+<app-header></app-header>
 <div class="container">
   <router-outlet></router-outlet>
 </div>
+<!--
+<nav class="navbar navbar-dark bg-dark mt-5 fixed-bottom">
+  <div class="navbar-expand m-auto navbar-text">
+    Made with <i class="fa fa-heart"></i> by Gulsah Coskun
+  </div>
+</nav>
+-->
+<app-footer></app-footer>
