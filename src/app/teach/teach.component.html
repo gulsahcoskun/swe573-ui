@@ -1,4 +1,4 @@
-<div *ngIf="info.token; else loggedOut">
+<div *ngIf="info.token">
     <div class="container">
         <nav mat-tab-nav-bar>
             <a mat-tab-link [routerLink]="['/teach/create']">Create</a>
@@ -9,9 +9,5 @@
         <router-outlet></router-outlet>
 
     </div>
-
-    <ng-template #loggedOut>
-        Please login.
-    </ng-template>
 
 </div>
