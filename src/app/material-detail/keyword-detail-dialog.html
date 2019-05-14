@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>{{data.keyword.label}}</h1>
+<hr>
+<div mat-dialog-content>
+    Title: {{data.keyword.title}}
+    <br/>
+    Description: {{data.keyword.description}}
+    <br/>
+    <a href="{{data.keyword.url}}" target="_blank">Discover in Wikidata</a>
+    <br/><br/>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button (click)="onNoClick()">Close</button>
+</div>

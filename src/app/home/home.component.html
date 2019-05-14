@@ -1,54 +1,36 @@
-<div *ngIf="info.token; else loggedOut">
-    <div class="container">
+<div class="container">
         <mat-form-field class="search-form">
-            <input matInput placeholder="Search Topics" type="text">
+            <input matInput placeholder="Search Materials" type="text" [(ngModel)]="searchKey">
         </mat-form-field>
-        <button button="submit" mat-raised-button color="primary">Search</button>
+        <button mat-stroked-button color="warn" (click)="searchMaterialsByKeyword()"  style="margin-left: 5px"
+                [disabled]="info.token==null">🔎 Search</button>
         <br/>
         <br/>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.8%" fxLayoutAlign="auto">
-            <mat-card class="card-picture" *ngFor="let material of materials">
-                <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
-                    <span fxFlex="80%">{{material.materialName}}</span>
-                    <mat-icon fxFlex="10%">thumb_up</mat-icon>
-                </mat-card-title>
+        <p *ngIf="materials.length==0">{{searchMessage}}</p>
+        <div fxLayout="row wrap"  fxLayoutGap="32px" fxLayoutAlign="flex-start">
+            <mat-card class="material-card" fxFlex="0 1 calc(50% - 32px)"
+                      *ngFor="let material of materials">
+
+
+                <mat-card-header>
+                    <mat-card-title>{{material.materialName}}</mat-card-title>
+                    <mat-card-subtitle>{{material.detail}}</mat-card-subtitle>
+                    <mat-card-subtitle>{{material.createdBy}}</mat-card-subtitle>
+                </mat-card-header>
+
                 <img mat-card-image [src]="material.image">
+
+                <br/>
+                <br/>
+
                 <mat-card-content>
-                    <p>
-                        {{material.description}}
-                    </p>
-                    <br/>
-                    {{material.keywordList}}
+                    <p>{{material.description}}</p>
+                    <p style="color: dodgerblue; font-size: small; font-weight: bold">{{material.keywordList}}</p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <a href="teach"><button mat-button>TAKE</button></a>
+                    <button  mat-flat-button color="warn" style="width:100%" (click)="seeDetail(material.materialId)" [disabled]="info.token==null">TAKE</button>
                 </mat-card-actions>
             </mat-card>
         </div>
-        <!--
-        <mat-card class="example-card">
-            <mat-card-header>
-                <mat-card-title>Shiba Inu</mat-card-title>
-                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-                 alt="Photo of a Shiba Inu">
-            <mat-card-content>
-                <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                    bred for hunting.
-                </p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>TAKE</button>
-            </mat-card-actions>
-        </mat-card>
-        -->
 
-    </div>
-
-    <ng-template #loggedOut>
-        Please login.
-    </ng-template>
 </div>

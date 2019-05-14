@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {TokenStorageService} from '../../../auth/token-storage.service';
+import {TeachService} from '../../../services/teach.service';
 
 @Component({
     selector: 'app-material',
@@ -9,8 +10,9 @@ import {TokenStorageService} from '../../../auth/token-storage.service';
 export class MaterialComponent implements OnInit {
     data: any = {};
     info: any;
+    message : any;
 
-    constructor(private token: TokenStorageService) {
+    constructor(private token: TokenStorageService,private teachService: TeachService) {
     }
 
     ngOnInit() {
@@ -23,7 +25,22 @@ export class MaterialComponent implements OnInit {
 
 
     onSubmit() {
-        alert(JSON.stringify(this.data));
+        this.data.createdBy = this.info.username;
+        this.teachService.createMaterial(this.data).subscribe(
+            data => {
+                console.log(data);
+                this.message = data.message;
+            }, error => {
+                console.log(error);
+            }
+        );
+        //this.cleanFields();
+    }
+
+    cleanFields() : void{
+        this.data.title = null;
+        this.data.description = null;
+        this.data.image = null;
     }
 
 }

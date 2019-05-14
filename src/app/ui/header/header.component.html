@@ -8,16 +8,25 @@
         </div>
 
         <!--menu -->
+        <!--
         <div class="navbar-menu">
             <div class="navbar-end">
                 <a *ngIf="authority === 'user'" class="navbar-item" href="learn" >📚 LEARN</a>
                 <a *ngIf="authority === 'user'" href="teach" class="navbar-item">📝 TEACH</a>
                 <a *ngIf="authority === 'user'" href="track" class="navbar-item">🛤 TRACK</a>
-                <a *ngIf="!authority" href="auth/login" class="navbar-item">LOGIN</a>
+                <a *ngIf="authority !== 'user'" href="auth/login" class="navbar-item">LOGIN</a>
                 <a *ngIf="authority === 'user'" (click)="logout()" class="navbar-item">LOG OUT</a>
             </div>
         </div>
+        -->
 
+        <ul id="horizontal-list">
+            <li><a *ngIf="authority === 'user'"  href="learn">📚 LEARN</a></li>
+            <li><a *ngIf="authority === 'user'" href="teach" >📝 TEACH</a></li>
+            <li><a *ngIf="authority === 'user'" href="track">🛤 TRACK</a></li>
+            <li><a *ngIf="authority !== 'user'" href="auth/login">LOGIN</a></li>
+            <li><a *ngIf="authority === 'user'" (click)="logout()">LOG OUT</a></li>
+        </ul>
 
     </div>
 </nav>

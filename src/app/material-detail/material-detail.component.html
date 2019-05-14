@@ -1,18 +1,67 @@
 <div *ngIf="info.token; else loggedOut">
-  <div class="container">
-    <h1>{{material.title}}</h1>
-    <nav mat-tab-nav-bar>
-      <a mat-tab-link
-         *ngFor="let content of material.contents"
-         [routerLink]="content.title"
-         routerLinkActive #rla="routerLinkActive"
-         [active]="rla.isActive">
-        {{content.title}}
-      </a>
-    </nav>
 
-    <router-outlet></router-outlet>
+    <div class="container">
+
+        <h3>{{material.title}}</h3>
+
+        <mat-horizontal-stepper [linear]="true" #stepper>
+            <ng-template matStepperIcon="edit" let-index="index"> {{index + 1}} </ng-template>
+
+            <mat-step *ngFor="let content of material.contents">
+
+                <ng-template matStepLabel>{{content.title}}</ng-template>
+
+                <img [src]="content.image" style="width: 100%;">
+
+                <br/><br/>
+
+                <h4>{{content.title}}</h4>
+
+                <em>Author: {{material.createdBy}} , {{material.dateCreated | date:'fullDate'}}</em>
+
+                <br/><br/>
+
+                <div [innerHTML]="content.explanation"></div>
+
+                <ul>
+                    <li *ngFor="let keyword of content.keywords" style="margin-left: 5px">
+                        <button mat-raised-button (click)="openKeywordDialog(keyword)">{{keyword.label}}</button>
+                    </li>
+                </ul>
+
+                <section style="background-color: whitesmoke">
+                    <ol style="font-weight: bold">
+                        <li *ngFor="let question of content.questions">
+                            <label id="option-radio-group-label">{{question.questionText}}</label>
+                            <mat-radio-group
+                                    aria-labelledby="option-radio-group-label"
+                                    class="option-radio-group">
+                                <mat-radio-button class="option-radio-button" *ngFor="let option of question.options"
+                                                  [value]="option" (change)="onSelectionChange(question.id,option.id)">
+                                    {{option.optionText}}
+                                </mat-radio-button>
+                            </mat-radio-group>
+
+                        </li>
+                    </ol>
+
+                </section>
 
 
-  </div>
+                <br/><br/>
+
+                <div>
+                    <button mat-button (click)="complete(material.id,content.id)" style="width: 100%"
+                            mat-raised-button color="warn">
+                        COMPLETE
+                    </button>
+                </div>
+
+            </mat-step>
+
+        </mat-horizontal-stepper>
+
+    </div>
+
+
 </div>

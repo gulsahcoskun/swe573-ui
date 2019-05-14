@@ -1,0 +1,14 @@
+ul li{
+    display: inline;
+}
+
+
+.option-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.option-radio-button {
+    margin: 5px;
+}

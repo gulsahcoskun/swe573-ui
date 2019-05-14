@@ -1,25 +1,28 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {TokenStorageService} from '../../../auth/token-storage.service';
-import {Content, Option, Question} from '../../../model/material';
+import {Content, Keyword, Material, Option, Question} from '../../../model/material';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
+import {SearchService} from '../../../services/search.service';
+import {TeachService} from '../../../services/teach.service';
+import {MaterialSummary} from '../../../model/material-summary';
 
 @Component({
-  selector: 'app-topic',
-  templateUrl: './topic.component.html',
-  styleUrls: ['./topic.component.css']
+    selector: 'app-topic',
+    templateUrl: './topic.component.html',
+    styleUrls: ['./topic.component.css']
 })
 export class TopicComponent implements OnInit {
 
-    private content: Content;
+    private content: Content = new Content();
     info: any;
-    wikis: Array<any>;
-    selectedKeyword: string;
-    keywordList: Array<any>;
-    questionList: Array<any>;
-    optionList: Array<any>;
-    private newQuestion: Question;
+    wikis: Array<Keyword> = new Array<Keyword>();
+    selectedKeyword: Keyword = new Keyword();
+    keywordList: Array<Keyword> = new Array<Keyword>();
+    materials: Array<MaterialSummary> = new Array<MaterialSummary>();
+    selectedMaterial: number;
+    message : any;
 
-    constructor(private token: TokenStorageService,public dialog: MatDialog) {
+    constructor(private token: TokenStorageService, private teachService: TeachService, private searchService: SearchService) {
     }
 
     ngOnInit() {
@@ -29,57 +32,46 @@ export class TopicComponent implements OnInit {
             authorities: this.token.getAuthorities()
         };
 
-        this.content = new Content();
-        this.newQuestion = new Question();
+        this.searchService.getCreatedByMaterials().subscribe(
+            data => {
+                this.materials = data;
+            }, error => {
+                console.log(error);
+            }
+        )
+
     }
 
-    onSubmit() {
-        alert(JSON.stringify(this.content));
+    createTopic() {
+        this.content.keywords = this.keywordList;
+        this.content.status = 1;
+        console.log(this.content);
+
+        this.teachService.createContent(this.content,this.selectedMaterial).subscribe(
+            data => {
+                console.log(data);
+                this.message = data.message;
+            }, error => {
+                console.log(error);
+            }
+        )
     }
 
-    searchWiki(keyword: string){
+    searchWiki(keyword: string) {
+        this.teachService.searchWiki(keyword).subscribe(
+            data => {
+                console.log(data);
+                this.wikis = data;
+            }, error => {
+                console.log(error);
+            }
+        );
         console.log(keyword + ' selected');
     }
 
-    addKeyword(){
+    addKeyword() {
         console.log(this.selectedKeyword);
         this.keywordList.push(this.selectedKeyword);
-    }
-
-
-    openDialog(): void {
-        const dialogRef = this.dialog.open(ContentQuestionDialog, {
-            width: '400px',
-            data: {question: this.newQuestion}
-        });
-
-        dialogRef.afterClosed().subscribe(result => {
-            console.log('The dialog was closed');
-            this.newQuestion = result;
-        });
-    }
-
-}
-
-
-
-export interface DialogData {
-    question: Question;
-}
-
-
-@Component({
-    selector: 'content-question-dialog',
-    templateUrl: 'content-question-dialog.html',
-})
-export class ContentQuestionDialog {
-
-    constructor(
-        public dialogRef: MatDialogRef<ContentQuestionDialog>,
-        @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
-
-    onNoClick(): void {
-        this.dialogRef.close();
     }
 
 }

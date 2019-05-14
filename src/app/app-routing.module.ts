@@ -11,6 +11,8 @@ import {CreateComponent} from './teach/create/create.component';
 import {UpdateComponent} from './teach/update/update.component';
 import {MaterialComponent} from './teach/create/material/material.component';
 import {TopicComponent} from './teach/create/topic/topic.component';
+import {QuestionComponent} from './teach/create/question/question.component';
+import {MaterialDetailComponent} from './material-detail/material-detail.component';
 
 const routes: Routes = [
     {
@@ -53,8 +55,12 @@ const routes: Routes = [
                         component: MaterialComponent
                     },
                     {
-                        path: 'topic',
+                        path: 'content',
                         component: TopicComponent
+                    },
+                    {
+                        path: 'question',
+                        component: QuestionComponent
                     }
                 ]
 
@@ -74,21 +80,9 @@ const routes: Routes = [
         component: LearnComponent
     },
     {
-        path: 'teach/create',
-        component: CreateComponent
-    },
-    {
-        path: 'teach/update',
-        component: UpdateComponent
-    },
-    {
-        path: 'teach/create/material',
-        component: MaterialComponent
-    },
-    {
-        path: 'teach/create/topic',
-        component: TopicComponent
-    },
+        path: 'detail/:id',
+        component: MaterialDetailComponent
+    }
 ];
 
 @NgModule({

@@ -1,11 +1,10 @@
-
-
-.img {
+.mat-card-image {
     width: 100%;
-    margin-bottom: 18%;
+    margin: 0%;
 }
-.card-picture {
-    width: 30%;
+
+.material-card {
+    width: 23%;
     margin-bottom: 2%;
 }
 .container {
@@ -13,9 +12,10 @@
     width: 100%;
 }
 .search-form {
-    width: 80%;
+    width: 85%;
 }
 
 ul li{
     display: inline;
 }
+

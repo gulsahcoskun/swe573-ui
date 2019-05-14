@@ -26,7 +26,7 @@ import {
     MatFormFieldModule,
     MatInputModule,
     MatToolbarModule,
-    MatTabsModule, MatDialogModule
+    MatTabsModule, MatDialogModule, MatSelectModule, MatOptionModule, MatCheckboxModule, MatStepperModule, MatRadioModule
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -35,10 +35,13 @@ import {FooterComponent} from './ui/footer/footer.component';
 import {SearchService} from './services/search.service';
 import { UpdateComponent } from './teach/update/update.component';
 import { MaterialComponent } from './teach/create/material/material.component';
-import {ContentQuestionDialog, TopicComponent} from './teach/create/topic/topic.component';
 import {NgxEditorModule} from 'ngx-editor';
 import {TooltipModule} from 'ngx-bootstrap';
-import { MaterialDetailComponent } from './material-detail/material-detail.component';
+import {KeywordDetailDialog, MaterialDetailComponent} from './material-detail/material-detail.component';
+import { QuestionComponent } from './teach/create/question/question.component';
+import {TopicComponent} from './teach/create/topic/topic.component';
+import {LearnService} from './services/learn.service';
+import {TeachService} from './services/teach.service';
 
 
 
@@ -57,8 +60,9 @@ import { MaterialDetailComponent } from './material-detail/material-detail.compo
         TopicComponent,
         UpdateComponent,
         MaterialComponent,
-        ContentQuestionDialog,
-        MaterialDetailComponent
+        MaterialDetailComponent,
+        QuestionComponent,
+        KeywordDetailDialog
     ],
     imports: [
         BrowserModule, BrowserAnimationsModule,
@@ -66,14 +70,16 @@ import { MaterialDetailComponent } from './material-detail/material-detail.compo
         FormsModule, ReactiveFormsModule,
         HttpClientModule,
         MatButtonModule, MatIconModule, MatCardModule, MatToolbarModule, MatFormFieldModule,
-        MatInputModule, MatTabsModule, MatDialogModule,
+        MatInputModule, MatTabsModule, MatDialogModule, MatSelectModule, MatOptionModule,
+        MatCheckboxModule, MatStepperModule,MatRadioModule,
         FlexLayoutModule,
         NgxEditorModule,
         TooltipModule.forRoot()
     ],
-    providers: [httpInterceptorProviders, UserService, TokenStorageService, AuthService, SearchService],
+    providers: [httpInterceptorProviders, UserService, TokenStorageService, AuthService, SearchService,
+        LearnService, TeachService],
     bootstrap: [AppComponent],
-    entryComponents: [ContentQuestionDialog]
+    entryComponents: [KeywordDetailDialog]
 })
 export class AppModule {
 }

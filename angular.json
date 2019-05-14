@@ -23,7 +23,7 @@
             "styles": [
               "src/styles.css",
               "../swe573-ui/node_modules/bulma/css/bulma.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
             ]

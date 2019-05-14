@@ -1,0 +1,78 @@
+<div *ngIf="info.token; else loggedOut">
+
+  <div class="container">
+
+    <br/>
+    <h2>Question Information</h2>
+    <br/>
+
+    <form name="form" (ngSubmit)="f.form.valid" #f="ngForm" novalidate>
+
+      <div class="form-group">
+        <mat-select [(ngModel)]="selectedMaterial" name="material" required #material="ngModel"
+                    placeholder="Select Material" (selectionChange)="onChange()">
+          <mat-option *ngFor="let material of materials" [value]="material.materialId">
+            {{material.materialName}}
+          </mat-option>
+        </mat-select>
+        <div *ngIf="material.invalid && (material.dirty || material.touched) " class="alert alert-danger">
+          <div *ngIf="material.errors.required">Material is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <mat-select [(ngModel)]="selectedContent" name="content" required #content="ngModel"
+                    placeholder="Select Content">
+          <mat-option *ngFor="let content of contents" [value]="content.id">
+            {{content.title}}
+          </mat-option>
+        </mat-select>
+        <div *ngIf="content.invalid && (content.dirty || content.touched) " class="alert alert-danger">
+          <div *ngIf="content.errors.required">Content is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input id="questionText" name="questionText" class="form-control" placeholder="Question Text"
+               required [(ngModel)]="question.questionText" #questionText="ngModel"/>
+        <div *ngIf="questionText.invalid && (questionText.dirty || questionText.touched)" class="alert alert-danger">
+          <div *ngIf="questionText.errors.required">Question Text is required.</div>
+        </div>
+      </div>
+
+
+      <section style="background-color: #dddddd; padding: 1em">
+        <mat-form-field>
+          <input matInput placeholder="Option Text" name="option" [(ngModel)]="selectedOption.optionText">
+        </mat-form-field>
+        <mat-checkbox name="value" [(ngModel)]="selectedOption.isAnswer">Is correct answer?</mat-checkbox>
+        <button mat-button (click)="addOption()">➕ Add Option</button>
+
+        <br/>
+        <li *ngFor="let option of optionList">{{option.optionText}} - {{option.isAnswer}}</li>
+      </section>
+
+      <br/>
+      <br/>
+
+      <div class="form-group">
+        <button class="btn btn-primary" style="width:100%" (click)="createQuestion()" [disabled]="f.form.pristine || f.form.invalid">Create Question</button>
+      </div>
+
+      <br/>
+      <h6 style="color: #3e5e9a">{{message}}</h6>
+
+    </form>
+
+
+  </div>
+
+  <br/>
+
+  <ng-template #loggedOut>
+    Please login.
+  </ng-template>
+
+
+
+</div>

@@ -3,16 +3,27 @@
     <div class="container">
 
         <br/>
-        <h2>Topic Information</h2>
+        <h2>Content Information</h2>
         <br/>
 
-        <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <form name="form" (ngSubmit)="f.form.valid" #f="ngForm" novalidate>
+
+            <div class="form-group">
+                <mat-select [(ngModel)]="selectedMaterial" name="material" required #material="ngModel" placeholder="Select Material" >
+                    <mat-option *ngFor="let material of materials" [value]="material.materialId">
+                        {{material.materialName}}
+                    </mat-option>
+                </mat-select>
+                <div *ngIf="material.invalid && (material.dirty || material.touched) " class="alert alert-danger">
+                    <div *ngIf="material.errors.required">Material is required.</div>
+                </div>
+            </div>
 
             <div class="form-group">
                 <input id="title" name="title" class="form-control" placeholder="Title"
                        required [(ngModel)]="content.title" #title="ngModel"/>
                 <div *ngIf="title.invalid && (title.dirty || title.touched)" class="alert alert-danger">
-                    <div *ngIf="title.errors.required">Material title is required.</div>
+                    <div *ngIf="title.errors.required">Content title is required.</div>
                 </div>
             </div>
 
@@ -20,9 +31,31 @@
                 <input id="image" name="image" class="form-control" placeholder="Image"
                        required [(ngModel)]="content.image" #image="ngModel"/>
                 <div *ngIf="image.invalid && (image.dirty || image.touched)" class="alert alert-danger">
-                    <div *ngIf="image.errors.required">Material image is required.</div>
+                    <div *ngIf="image.errors.required">Content image is required.</div>
                 </div>
             </div>
+
+            <section style="background-color: #dddddd; padding: 1em">
+                <mat-form-field>
+                    <input matInput placeholder="Keyword" name="keyword" [(ngModel)]="keyword">
+                </mat-form-field>
+                <button mat-button (click)="searchWiki(keyword)">🔎 Search Wikidata</button>
+
+                <mat-select id="foundWikis" [(ngModel)]="selectedKeyword" name="selectedWiki" placeholder="Select keyword from wikidata">
+                    <mat-option *ngFor="let wiki of wikis" [value]="wiki">{{wiki.description}}
+                    </mat-option>
+                </mat-select>
+
+                <br/>
+                <br/>
+                <a *ngIf="selectedKeyword" href="{{selectedKeyword.url}}">{{selectedKeyword.title}}</a>
+
+                <button mat-button (click)="addKeyword()">➕ Add Keyword</button>
+                <li *ngFor="let keyword of keywordList">{{keyword.label}}</li>
+
+            </section>
+
+            <br/>
 
             <div class="form-group">
                 <app-ngx-editor id="explanation" name="explanation" [placeholder]="'Enter explanation here...'"
@@ -30,37 +63,25 @@
                                 [(ngModel)]="content.explanation" #explanation="ngModel"></app-ngx-editor>
             </div>
 
-            <section style="background-color: #fafafa; padding: 1em">
-                <mat-form-field>
-                    <input matInput placeholder="Keyword" name="keyword" [(ngModel)]="keyword">
-                </mat-form-field>
-                <button mat-button (click)="searchWiki(keyword)">🔎 Search Wikidata</button>
-
-                <select id="foundWikis" [(ngModel)]="selectedKeyword" name="selectedWiki">
-                    <option *ngFor="let wiki of wikis" [value]="wiki">{{wiki}}</option>
-                </select>
-
-                <button mat-button (click)="addKeyword()">➕ Add Keyword</button>
-
-            </section>
-
-            <br />
-
-            <section style="background-color: #fafafa; padding: 1em">
-                <button mat-raised-button (click)="openDialog()">➕ Add Question</button>
-                <br/>
-                Questions added:
-            </section>
-
 
             <br/>
 
             <div class="form-group">
-                <button class="btn btn-primary" [disabled]="f.form.pristine || f.form.invalid">Create Topic</button>
+                <button class="btn btn-primary" style="width:100%" (click)="createTopic()" [disabled]="f.form.pristine || f.form.invalid">Create Content</button>
             </div>
+
+            <br/>
+            <h6 style="color: #3e5e9a">{{message}}</h6>
 
         </form>
 
 
     </div>
+
+    <ng-template #loggedOut>
+        Please login.
+    </ng-template>
+
+
+
 </div>

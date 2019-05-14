@@ -43,8 +43,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _track_track_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./track/track.component */ "./src/app/track/track.component.ts");
 /* harmony import */ var _learn_learn_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./learn/learn.component */ "./src/app/learn/learn.component.ts");
 /* harmony import */ var _teach_create_create_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./teach/create/create.component */ "./src/app/teach/create/create.component.ts");
-/* harmony import */ var _topic_topic_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./topic/topic.component */ "./src/app/topic/topic.component.ts");
-/* harmony import */ var _teach_update_update_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./teach/update/update.component */ "./src/app/teach/update/update.component.ts");
+/* harmony import */ var _teach_update_update_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./teach/update/update.component */ "./src/app/teach/update/update.component.ts");
+/* harmony import */ var _teach_create_material_material_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./teach/create/material/material.component */ "./src/app/teach/create/material/material.component.ts");
+/* harmony import */ var _teach_create_topic_topic_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./teach/create/topic/topic.component */ "./src/app/teach/create/topic/topic.component.ts");
+/* harmony import */ var _teach_create_question_question_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./teach/create/question/question.component */ "./src/app/teach/create/question/question.component.ts");
+/* harmony import */ var _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./material-detail/material-detail.component */ "./src/app/material-detail/material-detail.component.ts");
+
+
+
 
 
 
@@ -77,7 +83,41 @@ var routes = [
     },
     {
         path: 'teach',
-        component: _teach_teach_component__WEBPACK_IMPORTED_MODULE_6__["TeachComponent"]
+        component: _teach_teach_component__WEBPACK_IMPORTED_MODULE_6__["TeachComponent"],
+        children: [
+            {
+                path: '',
+                redirectTo: 'create',
+                pathMatch: 'full'
+            },
+            {
+                path: 'create',
+                component: _teach_create_create_component__WEBPACK_IMPORTED_MODULE_9__["CreateComponent"],
+                children: [
+                    {
+                        path: '',
+                        redirectTo: 'material',
+                        pathMatch: 'full'
+                    },
+                    {
+                        path: 'material',
+                        component: _teach_create_material_material_component__WEBPACK_IMPORTED_MODULE_11__["MaterialComponent"]
+                    },
+                    {
+                        path: 'content',
+                        component: _teach_create_topic_topic_component__WEBPACK_IMPORTED_MODULE_12__["TopicComponent"]
+                    },
+                    {
+                        path: 'question',
+                        component: _teach_create_question_question_component__WEBPACK_IMPORTED_MODULE_13__["QuestionComponent"]
+                    }
+                ]
+            },
+            {
+                path: 'update',
+                component: _teach_update_update_component__WEBPACK_IMPORTED_MODULE_10__["UpdateComponent"]
+            },
+        ]
     },
     {
         path: 'track',
@@ -88,24 +128,16 @@ var routes = [
         component: _learn_learn_component__WEBPACK_IMPORTED_MODULE_8__["LearnComponent"]
     },
     {
-        path: 'teach/create',
-        component: _teach_create_create_component__WEBPACK_IMPORTED_MODULE_9__["CreateComponent"]
-    },
-    {
-        path: 'teach/update',
-        component: _teach_update_update_component__WEBPACK_IMPORTED_MODULE_11__["UpdateComponent"]
-    },
-    {
-        path: 'topic',
-        component: _topic_topic_component__WEBPACK_IMPORTED_MODULE_10__["TopicComponent"]
-    },
+        path: 'detail/:id',
+        component: _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_14__["MaterialDetailComponent"]
+    }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes), _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
             exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
         })
     ], AppRoutingModule);
@@ -212,14 +244,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _learn_learn_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./learn/learn.component */ "./src/app/learn/learn.component.ts");
 /* harmony import */ var _teach_create_create_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./teach/create/create.component */ "./src/app/teach/create/create.component.ts");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _teach_create_data_formData_service__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./teach/create/data/formData.service */ "./src/app/teach/create/data/formData.service.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
-/* harmony import */ var _ui_header_header_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./ui/header/header.component */ "./src/app/ui/header/header.component.ts");
-/* harmony import */ var _ui_footer_footer_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./ui/footer/footer.component */ "./src/app/ui/footer/footer.component.ts");
-/* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./services/search.service */ "./src/app/services/search.service.ts");
-/* harmony import */ var _topic_topic_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./topic/topic.component */ "./src/app/topic/topic.component.ts");
-/* harmony import */ var _teach_update_update_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./teach/update/update.component */ "./src/app/teach/update/update.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _ui_header_header_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./ui/header/header.component */ "./src/app/ui/header/header.component.ts");
+/* harmony import */ var _ui_footer_footer_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./ui/footer/footer.component */ "./src/app/ui/footer/footer.component.ts");
+/* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./services/search.service */ "./src/app/services/search.service.ts");
+/* harmony import */ var _teach_update_update_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./teach/update/update.component */ "./src/app/teach/update/update.component.ts");
+/* harmony import */ var _teach_create_material_material_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./teach/create/material/material.component */ "./src/app/teach/create/material/material.component.ts");
+/* harmony import */ var ngx_editor__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ngx-editor */ "./node_modules/ngx-editor/fesm5/ngx-editor.js");
+/* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
+/* harmony import */ var _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./material-detail/material-detail.component */ "./src/app/material-detail/material-detail.component.ts");
+/* harmony import */ var _teach_create_question_question_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./teach/create/question/question.component */ "./src/app/teach/create/question/question.component.ts");
+/* harmony import */ var _teach_create_topic_topic_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./teach/create/topic/topic.component */ "./src/app/teach/create/topic/topic.component.ts");
+/* harmony import */ var _services_learn_service__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./services/learn.service */ "./src/app/services/learn.service.ts");
+/* harmony import */ var _services_teach_service__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./services/teach.service */ "./src/app/services/teach.service.ts");
+
+
+
+
+
+
 
 
 
@@ -261,22 +305,31 @@ var AppModule = /** @class */ (function () {
                 _track_track_component__WEBPACK_IMPORTED_MODULE_15__["TrackComponent"],
                 _learn_learn_component__WEBPACK_IMPORTED_MODULE_16__["LearnComponent"],
                 _teach_create_create_component__WEBPACK_IMPORTED_MODULE_17__["CreateComponent"],
-                _ui_header_header_component__WEBPACK_IMPORTED_MODULE_22__["HeaderComponent"],
-                _ui_footer_footer_component__WEBPACK_IMPORTED_MODULE_23__["FooterComponent"],
-                _topic_topic_component__WEBPACK_IMPORTED_MODULE_25__["TopicComponent"],
-                _teach_update_update_component__WEBPACK_IMPORTED_MODULE_26__["UpdateComponent"]
+                _ui_header_header_component__WEBPACK_IMPORTED_MODULE_21__["HeaderComponent"],
+                _ui_footer_footer_component__WEBPACK_IMPORTED_MODULE_22__["FooterComponent"],
+                _teach_create_topic_topic_component__WEBPACK_IMPORTED_MODULE_30__["TopicComponent"],
+                _teach_update_update_component__WEBPACK_IMPORTED_MODULE_24__["UpdateComponent"],
+                _teach_create_material_material_component__WEBPACK_IMPORTED_MODULE_25__["MaterialComponent"],
+                _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_28__["MaterialDetailComponent"],
+                _teach_create_question_question_component__WEBPACK_IMPORTED_MODULE_29__["QuestionComponent"],
+                _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_28__["KeywordDetailDialog"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["BrowserAnimationsModule"],
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_19__["BrowserAnimationsModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatToolbarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatTabsModule"],
-                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_21__["FlexLayoutModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatToolbarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatTabsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatDialogModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatOptionModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatCheckboxModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatStepperModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatRadioModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_20__["FlexLayoutModule"],
+                ngx_editor__WEBPACK_IMPORTED_MODULE_26__["NgxEditorModule"],
+                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_27__["TooltipModule"].forRoot()
             ],
-            providers: [_auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_10__["httpInterceptorProviders"], _services_user_service__WEBPACK_IMPORTED_MODULE_11__["UserService"], _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_12__["TokenStorageService"], _auth_auth_service__WEBPACK_IMPORTED_MODULE_13__["AuthService"], _services_search_service__WEBPACK_IMPORTED_MODULE_24__["SearchService"],
-                { provide: _teach_create_data_formData_service__WEBPACK_IMPORTED_MODULE_19__["FormDataService"], useClass: _teach_create_data_formData_service__WEBPACK_IMPORTED_MODULE_19__["FormDataService"] }],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
+            providers: [_auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_10__["httpInterceptorProviders"], _services_user_service__WEBPACK_IMPORTED_MODULE_11__["UserService"], _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_12__["TokenStorageService"], _auth_auth_service__WEBPACK_IMPORTED_MODULE_13__["AuthService"], _services_search_service__WEBPACK_IMPORTED_MODULE_23__["SearchService"],
+                _services_learn_service__WEBPACK_IMPORTED_MODULE_31__["LearnService"], _services_teach_service__WEBPACK_IMPORTED_MODULE_32__["TeachService"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]],
+            entryComponents: [_material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_28__["KeywordDetailDialog"]]
         })
     ], AppModule);
     return AppModule;
@@ -493,7 +546,7 @@ var TokenStorageService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n.img {\n    width: 100%;\n    margin-bottom: 18%;\n}\n.card-picture {\n    width: 30%;\n    margin-bottom: 2%;\n}\n.container {\n    min-height: 100%;\n    width: 100%;\n}\n.search-form {\n    width: 80%;\n}\nul li{\n    display: inline;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFFQTtJQUNJLFdBQVc7SUFDWCxrQkFBa0I7QUFDdEI7QUFDQTtJQUNJLFVBQVU7SUFDVixpQkFBaUI7QUFDckI7QUFDQTtJQUNJLGdCQUFnQjtJQUNoQixXQUFXO0FBQ2Y7QUFDQTtJQUNJLFVBQVU7QUFDZDtBQUVBO0lBQ0ksZUFBZTtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG5cbi5pbWcge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG1hcmdpbi1ib3R0b206IDE4JTtcbn1cbi5jYXJkLXBpY3R1cmUge1xuICAgIHdpZHRoOiAzMCU7XG4gICAgbWFyZ2luLWJvdHRvbTogMiU7XG59XG4uY29udGFpbmVyIHtcbiAgICBtaW4taGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xufVxuLnNlYXJjaC1mb3JtIHtcbiAgICB3aWR0aDogODAlO1xufVxuXG51bCBsaXtcbiAgICBkaXNwbGF5OiBpbmxpbmU7XG59Il19 */"
+module.exports = ".mat-card-image {\n    width: 100%;\n    margin: 0%;\n}\n\n.material-card {\n    width: 23%;\n    margin-bottom: 2%;\n}\n\n.container {\n    min-height: 100%;\n    width: 100%;\n}\n\n.search-form {\n    width: 85%;\n}\n\nul li{\n    display: inline;\n}\n\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gsVUFBVTtBQUNkOztBQUVBO0lBQ0ksVUFBVTtJQUNWLGlCQUFpQjtBQUNyQjs7QUFDQTtJQUNJLGdCQUFnQjtJQUNoQixXQUFXO0FBQ2Y7O0FBQ0E7SUFDSSxVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxlQUFlO0FBQ25CIiwiZmlsZSI6InNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LWNhcmQtaW1hZ2Uge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG1hcmdpbjogMCU7XG59XG5cbi5tYXRlcmlhbC1jYXJkIHtcbiAgICB3aWR0aDogMjMlO1xuICAgIG1hcmdpbi1ib3R0b206IDIlO1xufVxuLmNvbnRhaW5lciB7XG4gICAgbWluLWhlaWdodDogMTAwJTtcbiAgICB3aWR0aDogMTAwJTtcbn1cbi5zZWFyY2gtZm9ybSB7XG4gICAgd2lkdGg6IDg1JTtcbn1cblxudWwgbGl7XG4gICAgZGlzcGxheTogaW5saW5lO1xufVxuXG4iXX0= */"
 
 /***/ }),
 
@@ -504,7 +557,7 @@ module.exports = "\n\n.img {\n    width: 100%;\n    margin-bottom: 18%;\n}\n.car
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"info.token; else loggedOut\">\n    <div class=\"container\">\n        <mat-form-field class=\"search-form\">\n            <input matInput placeholder=\"Search Topics\" type=\"text\">\n        </mat-form-field>\n        <button button=\"submit\" mat-raised-button color=\"primary\">Search</button>\n        <br/>\n        <br/>\n        <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"0.8%\" fxLayoutAlign=\"auto\">\n            <mat-card class=\"card-picture\" *ngFor=\"let material of materials\">\n                <mat-card-title fxLayout.gt-xs=\"row\" fxLayout.xs=\"column\">\n                    <span fxFlex=\"80%\">{{material.materialName}}</span>\n                    <mat-icon fxFlex=\"10%\">thumb_up</mat-icon>\n                </mat-card-title>\n                <img mat-card-image [src]=\"material.image\">\n                <mat-card-content>\n                    <p>\n                        {{material.description}}\n                    </p>\n                    <br/>\n                    {{material.keywordList}}\n                </mat-card-content>\n                <mat-card-actions>\n                    <a href=\"teach\"><button mat-button>TAKE</button></a>\n                </mat-card-actions>\n            </mat-card>\n        </div>\n        <!--\n        <mat-card class=\"example-card\">\n            <mat-card-header>\n                <mat-card-title>Shiba Inu</mat-card-title>\n                <mat-card-subtitle>Dog Breed</mat-card-subtitle>\n            </mat-card-header>\n            <img mat-card-image src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\"\n                 alt=\"Photo of a Shiba Inu\">\n            <mat-card-content>\n                <p>\n                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.\n                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally\n                    bred for hunting.\n                </p>\n            </mat-card-content>\n            <mat-card-actions>\n                <button mat-button>TAKE</button>\n            </mat-card-actions>\n        </mat-card>\n        -->\n\n    </div>\n\n    <ng-template #loggedOut>\n        Please login.\n    </ng-template>\n</div>"
+module.exports = "<div class=\"container\">\n        <mat-form-field class=\"search-form\">\n            <input matInput placeholder=\"Search Materials\" type=\"text\" [(ngModel)]=\"searchKey\">\n        </mat-form-field>\n        <button mat-stroked-button color=\"warn\" (click)=\"searchMaterialsByKeyword()\"  style=\"margin-left: 5px\"\n                [disabled]=\"info.token==null\">🔎 Search</button>\n        <br/>\n        <br/>\n        <p *ngIf=\"materials.length==0\">{{searchMessage}}</p>\n        <div fxLayout=\"row wrap\"  fxLayoutGap=\"32px\" fxLayoutAlign=\"flex-start\">\n            <mat-card class=\"material-card\" fxFlex=\"0 1 calc(50% - 32px)\"\n                      *ngFor=\"let material of materials\">\n\n\n                <mat-card-header>\n                    <mat-card-title>{{material.materialName}}</mat-card-title>\n                    <mat-card-subtitle>{{material.detail}}</mat-card-subtitle>\n                    <mat-card-subtitle>{{material.createdBy}}</mat-card-subtitle>\n                </mat-card-header>\n\n                <img mat-card-image [src]=\"material.image\">\n\n                <br/>\n                <br/>\n\n                <mat-card-content>\n                    <p>{{material.description}}</p>\n                    <p style=\"color: dodgerblue; font-size: small; font-weight: bold\">{{material.keywordList}}</p>\n                </mat-card-content>\n                <mat-card-actions>\n                    <button mat-stroked-button style=\"width:100%\" (click)=\"seeDetail(material.materialId)\" [disabled]=\"info.token==null\">TAKE</button>\n                </mat-card-actions>\n            </mat-card>\n        </div>\n\n</div>"
 
 /***/ }),
 
@@ -522,14 +575,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
 /* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/search.service */ "./src/app/services/search.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 
 
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent(token, searchService) {
+    function HomeComponent(token, searchService, router) {
         this.token = token;
         this.searchService = searchService;
+        this.router = router;
+        this.materials = new Array();
+        this.searchMessage = 'Material you are looking for cannot be found.';
     }
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -545,13 +603,26 @@ var HomeComponent = /** @class */ (function () {
             console.log(error);
         });
     };
+    HomeComponent.prototype.searchMaterialsByKeyword = function () {
+        var _this = this;
+        if (this.searchKey != null) {
+            this.searchService.searchMaterials(this.searchKey).subscribe(function (data) {
+                _this.materials = data;
+            }, function (error) {
+                console.log(error);
+            });
+        }
+    };
+    HomeComponent.prototype.seeDetail = function (id) {
+        this.router.navigate(['detail', id]);
+    };
     HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-home',
             template: __webpack_require__(/*! ./home.component.html */ "./src/app/home/home.component.html"),
             styles: [__webpack_require__(/*! ./home.component.css */ "./src/app/home/home.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"], _services_search_service__WEBPACK_IMPORTED_MODULE_3__["SearchService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"], _services_search_service__WEBPACK_IMPORTED_MODULE_3__["SearchService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
     ], HomeComponent);
     return HomeComponent;
 }());
@@ -578,7 +649,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"info.token; else loggedOut\">\n    <p>\n        learn works!\n    </p>\n</div>"
+module.exports = "<div *ngIf=\"info.token; else loggedOut\">\n    <div class=\"container\">\n        <h1>My Materials</h1>\n\n        <br/>\n\n        <h4>In Progress</h4>\n\n        <br/>\n\n        <h4>Completed</h4>\n\n        <br/>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -594,12 +665,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LearnComponent", function() { return LearnComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
+
 
 
 var LearnComponent = /** @class */ (function () {
-    function LearnComponent() {
+    function LearnComponent(token) {
+        this.token = token;
     }
     LearnComponent.prototype.ngOnInit = function () {
+        this.info = {
+            token: this.token.getToken(),
+            username: this.token.getUsername(),
+            authorities: this.token.getAuthorities()
+        };
     };
     LearnComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -607,7 +686,7 @@ var LearnComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./learn.component.html */ "./src/app/learn/learn.component.html"),
             styles: [__webpack_require__(/*! ./learn.component.css */ "./src/app/learn/learn.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"]])
     ], LearnComponent);
     return LearnComponent;
 }());
@@ -715,6 +794,253 @@ var LoginComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/material-detail/keyword-detail-dialog.html":
+/*!************************************************************!*\
+  !*** ./src/app/material-detail/keyword-detail-dialog.html ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1 mat-dialog-title>{{data.keyword.label}}</h1>\n<hr>\n<div mat-dialog-content>\n    Title: {{data.keyword.title}}\n    <br/>\n    Description: {{data.keyword.description}}\n    <br/>\n    <a href=\"{{data.keyword.url}}\" target=\"_blank\">Discover in Wikidata</a>\n    <br/><br/>\n</div>\n<div mat-dialog-actions>\n    <button mat-raised-button (click)=\"onNoClick()\">Close</button>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/material-detail/material-detail.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/material-detail/material-detail.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "ul li{\n    display: inline;\n}\n\n\n.option-radio-group {\n    display: flex;\n    flex-direction: column;\n    margin: 15px 0;\n}\n\n\n.option-radio-button {\n    margin: 5px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWF0ZXJpYWwtZGV0YWlsL21hdGVyaWFsLWRldGFpbC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtBQUNuQjs7O0FBR0E7SUFDSSxhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLGNBQWM7QUFDbEI7OztBQUVBO0lBQ0ksV0FBVztBQUNmIiwiZmlsZSI6InNyYy9hcHAvbWF0ZXJpYWwtZGV0YWlsL21hdGVyaWFsLWRldGFpbC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsidWwgbGl7XG4gICAgZGlzcGxheTogaW5saW5lO1xufVxuXG5cbi5vcHRpb24tcmFkaW8tZ3JvdXAge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBtYXJnaW46IDE1cHggMDtcbn1cblxuLm9wdGlvbi1yYWRpby1idXR0b24ge1xuICAgIG1hcmdpbjogNXB4O1xufVxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/material-detail/material-detail.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/material-detail/material-detail.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"info.token; else loggedOut\">\n\n    <div class=\"container\">\n\n        <h3>{{material.title}}</h3>\n\n        <mat-horizontal-stepper [linear]=\"true\" #stepper>\n            <ng-template matStepperIcon=\"done\" let-index=\"index\">\n                {{index+1}}\n            </ng-template>\n\n            <mat-step *ngFor=\"let content of material.contents\">\n\n                <ng-template matStepLabel>{{content.title}}</ng-template>\n\n                <img [src]=\"content.image\" style=\"width: 100%;\">\n\n                <br/><br/>\n\n                <h4>{{content.title}}</h4>\n\n                <em>Author: {{material.createdBy}} , {{material.dateCreated | date:'fullDate'}}</em>\n\n                <br/><br/>\n\n                <div [innerHTML]=\"content.explanation\"></div>\n\n                <ul>\n                    <li *ngFor=\"let keyword of content.keywords\" style=\"margin-left: 5px\">\n                        <button mat-raised-button (click)=\"openKeywordDialog(keyword)\">{{keyword.label}}</button>\n                    </li>\n                </ul>\n\n                <section style=\"background-color: whitesmoke\">\n                    <ol style=\"font-weight: bold\">\n                        <li *ngFor=\"let question of content.questions\">\n                            <label id=\"option-radio-group-label\">{{question.questionText}}</label>\n                            <mat-radio-group\n                                    aria-labelledby=\"option-radio-group-label\"\n                                    class=\"option-radio-group\">\n                                <mat-radio-button class=\"option-radio-button\" *ngFor=\"let option of question.options\"\n                                                  [value]=\"option\" (change)=\"onSelectionChange(question.id,option.id)\">\n                                    {{option.optionText}}\n                                </mat-radio-button>\n                            </mat-radio-group>\n\n                        </li>\n                    </ol>\n\n                </section>\n\n\n                <br/><br/>\n\n                <div>\n                    <button mat-button (click)=\"complete(material.id,content.id)\" style=\"width: 100%\"\n                            mat-raised-button color=\"warn\"\n                            [disabled]=isCompleted(material.id,content.id)>\n                        COMPLETE\n                    </button>\n                </div>\n\n            </mat-step>\n\n        </mat-horizontal-stepper>\n\n    </div>\n\n\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/material-detail/material-detail.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/material-detail/material-detail.component.ts ***!
+  \**************************************************************/
+/*! exports provided: MaterialDetailComponent, KeywordDetailDialog */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaterialDetailComponent", function() { return MaterialDetailComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KeywordDetailDialog", function() { return KeywordDetailDialog; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/search.service */ "./src/app/services/search.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _services_learn_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/learn.service */ "./src/app/services/learn.service.ts");
+
+
+
+
+
+
+
+var MaterialDetailComponent = /** @class */ (function () {
+    function MaterialDetailComponent(token, route, searchService, dialog, learnService) {
+        this.token = token;
+        this.route = route;
+        this.searchService = searchService;
+        this.dialog = dialog;
+        this.learnService = learnService;
+        this.answerList = new Array();
+    }
+    MaterialDetailComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.info = {
+            token: this.token.getToken(),
+            username: this.token.getUsername(),
+            authorities: this.token.getAuthorities()
+        };
+        this.sub = this.route.params.subscribe(function (params) {
+            _this.id = +params['id'];
+        });
+        this.material = this.searchService.getMaterialDetail(this.id).subscribe(function (data) {
+            _this.material = data;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    MaterialDetailComponent.prototype.ngOnDestroy = function () {
+        this.sub.unsubscribe();
+    };
+    MaterialDetailComponent.prototype.complete = function (materialId, contentId) {
+        var _this = this;
+        this.stepper.selected.completed = true;
+        this.stepper.selected.editable = false;
+        this.progress = {
+            username: this.token.getUsername(),
+            materialId: materialId,
+            contentId: contentId,
+            answerList: this.answerList
+        };
+        this.learnService.createProgress(this.progress).subscribe(function (data) {
+            _this.status = data.isSuccess;
+        }, function (error) {
+            console.log(error);
+        });
+        this.stepper.next();
+    };
+    MaterialDetailComponent.prototype.openKeywordDialog = function (keyword) {
+        var dialogRef = this.dialog.open(KeywordDetailDialog, {
+            width: '300px',
+            data: { keyword: keyword }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log('The dialog was closed');
+        });
+    };
+    MaterialDetailComponent.prototype.onSelectionChange = function (selectedQuestion, selectedOption) {
+        var found = false;
+        for (var _i = 0, _a = this.answerList; _i < _a.length; _i++) {
+            var a = _a[_i];
+            if (a.questionId == selectedQuestion) {
+                a.optionId = selectedOption;
+                found = true;
+            }
+        }
+        if (!found) {
+            this.answer = {
+                questionId: selectedQuestion,
+                optionId: selectedOption
+            };
+            this.answerList.push(this.answer);
+        }
+        console.log(selectedOption + "selected");
+        console.log(this.answerList);
+    };
+    MaterialDetailComponent.prototype.isCompleted = function (materialId, contentId) {
+        /*
+        this.progress = {
+            username: this.token.getUsername(),
+            materialId: materialId,
+            contentId: contentId,
+            answerList: this.answerList
+        };
+
+        this.learnService.checkIsCompleted(this.progress).subscribe(data =>
+        {
+            this.isContentCompleted = data.isSuccess;
+        }, error => {
+            console.log(error);
+        });
+
+        return this.isContentCompleted;
+        */
+        return false;
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_5__["MatHorizontalStepper"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatHorizontalStepper"])
+    ], MaterialDetailComponent.prototype, "stepper", void 0);
+    MaterialDetailComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-material-detail',
+            template: __webpack_require__(/*! ./material-detail.component.html */ "./src/app/material-detail/material-detail.component.html"),
+            styles: [__webpack_require__(/*! ./material-detail.component.css */ "./src/app/material-detail/material-detail.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _services_search_service__WEBPACK_IMPORTED_MODULE_4__["SearchService"], _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatDialog"],
+            _services_learn_service__WEBPACK_IMPORTED_MODULE_6__["LearnService"]])
+    ], MaterialDetailComponent);
+    return MaterialDetailComponent;
+}());
+
+var KeywordDetailDialog = /** @class */ (function () {
+    function KeywordDetailDialog(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+    }
+    KeywordDetailDialog.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    KeywordDetailDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'keyword-detail-dialog',
+            template: __webpack_require__(/*! ./keyword-detail-dialog.html */ "./src/app/material-detail/keyword-detail-dialog.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_5__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_5__["MatDialogRef"], Object])
+    ], KeywordDetailDialog);
+    return KeywordDetailDialog;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/model/material.ts":
+/*!***********************************!*\
+  !*** ./src/app/model/material.ts ***!
+  \***********************************/
+/*! exports provided: Material, Content, Keyword, Question, Option, Answer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Material", function() { return Material; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Content", function() { return Content; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Keyword", function() { return Keyword; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Question", function() { return Question; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Option", function() { return Option; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Answer", function() { return Answer; });
+var Material = /** @class */ (function () {
+    function Material() {
+    }
+    return Material;
+}());
+
+var Content = /** @class */ (function () {
+    function Content() {
+    }
+    return Content;
+}());
+
+var Keyword = /** @class */ (function () {
+    function Keyword() {
+    }
+    return Keyword;
+}());
+
+var Question = /** @class */ (function () {
+    function Question() {
+    }
+    return Question;
+}());
+
+var Option = /** @class */ (function () {
+    function Option() {
+        this.isAnswer = false;
+    }
+    return Option;
+}());
+
+var Answer = /** @class */ (function () {
+    function Answer() {
+    }
+    return Answer;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/register/register.component.css":
 /*!*************************************************!*\
   !*** ./src/app/register/register.component.css ***!
@@ -794,6 +1120,51 @@ var RegisterComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/learn.service.ts":
+/*!*******************************************!*\
+  !*** ./src/app/services/learn.service.ts ***!
+  \*******************************************/
+/*! exports provided: LearnService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LearnService", function() { return LearnService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({ 'Content-Type': 'application/json' })
+};
+var LearnService = /** @class */ (function () {
+    function LearnService(http) {
+        this.http = http;
+        this.learnUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl + '/learn/';
+    }
+    LearnService.prototype.createProgress = function (progress) {
+        return this.http.post(this.learnUrl + 'progress', progress, httpOptions);
+    };
+    LearnService.prototype.checkIsCompleted = function (progress) {
+        return this.http.post(this.learnUrl + 'isCompleted', progress, httpOptions);
+    };
+    LearnService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], LearnService);
+    return LearnService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/search.service.ts":
 /*!********************************************!*\
   !*** ./src/app/services/search.service.ts ***!
@@ -821,20 +1192,88 @@ var SearchService = /** @class */ (function () {
     function SearchService(http, token) {
         this.http = http;
         this.token = token;
-        this.searchAllUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl + '/search/';
+        this.searchUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl + '/search/';
         this.searchCreatedBy = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl + '/search/createdBy/';
+        this.searchContents = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl + '/search/content/';
+        this.searchMaterialsUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl + '/search/keyword/';
     }
     SearchService.prototype.getAllMaterialSummaries = function () {
-        return this.http.get(this.searchAllUrl, { responseType: 'json' });
+        return this.http.get(this.searchUrl, { responseType: 'json' });
     };
     SearchService.prototype.getCreatedByMaterials = function () {
         return this.http.get(this.searchCreatedBy + this.token.getUsername(), httpOptions);
+    };
+    SearchService.prototype.getContentsByMaterial = function (materialId) {
+        return this.http.get(this.searchContents + materialId, httpOptions);
+    };
+    SearchService.prototype.searchMaterials = function (searchKey) {
+        return this.http.get(this.searchMaterialsUrl + searchKey, httpOptions);
+    };
+    SearchService.prototype.getMaterialDetail = function (id) {
+        return this.http.get(this.searchUrl + 'id/' + id, httpOptions);
+    };
+    SearchService.prototype.getInProgressMaterials = function () {
+        return this.http.get(this.searchUrl + 'inProgress/' + this.token.getUsername(), httpOptions);
+    };
+    SearchService.prototype.getCompletedMaterials = function () {
+        return this.http.get(this.searchUrl + 'completed/' + this.token.getUsername(), httpOptions);
     };
     SearchService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_4__["TokenStorageService"]])
     ], SearchService);
     return SearchService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/teach.service.ts":
+/*!*******************************************!*\
+  !*** ./src/app/services/teach.service.ts ***!
+  \*******************************************/
+/*! exports provided: TeachService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TeachService", function() { return TeachService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({ 'Content-Type': 'application/json' })
+};
+var TeachService = /** @class */ (function () {
+    function TeachService(http) {
+        this.http = http;
+        this.teachUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl + '/teach/';
+    }
+    TeachService.prototype.createMaterial = function (material) {
+        return this.http.post(this.teachUrl + 'create/material/', material, httpOptions);
+    };
+    TeachService.prototype.searchWiki = function (keyword) {
+        return this.http.get(this.teachUrl + 'search/' + keyword, httpOptions);
+    };
+    TeachService.prototype.createContent = function (content, materialId) {
+        return this.http.post(this.teachUrl + 'create/content/' + materialId, content, httpOptions);
+    };
+    TeachService.prototype.createQuestion = function (question, contentId) {
+        return this.http.post(this.teachUrl + 'create/question/' + contentId, question, httpOptions);
+    };
+    TeachService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], TeachService);
+    return TeachService;
 }());
 
 
@@ -885,7 +1324,7 @@ var UserService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".material, .topics, .contents, .keywords, .questions, .options, p{\n    margin: 10px;\n}\n\ninput{\n    margin: 2px;\n}\n\ninput[type=\"button\"], p{\n    margin-top: 5px;\n}\n\n.material{\n    border: black solid 1px;\n    background-color: #ffffff;\n}\n\n.topics{\n    border: black solid 1px;\n    background-color: #f0f0f0;\n}\n\n.contents{\n    border: black solid 1px;\n    background-color: #bfbfbf;\n}\n\n.keywords{\n    border: black solid 1px;\n    background-color: #aaaaaa;\n}\n\n.questions{\n    border: black solid 1px;\n    background-color: #aaaaaa;\n}\n\n.options{\n    border: black solid 1px;\n    background-color: #8e8e8e;\n}\n\ninput[value=\"Add Material\"]{\n    background-color: #ff7f7f;\n}\n\ninput[value=\"Add Topic\"]{\n    background-color: #7fbf7f;\n}\n\ninput[value=\"Add Content\"]{\n     background-color: red;\n }\n\ninput[value=\"Add Keyword\"]{\n    background-color: cadetblue;\n}\n\ninput[value=\"Add Question\"]{\n    background-color: violet;\n}\n\ninput[value=\"Add Option\"]{\n    background-color: #a94442;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhY2gvY3JlYXRlL2NyZWF0ZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksWUFBWTtBQUNoQjs7QUFFQTtJQUNJLFdBQVc7QUFDZjs7QUFFQTtJQUNJLGVBQWU7QUFDbkI7O0FBR0E7SUFDSSx1QkFBdUI7SUFDdkIseUJBQXlCO0FBQzdCOztBQUVBO0lBQ0ksdUJBQXVCO0lBQ3ZCLHlCQUF5QjtBQUM3Qjs7QUFFQTtJQUNJLHVCQUF1QjtJQUN2Qix5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSx1QkFBdUI7SUFDdkIseUJBQXlCO0FBQzdCOztBQUVBO0lBQ0ksdUJBQXVCO0lBQ3ZCLHlCQUF5QjtBQUM3Qjs7QUFFQTtJQUNJLHVCQUF1QjtJQUN2Qix5QkFBeUI7QUFDN0I7O0FBSUE7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7S0FDSyxxQkFBcUI7Q0FDekI7O0FBRUQ7SUFDSSwyQkFBMkI7QUFDL0I7O0FBRUE7SUFDSSx3QkFBd0I7QUFDNUI7O0FBRUE7SUFDSSx5QkFBeUI7QUFDN0IiLCJmaWxlIjoic3JjL2FwcC90ZWFjaC9jcmVhdGUvY3JlYXRlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0ZXJpYWwsIC50b3BpY3MsIC5jb250ZW50cywgLmtleXdvcmRzLCAucXVlc3Rpb25zLCAub3B0aW9ucywgcHtcbiAgICBtYXJnaW46IDEwcHg7XG59XG5cbmlucHV0e1xuICAgIG1hcmdpbjogMnB4O1xufVxuXG5pbnB1dFt0eXBlPVwiYnV0dG9uXCJdLCBwe1xuICAgIG1hcmdpbi10b3A6IDVweDtcbn1cblxuXG4ubWF0ZXJpYWx7XG4gICAgYm9yZGVyOiBibGFjayBzb2xpZCAxcHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjtcbn1cblxuLnRvcGljc3tcbiAgICBib3JkZXI6IGJsYWNrIHNvbGlkIDFweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjBmMGYwO1xufVxuXG4uY29udGVudHN7XG4gICAgYm9yZGVyOiBibGFjayBzb2xpZCAxcHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2JmYmZiZjtcbn1cblxuLmtleXdvcmRze1xuICAgIGJvcmRlcjogYmxhY2sgc29saWQgMXB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNhYWFhYWE7XG59XG5cbi5xdWVzdGlvbnN7XG4gICAgYm9yZGVyOiBibGFjayBzb2xpZCAxcHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2FhYWFhYTtcbn1cblxuLm9wdGlvbnN7XG4gICAgYm9yZGVyOiBibGFjayBzb2xpZCAxcHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzhlOGU4ZTtcbn1cblxuXG5cbmlucHV0W3ZhbHVlPVwiQWRkIE1hdGVyaWFsXCJde1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZjdmN2Y7XG59XG5cbmlucHV0W3ZhbHVlPVwiQWRkIFRvcGljXCJde1xuICAgIGJhY2tncm91bmQtY29sb3I6ICM3ZmJmN2Y7XG59XG5cbmlucHV0W3ZhbHVlPVwiQWRkIENvbnRlbnRcIl17XG4gICAgIGJhY2tncm91bmQtY29sb3I6IHJlZDtcbiB9XG5cbmlucHV0W3ZhbHVlPVwiQWRkIEtleXdvcmRcIl17XG4gICAgYmFja2dyb3VuZC1jb2xvcjogY2FkZXRibHVlO1xufVxuXG5pbnB1dFt2YWx1ZT1cIkFkZCBRdWVzdGlvblwiXXtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2aW9sZXQ7XG59XG5cbmlucHV0W3ZhbHVlPVwiQWRkIE9wdGlvblwiXXtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjYTk0NDQyO1xufSJdfQ== */"
+module.exports = ".mat-tab-nav-bar{\n    background: #ffdd57;\n}\n\n.mat-tab-link{\n    color: #000;\n}\n\n.container{\n    width: 90%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhY2gvY3JlYXRlL2NyZWF0ZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksbUJBQW1CO0FBQ3ZCOztBQUVBO0lBQ0ksV0FBVztBQUNmOztBQUVBO0lBQ0ksVUFBVTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvdGVhY2gvY3JlYXRlL2NyZWF0ZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hdC10YWItbmF2LWJhcntcbiAgICBiYWNrZ3JvdW5kOiAjZmZkZDU3O1xufVxuXG4ubWF0LXRhYi1saW5re1xuICAgIGNvbG9yOiAjMDAwO1xufVxuXG4uY29udGFpbmVye1xuICAgIHdpZHRoOiA5MCU7XG59Il19 */"
 
 /***/ }),
 
@@ -896,7 +1335,7 @@ module.exports = ".material, .topics, .contents, .keywords, .questions, .options
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"info.token; else loggedOut\">\n   <h2>Create Material</h2>\n</div>"
+module.exports = "<div class=\"container\">\n\n   <br/>\n\n   <nav mat-tab-nav-bar>\n      <a mat-tab-link [routerLink]=\"['/teach/create/material']\">Create Material</a>\n      <a mat-tab-link [routerLink]=\"['/teach/create/content']\">Create Content</a>\n      <a mat-tab-link [routerLink]=\"['/teach/create/question']\">Create Question</a>\n   </nav>\n\n\n   <router-outlet></router-outlet>\n\n\n</div>"
 
 /***/ }),
 
@@ -942,29 +1381,300 @@ var CreateComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/teach/create/data/formData.service.ts":
-/*!*******************************************************!*\
-  !*** ./src/app/teach/create/data/formData.service.ts ***!
-  \*******************************************************/
-/*! exports provided: FormDataService */
+/***/ "./src/app/teach/create/material/material.component.css":
+/*!**************************************************************!*\
+  !*** ./src/app/teach/create/material/material.component.css ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".container{\n    width: 90%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhY2gvY3JlYXRlL21hdGVyaWFsL21hdGVyaWFsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxVQUFVO0FBQ2QiLCJmaWxlIjoic3JjL2FwcC90ZWFjaC9jcmVhdGUvbWF0ZXJpYWwvbWF0ZXJpYWwuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXJ7XG4gICAgd2lkdGg6IDkwJTtcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/teach/create/material/material.component.html":
+/*!***************************************************************!*\
+  !*** ./src/app/teach/create/material/material.component.html ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"info.token; else loggedOut\">\n\n    <div class=\"container\">\n\n        <br/>\n\n        <h2>Material Information</h2>\n        <br/>\n\n        <form name=\"form\" (ngSubmit)=\"f.form.valid && onSubmit()\" #f=\"ngForm\" novalidate>\n\n            <div class=\"form-group\">\n                <input id=\"title\" name=\"title\" class=\"form-control\" placeholder=\"Title\"\n                       required [(ngModel)]=\"data.title\" #title=\"ngModel\"/>\n                <div *ngIf=\"title.invalid && (title.dirty || title.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"title.errors.required\">Material title is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"description\" name=\"description\" class=\"form-control\" placeholder=\"Description\"\n                       required [(ngModel)]=\"data.description\" #description=\"ngModel\"/>\n                <div *ngIf=\"description.invalid && (description.dirty || description.touched)\"\n                     class=\"alert alert-danger\">\n                    <div *ngIf=\"description.errors.required\">Material description is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"image\" name=\"image\" class=\"form-control\" placeholder=\"Image\"\n                       required [(ngModel)]=\"data.image\" #image=\"ngModel\"/>\n                <div *ngIf=\"image.invalid && (image.dirty || image.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"image.errors.required\">Material image is required.</div>\n                </div>\n            </div>\n\n\n            <div class=\"form-group\">\n                <button class=\"btn btn-primary\" style=\"width:100%\" [disabled]=\"f.form.pristine || f.form.invalid\">Create\n                    Material\n                </button>\n            </div>\n\n            <br/>\n            <h6 style=\"color: #3e5e9a\">{{message}}</h6>\n\n\n        </form>\n    </div>\n    <ng-template #loggedOut>\n        Please login.\n    </ng-template>\n\n\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/teach/create/material/material.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/teach/create/material/material.component.ts ***!
+  \*************************************************************/
+/*! exports provided: MaterialComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormDataService", function() { return FormDataService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaterialComponent", function() { return MaterialComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
+/* harmony import */ var _services_teach_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/teach.service */ "./src/app/services/teach.service.ts");
 
 
-var FormDataService = /** @class */ (function () {
-    function FormDataService() {
+
+
+var MaterialComponent = /** @class */ (function () {
+    function MaterialComponent(token, teachService) {
+        this.token = token;
+        this.teachService = teachService;
+        this.data = {};
     }
-    FormDataService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-            providedIn: 'root'
-        })
-    ], FormDataService);
-    return FormDataService;
+    MaterialComponent.prototype.ngOnInit = function () {
+        this.info = {
+            token: this.token.getToken(),
+            username: this.token.getUsername(),
+            authorities: this.token.getAuthorities()
+        };
+    };
+    MaterialComponent.prototype.onSubmit = function () {
+        var _this = this;
+        this.data.createdBy = this.info.username;
+        this.teachService.createMaterial(this.data).subscribe(function (data) {
+            console.log(data);
+            _this.message = data.message;
+        }, function (error) {
+            console.log(error);
+        });
+        //this.cleanFields();
+    };
+    MaterialComponent.prototype.cleanFields = function () {
+        this.data.title = null;
+        this.data.description = null;
+        this.data.image = null;
+    };
+    MaterialComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-material',
+            template: __webpack_require__(/*! ./material.component.html */ "./src/app/teach/create/material/material.component.html"),
+            styles: [__webpack_require__(/*! ./material.component.css */ "./src/app/teach/create/material/material.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"], _services_teach_service__WEBPACK_IMPORTED_MODULE_3__["TeachService"]])
+    ], MaterialComponent);
+    return MaterialComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/teach/create/question/question.component.css":
+/*!**************************************************************!*\
+  !*** ./src/app/teach/create/question/question.component.css ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".container{\n    width: 90%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhY2gvY3JlYXRlL3F1ZXN0aW9uL3F1ZXN0aW9uLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxVQUFVO0FBQ2QiLCJmaWxlIjoic3JjL2FwcC90ZWFjaC9jcmVhdGUvcXVlc3Rpb24vcXVlc3Rpb24uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXJ7XG4gICAgd2lkdGg6IDkwJTtcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/teach/create/question/question.component.html":
+/*!***************************************************************!*\
+  !*** ./src/app/teach/create/question/question.component.html ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"info.token; else loggedOut\">\n\n  <div class=\"container\">\n\n    <br/>\n    <h2>Question Information</h2>\n    <br/>\n\n    <form name=\"form\" (ngSubmit)=\"f.form.valid\" #f=\"ngForm\" novalidate>\n\n      <div class=\"form-group\">\n        <mat-select [(ngModel)]=\"selectedMaterial\" name=\"material\" required #material=\"ngModel\"\n                    placeholder=\"Select Material\" (selectionChange)=\"onChange()\">\n          <mat-option *ngFor=\"let material of materials\" [value]=\"material.materialId\">\n            {{material.materialName}}\n          </mat-option>\n        </mat-select>\n        <div *ngIf=\"material.invalid && (material.dirty || material.touched) \" class=\"alert alert-danger\">\n          <div *ngIf=\"material.errors.required\">Material is required.</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <mat-select [(ngModel)]=\"selectedContent\" name=\"content\" required #content=\"ngModel\"\n                    placeholder=\"Select Content\">\n          <mat-option *ngFor=\"let content of contents\" [value]=\"content.id\">\n            {{content.title}}\n          </mat-option>\n        </mat-select>\n        <div *ngIf=\"content.invalid && (content.dirty || content.touched) \" class=\"alert alert-danger\">\n          <div *ngIf=\"content.errors.required\">Content is required.</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <input id=\"questionText\" name=\"questionText\" class=\"form-control\" placeholder=\"Question Text\"\n               required [(ngModel)]=\"question.questionText\" #questionText=\"ngModel\"/>\n        <div *ngIf=\"questionText.invalid && (questionText.dirty || questionText.touched)\" class=\"alert alert-danger\">\n          <div *ngIf=\"questionText.errors.required\">Question Text is required.</div>\n        </div>\n      </div>\n\n\n      <section style=\"background-color: #dddddd; padding: 1em\">\n        <mat-form-field>\n          <input matInput placeholder=\"Option Text\" name=\"option\" [(ngModel)]=\"selectedOption.optionText\">\n        </mat-form-field>\n        <mat-checkbox name=\"value\" [(ngModel)]=\"selectedOption.isAnswer\">Is correct answer?</mat-checkbox>\n        <button mat-button (click)=\"addOption()\">➕ Add Option</button>\n\n        <br/>\n        <li *ngFor=\"let option of optionList\">{{option.optionText}} - {{option.isAnswer}}</li>\n      </section>\n\n      <br/>\n      <br/>\n\n      <div class=\"form-group\">\n        <button class=\"btn btn-primary\" style=\"width:100%\" (click)=\"createQuestion()\" [disabled]=\"f.form.pristine || f.form.invalid\">Create Question</button>\n      </div>\n\n      <br/>\n      <h6 style=\"color: #3e5e9a\">{{message}}</h6>\n\n    </form>\n\n\n  </div>\n\n  <br/>\n\n  <ng-template #loggedOut>\n    Please login.\n  </ng-template>\n\n\n\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/teach/create/question/question.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/teach/create/question/question.component.ts ***!
+  \*************************************************************/
+/*! exports provided: QuestionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuestionComponent", function() { return QuestionComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
+/* harmony import */ var _services_teach_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/teach.service */ "./src/app/services/teach.service.ts");
+/* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/search.service */ "./src/app/services/search.service.ts");
+/* harmony import */ var _model_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../model/material */ "./src/app/model/material.ts");
+
+
+
+
+
+
+var QuestionComponent = /** @class */ (function () {
+    function QuestionComponent(token, teachService, searchService) {
+        this.token = token;
+        this.teachService = teachService;
+        this.searchService = searchService;
+        this.question = new _model_material__WEBPACK_IMPORTED_MODULE_5__["Question"]();
+        this.contents = new Array();
+        this.materials = new Array();
+        this.optionList = new Array();
+        this.selectedOption = new _model_material__WEBPACK_IMPORTED_MODULE_5__["Option"]();
+    }
+    QuestionComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.info = {
+            token: this.token.getToken(),
+            username: this.token.getUsername(),
+            authorities: this.token.getAuthorities()
+        };
+        this.searchService.getCreatedByMaterials().subscribe(function (data) {
+            _this.materials = data;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    QuestionComponent.prototype.onChange = function () {
+        var _this = this;
+        this.searchService.getContentsByMaterial(this.selectedMaterial).subscribe(function (data) {
+            _this.contents = data;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    QuestionComponent.prototype.createQuestion = function () {
+        var _this = this;
+        this.question.options = this.optionList;
+        console.log(this.question);
+        this.teachService.createQuestion(this.question, this.selectedContent).subscribe(function (data) {
+            console.log(data);
+            _this.message = data.message;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    QuestionComponent.prototype.addOption = function () {
+        console.log(this.selectedOption);
+        this.optionList.push(this.selectedOption);
+        this.selectedOption = new _model_material__WEBPACK_IMPORTED_MODULE_5__["Option"]();
+    };
+    QuestionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-question',
+            template: __webpack_require__(/*! ./question.component.html */ "./src/app/teach/create/question/question.component.html"),
+            styles: [__webpack_require__(/*! ./question.component.css */ "./src/app/teach/create/question/question.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"], _services_teach_service__WEBPACK_IMPORTED_MODULE_3__["TeachService"], _services_search_service__WEBPACK_IMPORTED_MODULE_4__["SearchService"]])
+    ], QuestionComponent);
+    return QuestionComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/teach/create/topic/topic.component.css":
+/*!********************************************************!*\
+  !*** ./src/app/teach/create/topic/topic.component.css ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".container{\n    width: 90%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhY2gvY3JlYXRlL3RvcGljL3RvcGljLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxVQUFVO0FBQ2QiLCJmaWxlIjoic3JjL2FwcC90ZWFjaC9jcmVhdGUvdG9waWMvdG9waWMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXJ7XG4gICAgd2lkdGg6IDkwJTtcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/teach/create/topic/topic.component.html":
+/*!*********************************************************!*\
+  !*** ./src/app/teach/create/topic/topic.component.html ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"info.token; else loggedOut\">\n\n    <div class=\"container\">\n\n        <br/>\n        <h2>Content Information</h2>\n        <br/>\n\n        <form name=\"form\" (ngSubmit)=\"f.form.valid\" #f=\"ngForm\" novalidate>\n\n            <div class=\"form-group\">\n                <mat-select [(ngModel)]=\"selectedMaterial\" name=\"material\" required #material=\"ngModel\" placeholder=\"Select Material\" >\n                    <mat-option *ngFor=\"let material of materials\" [value]=\"material.materialId\">\n                        {{material.materialName}}\n                    </mat-option>\n                </mat-select>\n                <div *ngIf=\"material.invalid && (material.dirty || material.touched) \" class=\"alert alert-danger\">\n                    <div *ngIf=\"material.errors.required\">Material is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"title\" name=\"title\" class=\"form-control\" placeholder=\"Title\"\n                       required [(ngModel)]=\"content.title\" #title=\"ngModel\"/>\n                <div *ngIf=\"title.invalid && (title.dirty || title.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"title.errors.required\">Content title is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"image\" name=\"image\" class=\"form-control\" placeholder=\"Image\"\n                       required [(ngModel)]=\"content.image\" #image=\"ngModel\"/>\n                <div *ngIf=\"image.invalid && (image.dirty || image.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"image.errors.required\">Content image is required.</div>\n                </div>\n            </div>\n\n            <section style=\"background-color: #dddddd; padding: 1em\">\n                <mat-form-field>\n                    <input matInput placeholder=\"Keyword\" name=\"keyword\" [(ngModel)]=\"keyword\">\n                </mat-form-field>\n                <button mat-button (click)=\"searchWiki(keyword)\">🔎 Search Wikidata</button>\n\n                <mat-select id=\"foundWikis\" [(ngModel)]=\"selectedKeyword\" name=\"selectedWiki\" placeholder=\"Select keyword from wikidata\">\n                    <mat-option *ngFor=\"let wiki of wikis\" [value]=\"wiki\">{{wiki.description}}\n                    </mat-option>\n                </mat-select>\n\n                <br/>\n                <br/>\n                <a *ngIf=\"selectedKeyword\" href=\"{{selectedKeyword.url}}\">{{selectedKeyword.title}}</a>\n\n                <button mat-button (click)=\"addKeyword()\">➕ Add Keyword</button>\n                <li *ngFor=\"let keyword of keywordList\">{{keyword.label}}</li>\n\n            </section>\n\n            <br/>\n\n            <div class=\"form-group\">\n                <app-ngx-editor id=\"explanation\" name=\"explanation\" [placeholder]=\"'Enter explanation here...'\"\n                                [spellcheck]=\"true\"\n                                [(ngModel)]=\"content.explanation\" #explanation=\"ngModel\"></app-ngx-editor>\n            </div>\n\n\n            <br/>\n\n            <div class=\"form-group\">\n                <button class=\"btn btn-primary\" style=\"width:100%\" (click)=\"createTopic()\" [disabled]=\"f.form.pristine || f.form.invalid\">Create Content</button>\n            </div>\n\n            <br/>\n            <h6 style=\"color: #3e5e9a\">{{message}}</h6>\n\n        </form>\n\n\n    </div>\n\n    <ng-template #loggedOut>\n        Please login.\n    </ng-template>\n\n\n\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/teach/create/topic/topic.component.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/teach/create/topic/topic.component.ts ***!
+  \*******************************************************/
+/*! exports provided: TopicComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopicComponent", function() { return TopicComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
+/* harmony import */ var _model_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../model/material */ "./src/app/model/material.ts");
+/* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/search.service */ "./src/app/services/search.service.ts");
+/* harmony import */ var _services_teach_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/teach.service */ "./src/app/services/teach.service.ts");
+
+
+
+
+
+
+var TopicComponent = /** @class */ (function () {
+    function TopicComponent(token, teachService, searchService) {
+        this.token = token;
+        this.teachService = teachService;
+        this.searchService = searchService;
+        this.content = new _model_material__WEBPACK_IMPORTED_MODULE_3__["Content"]();
+        this.wikis = new Array();
+        this.selectedKeyword = new _model_material__WEBPACK_IMPORTED_MODULE_3__["Keyword"]();
+        this.keywordList = new Array();
+        this.materials = new Array();
+    }
+    TopicComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.info = {
+            token: this.token.getToken(),
+            username: this.token.getUsername(),
+            authorities: this.token.getAuthorities()
+        };
+        this.searchService.getCreatedByMaterials().subscribe(function (data) {
+            _this.materials = data;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    TopicComponent.prototype.createTopic = function () {
+        var _this = this;
+        this.content.keywords = this.keywordList;
+        this.content.status = 1;
+        console.log(this.content);
+        this.teachService.createContent(this.content, this.selectedMaterial).subscribe(function (data) {
+            console.log(data);
+            _this.message = data.message;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    TopicComponent.prototype.searchWiki = function (keyword) {
+        var _this = this;
+        this.teachService.searchWiki(keyword).subscribe(function (data) {
+            console.log(data);
+            _this.wikis = data;
+        }, function (error) {
+            console.log(error);
+        });
+        console.log(keyword + ' selected');
+    };
+    TopicComponent.prototype.addKeyword = function () {
+        console.log(this.selectedKeyword);
+        this.keywordList.push(this.selectedKeyword);
+    };
+    TopicComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-topic',
+            template: __webpack_require__(/*! ./topic.component.html */ "./src/app/teach/create/topic/topic.component.html"),
+            styles: [__webpack_require__(/*! ./topic.component.css */ "./src/app/teach/create/topic/topic.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"], _services_teach_service__WEBPACK_IMPORTED_MODULE_5__["TeachService"], _services_search_service__WEBPACK_IMPORTED_MODULE_4__["SearchService"]])
+    ], TopicComponent);
+    return TopicComponent;
 }());
 
 
@@ -978,7 +1688,7 @@ var FormDataService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-tab-nav-bar{\n    background: black;\n}\n\n.mat-tab-link{\n    color: #fff;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhY2gvdGVhY2guY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLFdBQVc7QUFDZiIsImZpbGUiOiJzcmMvYXBwL3RlYWNoL3RlYWNoLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LXRhYi1uYXYtYmFye1xuICAgIGJhY2tncm91bmQ6IGJsYWNrO1xufVxuXG4ubWF0LXRhYi1saW5re1xuICAgIGNvbG9yOiAjZmZmO1xufSJdfQ== */"
+module.exports = ".mat-tab-nav-bar{\n    background: black;\n}\n\n.mat-tab-link{\n    color: #fff;\n}\n\n.container{\n    background: #fafafa;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhY2gvdGVhY2guY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLFdBQVc7QUFDZjs7QUFFQTtJQUNJLG1CQUFtQjtBQUN2QiIsImZpbGUiOiJzcmMvYXBwL3RlYWNoL3RlYWNoLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LXRhYi1uYXYtYmFye1xuICAgIGJhY2tncm91bmQ6IGJsYWNrO1xufVxuXG4ubWF0LXRhYi1saW5re1xuICAgIGNvbG9yOiAjZmZmO1xufVxuXG4uY29udGFpbmVye1xuICAgIGJhY2tncm91bmQ6ICNmYWZhZmE7XG59Il19 */"
 
 /***/ }),
 
@@ -989,7 +1699,7 @@ module.exports = ".mat-tab-nav-bar{\n    background: black;\n}\n\n.mat-tab-link{
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"info.token; else loggedOut\">\n\n    <!--\n    <div class=\"tabs is-medium\">\n        <ul>\n            <li class=\"is-active\">\n                <a routerLink=\"/teach/create\">\n                    <span class=\"icon is-small\"><i class=\"fas fa-image\" aria-hidden=\"true\"></i></span>\n                    <span>Create Material</span>\n                </a>\n            </li>\n            <li>\n                <a>\n                    <span class=\"icon is-small\"><i class=\"fas fa-music\" aria-hidden=\"true\"></i></span>\n                    <span>Create Topic</span>\n                </a>\n            </li>\n        </ul>\n    </div>\n\n-->\n\n    <nav mat-tab-nav-bar>\n        <a mat-tab-link [routerLink]=\"['/teach/create']\">Create</a>\n        <a mat-tab-link [routerLink]=\"['/teach/update']\">Update</a>\n    </nav>\n\n\n    <router-outlet></router-outlet>\n\n\n</div>\n\n"
+module.exports = "<div *ngIf=\"info.token; else loggedOut\">\n    <div class=\"container\">\n        <nav mat-tab-nav-bar>\n            <a mat-tab-link [routerLink]=\"['/teach/create']\">Create</a>\n            <a mat-tab-link [routerLink]=\"['/teach/update']\">Update</a>\n        </nav>\n\n\n        <router-outlet></router-outlet>\n\n    </div>\n\n    <ng-template #loggedOut>\n        Please login.\n    </ng-template>\n\n</div>\n"
 
 /***/ }),
 
@@ -1091,62 +1801,6 @@ var UpdateComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/topic/topic.component.css":
-/*!*******************************************!*\
-  !*** ./src/app/topic/topic.component.css ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RvcGljL3RvcGljLmNvbXBvbmVudC5jc3MifQ== */"
-
-/***/ }),
-
-/***/ "./src/app/topic/topic.component.html":
-/*!********************************************!*\
-  !*** ./src/app/topic/topic.component.html ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  topic works!\n</p>\n"
-
-/***/ }),
-
-/***/ "./src/app/topic/topic.component.ts":
-/*!******************************************!*\
-  !*** ./src/app/topic/topic.component.ts ***!
-  \******************************************/
-/*! exports provided: TopicComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopicComponent", function() { return TopicComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-
-var TopicComponent = /** @class */ (function () {
-    function TopicComponent() {
-    }
-    TopicComponent.prototype.ngOnInit = function () {
-    };
-    TopicComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-topic',
-            template: __webpack_require__(/*! ./topic.component.html */ "./src/app/topic/topic.component.html"),
-            styles: [__webpack_require__(/*! ./topic.component.css */ "./src/app/topic/topic.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], TopicComponent);
-    return TopicComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/track/track.component.css":
 /*!*******************************************!*\
   !*** ./src/app/track/track.component.css ***!
@@ -1210,7 +1864,7 @@ var TrackComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".fa-heart {\n    color: red;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdWkvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksVUFBVTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvdWkvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZhLWhlYXJ0IHtcbiAgICBjb2xvcjogcmVkO1xufVxuIl19 */"
+module.exports = ".footer{\n    margin-top: 5em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdWkvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL3VpL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mb290ZXJ7XG4gICAgbWFyZ2luLXRvcDogNWVtO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -1277,7 +1931,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar is-warning\">\n    <div class=\"container\">\n\n        <!-- logo-->\n        <div class=\"navbar-brand\">\n            <a class=\"navbar-item\" href=\"#\">🐝 G-LEARN\n            </a>\n        </div>\n\n        <!--menu -->\n        <div class=\"navbar-menu\">\n            <div class=\"navbar-end\">\n                <a *ngIf=\"authority === 'user'\" class=\"navbar-item\" href=\"learn\" >📚 LEARN</a>\n                <a *ngIf=\"authority === 'user'\" href=\"teach\" class=\"navbar-item\">📝 TEACH</a>\n                <a *ngIf=\"authority === 'user'\" href=\"track\" class=\"navbar-item\">🛤 TRACK</a>\n                <a *ngIf=\"!authority\" href=\"auth/login\" class=\"navbar-item\">LOGIN</a>\n                <a *ngIf=\"authority === 'user'\" (click)=\"logout()\" class=\"navbar-item\">LOG OUT</a>\n            </div>\n        </div>\n\n\n    </div>\n</nav>"
+module.exports = "<nav class=\"navbar is-warning\">\n    <div class=\"container\">\n\n        <!-- logo-->\n        <div class=\"navbar-brand\">\n            <a class=\"navbar-item\" href=\"#\">🐝 G-LEARN\n            </a>\n        </div>\n\n        <!--menu -->\n        <div class=\"navbar-menu\">\n            <div class=\"navbar-end\">\n                <a *ngIf=\"authority === 'user'\" class=\"navbar-item\" href=\"learn\" >📚 LEARN</a>\n                <a *ngIf=\"authority === 'user'\" href=\"teach\" class=\"navbar-item\">📝 TEACH</a>\n                <a *ngIf=\"authority === 'user'\" href=\"track\" class=\"navbar-item\">🛤 TRACK</a>\n                <a *ngIf=\"authority !== 'user'\" href=\"auth/login\" class=\"navbar-item\">LOGIN</a>\n                <a *ngIf=\"authority === 'user'\" (click)=\"logout()\" class=\"navbar-item\">LOG OUT</a>\n            </div>\n        </div>\n\n\n    </div>\n</nav>"
 
 /***/ }),
 
