@@ -4,6 +4,7 @@
 @import "assets/css/form.css";
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";
+@import "~bulma/css/bulma.css";
 
 body {
     font-family: Roboto, Arial, sans-serif;
