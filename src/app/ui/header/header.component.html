@@ -1,12 +1,52 @@
-<nav class="navbar is-warning">
-    <div class="container">
+<nav class="navbar navbar-dark bg-primary">
 
-        <!-- logo-->
-        <div class="navbar-brand">
-            <a class="navbar-item" href="#">🐝 G-LEARN
-            </a>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"> G-LEARN 📖 </a>
+        </div>
+        <!--
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">Features</a>
+                    <a class="nav-item nav-link" href="#">Pricing</a>
+                    <a class="nav-item nav-link disabled" href="#">Disabled</a>
+                </div>
+            </div>
+            -->
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">HOME<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" *ngIf="authority === 'user'">
+                    <a class="nav-link" href="learn">LEARN</a>
+                </li>
+                <li class="nav-item" *ngIf="authority === 'user'">
+                    <a class="nav-link" href="teach">TEACH</a>
+                </li>
+                <li class="nav-item" *ngIf="authority === 'user'">
+                    <a class="nav-link" href="track">TRACK</a>
+                </li>
+                <li class="nav-item" *ngIf="authority !== 'user'">
+                    <a class="nav-link" href="auth/login">LOGIN</a>
+                </li>
+                <li class="nav-item" *ngIf="authority === 'user'">
+                    <a class="nav-link" (click)="logout()">LOGOUT</a>
+                </li>
+            </ul>
         </div>
 
+        <!--
+            <div class="container">
+
+                <a style="float: left" class="navbar-header" href="#">🐝 G-LEARN</a>
+
+                <!-- logo
+                <div class="navbar-brand">
+
+                </div>
+        -->
         <!--menu -->
         <!--
         <div class="navbar-menu">
@@ -19,14 +59,16 @@
             </div>
         </div>
         -->
+        <!--
+                <ul id="horizontal-list">
+                    <li><a *ngIf="authority === 'user'"  href="learn">📚 LEARN</a></li>
+                    <li><a *ngIf="authority === 'user'" href="teach" >📝 TEACH</a></li>
+                    <li><a *ngIf="authority === 'user'" href="track">🛤 TRACK</a></li>
+                    <li><a *ngIf="authority !== 'user'" href="auth/login">LOGIN</a></li>
+                    <li><a *ngIf="authority === 'user'" (click)="logout()">LOG OUT</a></li>
+                </ul>
 
-        <ul id="horizontal-list">
-            <li><a *ngIf="authority === 'user'"  href="learn">📚 LEARN</a></li>
-            <li><a *ngIf="authority === 'user'" href="teach" >📝 TEACH</a></li>
-            <li><a *ngIf="authority === 'user'" href="track">🛤 TRACK</a></li>
-            <li><a *ngIf="authority !== 'user'" href="auth/login">LOGIN</a></li>
-            <li><a *ngIf="authority === 'user'" (click)="logout()">LOG OUT</a></li>
-        </ul>
+            </div>
 
-    </div>
+            -->
 </nav>
