@@ -39,22 +39,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
 /* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
 /* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _teach_teach_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./teach/teach.component */ "./src/app/teach/teach.component.ts");
-/* harmony import */ var _track_track_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./track/track.component */ "./src/app/track/track.component.ts");
-/* harmony import */ var _learn_learn_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./learn/learn.component */ "./src/app/learn/learn.component.ts");
-/* harmony import */ var _teach_create_create_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./teach/create/create.component */ "./src/app/teach/create/create.component.ts");
-/* harmony import */ var _teach_update_update_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./teach/update/update.component */ "./src/app/teach/update/update.component.ts");
-/* harmony import */ var _teach_create_material_material_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./teach/create/material/material.component */ "./src/app/teach/create/material/material.component.ts");
-/* harmony import */ var _teach_create_topic_topic_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./teach/create/topic/topic.component */ "./src/app/teach/create/topic/topic.component.ts");
-/* harmony import */ var _teach_create_question_question_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./teach/create/question/question.component */ "./src/app/teach/create/question/question.component.ts");
-/* harmony import */ var _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./material-detail/material-detail.component */ "./src/app/material-detail/material-detail.component.ts");
-/* harmony import */ var _teach_update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./teach/update/update-content/update-content.component */ "./src/app/teach/update/update-content/update-content.component.ts");
-/* harmony import */ var _teach_update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./teach/update/update-question/update-question.component */ "./src/app/teach/update/update-question/update-question.component.ts");
-
-
-
-
-
+/* harmony import */ var _track_track_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./track/track.component */ "./src/app/track/track.component.ts");
+/* harmony import */ var _learn_learn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./learn/learn.component */ "./src/app/learn/learn.component.ts");
+/* harmony import */ var _update_update_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./update/update.component */ "./src/app/update/update.component.ts");
+/* harmony import */ var _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./material-detail/material-detail.component */ "./src/app/material-detail/material-detail.component.ts");
+/* harmony import */ var _update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./update/update-content/update-content.component */ "./src/app/update/update-content/update-content.component.ts");
+/* harmony import */ var _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./update/update-question/update-question.component */ "./src/app/update/update-question/update-question.component.ts");
 
 
 
@@ -87,61 +77,27 @@ var routes = [
     },
     {
         path: 'teach',
-        component: _teach_teach_component__WEBPACK_IMPORTED_MODULE_6__["TeachComponent"],
-        children: [
-            {
-                path: '',
-                redirectTo: 'create',
-                pathMatch: 'full'
-            },
-            {
-                path: 'create',
-                component: _teach_create_create_component__WEBPACK_IMPORTED_MODULE_9__["CreateComponent"],
-                children: [
-                    {
-                        path: '',
-                        redirectTo: 'material',
-                        pathMatch: 'full'
-                    },
-                    {
-                        path: 'material',
-                        component: _teach_create_material_material_component__WEBPACK_IMPORTED_MODULE_11__["MaterialComponent"]
-                    },
-                    {
-                        path: 'content',
-                        component: _teach_create_topic_topic_component__WEBPACK_IMPORTED_MODULE_12__["TopicComponent"]
-                    },
-                    {
-                        path: 'question',
-                        component: _teach_create_question_question_component__WEBPACK_IMPORTED_MODULE_13__["QuestionComponent"]
-                    }
-                ]
-            },
-            {
-                path: 'update',
-                component: _teach_update_update_component__WEBPACK_IMPORTED_MODULE_10__["UpdateComponent"]
-            },
-        ]
+        component: _update_update_component__WEBPACK_IMPORTED_MODULE_8__["UpdateComponent"]
     },
     {
         path: 'track',
-        component: _track_track_component__WEBPACK_IMPORTED_MODULE_7__["TrackComponent"]
+        component: _track_track_component__WEBPACK_IMPORTED_MODULE_6__["TrackComponent"]
     },
     {
         path: 'learn',
-        component: _learn_learn_component__WEBPACK_IMPORTED_MODULE_8__["LearnComponent"]
+        component: _learn_learn_component__WEBPACK_IMPORTED_MODULE_7__["LearnComponent"]
     },
     {
         path: 'detail/:id',
-        component: _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_14__["MaterialDetailComponent"]
+        component: _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_9__["MaterialDetailComponent"]
     },
     {
         path: 'update/material/:id',
-        component: _teach_update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_15__["UpdateContentComponent"]
+        component: _update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_10__["UpdateContentComponent"]
     },
     {
         path: 'update/content/:id',
-        component: _teach_update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_16__["UpdateQuestionComponent"]
+        component: _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_11__["UpdateQuestionComponent"]
     },
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -251,32 +207,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./services/user.service */ "./src/app/services/user.service.ts");
 /* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
 /* harmony import */ var _auth_auth_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./auth/auth.service */ "./src/app/auth/auth.service.ts");
-/* harmony import */ var _teach_teach_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./teach/teach.component */ "./src/app/teach/teach.component.ts");
-/* harmony import */ var _track_track_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./track/track.component */ "./src/app/track/track.component.ts");
-/* harmony import */ var _learn_learn_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./learn/learn.component */ "./src/app/learn/learn.component.ts");
-/* harmony import */ var _teach_create_create_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./teach/create/create.component */ "./src/app/teach/create/create.component.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
-/* harmony import */ var _ui_header_header_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./ui/header/header.component */ "./src/app/ui/header/header.component.ts");
-/* harmony import */ var _ui_footer_footer_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./ui/footer/footer.component */ "./src/app/ui/footer/footer.component.ts");
-/* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./services/search.service */ "./src/app/services/search.service.ts");
-/* harmony import */ var _teach_update_update_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./teach/update/update.component */ "./src/app/teach/update/update.component.ts");
-/* harmony import */ var _teach_create_material_material_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./teach/create/material/material.component */ "./src/app/teach/create/material/material.component.ts");
-/* harmony import */ var ngx_editor__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ngx-editor */ "./node_modules/ngx-editor/fesm5/ngx-editor.js");
-/* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
-/* harmony import */ var _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./material-detail/material-detail.component */ "./src/app/material-detail/material-detail.component.ts");
-/* harmony import */ var _teach_create_question_question_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./teach/create/question/question.component */ "./src/app/teach/create/question/question.component.ts");
-/* harmony import */ var _teach_create_topic_topic_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./teach/create/topic/topic.component */ "./src/app/teach/create/topic/topic.component.ts");
-/* harmony import */ var _services_learn_service__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./services/learn.service */ "./src/app/services/learn.service.ts");
-/* harmony import */ var _services_teach_service__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./services/teach.service */ "./src/app/services/teach.service.ts");
-/* harmony import */ var _teach_update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./teach/update/update-content/update-content.component */ "./src/app/teach/update/update-content/update-content.component.ts");
-/* harmony import */ var _teach_update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./teach/update/update-question/update-question.component */ "./src/app/teach/update/update-question/update-question.component.ts");
-
-
-
-
-
+/* harmony import */ var _track_track_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./track/track.component */ "./src/app/track/track.component.ts");
+/* harmony import */ var _learn_learn_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./learn/learn.component */ "./src/app/learn/learn.component.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _ui_header_header_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./ui/header/header.component */ "./src/app/ui/header/header.component.ts");
+/* harmony import */ var _ui_footer_footer_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./ui/footer/footer.component */ "./src/app/ui/footer/footer.component.ts");
+/* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./services/search.service */ "./src/app/services/search.service.ts");
+/* harmony import */ var _update_update_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./update/update.component */ "./src/app/update/update.component.ts");
+/* harmony import */ var ngx_editor__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ngx-editor */ "./node_modules/ngx-editor/fesm5/ngx-editor.js");
+/* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
+/* harmony import */ var _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./material-detail/material-detail.component */ "./src/app/material-detail/material-detail.component.ts");
+/* harmony import */ var _services_learn_service__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./services/learn.service */ "./src/app/services/learn.service.ts");
+/* harmony import */ var _services_teach_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./services/teach.service */ "./src/app/services/teach.service.ts");
+/* harmony import */ var _update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./update/update-content/update-content.component */ "./src/app/update/update-content/update-content.component.ts");
+/* harmony import */ var _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./update/update-question/update-question.component */ "./src/app/update/update-question/update-question.component.ts");
 
 
 
@@ -317,39 +263,38 @@ var AppModule = /** @class */ (function () {
                 _login_login_component__WEBPACK_IMPORTED_MODULE_7__["LoginComponent"],
                 _register_register_component__WEBPACK_IMPORTED_MODULE_8__["RegisterComponent"],
                 _home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"],
-                _teach_teach_component__WEBPACK_IMPORTED_MODULE_14__["TeachComponent"],
-                _track_track_component__WEBPACK_IMPORTED_MODULE_15__["TrackComponent"],
-                _learn_learn_component__WEBPACK_IMPORTED_MODULE_16__["LearnComponent"],
-                _teach_create_create_component__WEBPACK_IMPORTED_MODULE_17__["CreateComponent"],
-                _ui_header_header_component__WEBPACK_IMPORTED_MODULE_21__["HeaderComponent"],
-                _ui_footer_footer_component__WEBPACK_IMPORTED_MODULE_22__["FooterComponent"],
-                _teach_create_topic_topic_component__WEBPACK_IMPORTED_MODULE_30__["TopicComponent"],
-                _teach_update_update_component__WEBPACK_IMPORTED_MODULE_24__["UpdateComponent"],
-                _teach_create_material_material_component__WEBPACK_IMPORTED_MODULE_25__["MaterialComponent"],
-                _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_28__["MaterialDetailComponent"],
-                _teach_create_question_question_component__WEBPACK_IMPORTED_MODULE_29__["QuestionComponent"],
-                _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_28__["KeywordDetailDialog"], _teach_update_update_component__WEBPACK_IMPORTED_MODULE_24__["MaterialAddDialog"], _teach_update_update_component__WEBPACK_IMPORTED_MODULE_24__["MaterialUpdateDialog"], _teach_update_update_component__WEBPACK_IMPORTED_MODULE_24__["MaterialDeleteDialog"],
-                _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_28__["ContentResultSuccessComponent"], _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_28__["ContentResultFailComponent"], _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_28__["ContentResultCompletedComponent"],
-                _teach_update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_33__["UpdateContentComponent"], _teach_update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_34__["UpdateQuestionComponent"]
+                _track_track_component__WEBPACK_IMPORTED_MODULE_14__["TrackComponent"],
+                _learn_learn_component__WEBPACK_IMPORTED_MODULE_15__["LearnComponent"],
+                _ui_header_header_component__WEBPACK_IMPORTED_MODULE_19__["HeaderComponent"],
+                _ui_footer_footer_component__WEBPACK_IMPORTED_MODULE_20__["FooterComponent"],
+                _update_update_component__WEBPACK_IMPORTED_MODULE_22__["UpdateComponent"],
+                _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__["MaterialDetailComponent"],
+                _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__["KeywordDetailDialog"], _update_update_component__WEBPACK_IMPORTED_MODULE_22__["MaterialAddDialog"], _update_update_component__WEBPACK_IMPORTED_MODULE_22__["MaterialUpdateDialog"], _update_update_component__WEBPACK_IMPORTED_MODULE_22__["MaterialDeleteDialog"],
+                _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__["ContentResultSuccessComponent"], _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__["ContentResultFailComponent"], _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__["ContentResultCompletedComponent"],
+                _update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_28__["UpdateContentComponent"], _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_29__["UpdateQuestionComponent"],
+                _update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_28__["ContentAddDialog"], _update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_28__["ContentUpdateDialog"], _update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_28__["ContentDeleteDialog"],
+                _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_29__["QuestionAddDialog"], _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_29__["QuestionUpdateDialog"], _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_29__["QuestionDeleteDialog"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_19__["BrowserAnimationsModule"],
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_17__["BrowserAnimationsModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatToolbarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatFormFieldModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatTabsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatDialogModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatOptionModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatCheckboxModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatStepperModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatRadioModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatTooltipModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatSnackBarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatDividerModule"],
-                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_20__["FlexLayoutModule"],
-                ngx_editor__WEBPACK_IMPORTED_MODULE_26__["NgxEditorModule"],
-                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_27__["TooltipModule"].forRoot()
+                _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatToolbarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatTabsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatDialogModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatOptionModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatCheckboxModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatStepperModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatRadioModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatTooltipModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatSnackBarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatDividerModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_18__["FlexLayoutModule"],
+                ngx_editor__WEBPACK_IMPORTED_MODULE_23__["NgxEditorModule"],
+                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_24__["TooltipModule"].forRoot()
             ],
-            providers: [_auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_10__["httpInterceptorProviders"], _services_user_service__WEBPACK_IMPORTED_MODULE_11__["UserService"], _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_12__["TokenStorageService"], _auth_auth_service__WEBPACK_IMPORTED_MODULE_13__["AuthService"], _services_search_service__WEBPACK_IMPORTED_MODULE_23__["SearchService"],
-                _services_learn_service__WEBPACK_IMPORTED_MODULE_31__["LearnService"], _services_teach_service__WEBPACK_IMPORTED_MODULE_32__["TeachService"]],
+            providers: [_auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_10__["httpInterceptorProviders"], _services_user_service__WEBPACK_IMPORTED_MODULE_11__["UserService"], _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_12__["TokenStorageService"], _auth_auth_service__WEBPACK_IMPORTED_MODULE_13__["AuthService"], _services_search_service__WEBPACK_IMPORTED_MODULE_21__["SearchService"],
+                _services_learn_service__WEBPACK_IMPORTED_MODULE_26__["LearnService"], _services_teach_service__WEBPACK_IMPORTED_MODULE_27__["TeachService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]],
-            entryComponents: [_material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_28__["KeywordDetailDialog"], _teach_update_update_component__WEBPACK_IMPORTED_MODULE_24__["MaterialAddDialog"], _teach_update_update_component__WEBPACK_IMPORTED_MODULE_24__["MaterialUpdateDialog"], _teach_update_update_component__WEBPACK_IMPORTED_MODULE_24__["MaterialDeleteDialog"],
-                _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_28__["ContentResultFailComponent"], _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_28__["ContentResultSuccessComponent"], _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_28__["ContentResultCompletedComponent"]]
+            entryComponents: [_material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__["KeywordDetailDialog"], _update_update_component__WEBPACK_IMPORTED_MODULE_22__["MaterialAddDialog"], _update_update_component__WEBPACK_IMPORTED_MODULE_22__["MaterialUpdateDialog"], _update_update_component__WEBPACK_IMPORTED_MODULE_22__["MaterialDeleteDialog"],
+                _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__["ContentResultFailComponent"], _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__["ContentResultSuccessComponent"], _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__["ContentResultCompletedComponent"],
+                _update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_28__["ContentAddDialog"], _update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_28__["ContentUpdateDialog"], _update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_28__["ContentDeleteDialog"],
+                _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_29__["QuestionAddDialog"], _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_29__["QuestionUpdateDialog"], _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_29__["QuestionDeleteDialog"]]
         })
     ], AppModule);
     return AppModule;
@@ -577,7 +522,7 @@ module.exports = ".mat-card-image {\n    width: 100%;\n    margin: 0%;\n}\n\n.ma
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n        <mat-form-field class=\"search-form\">\n            <input matInput placeholder=\"Search Materials\" type=\"text\" [(ngModel)]=\"searchKey\">\n        </mat-form-field>\n        <button mat-stroked-button color=\"warn\" (click)=\"searchMaterialsByKeyword()\"  style=\"margin-left: 5px\"\n                [disabled]=\"info.token==null\">🔎 Search</button>\n        <br/>\n        <br/>\n        <p *ngIf=\"materials.length==0\">{{searchMessage}}</p>\n        <div fxLayout=\"row wrap\"  fxLayoutGap=\"32px\" fxLayoutAlign=\"flex-start\">\n            <mat-card class=\"material-card\" fxFlex=\"0 1 calc(50% - 32px)\"\n                      *ngFor=\"let material of materials\">\n\n\n                <mat-card-header>\n                    <mat-card-title>{{material.materialName}}</mat-card-title>\n                    <mat-card-subtitle>{{material.detail}}</mat-card-subtitle>\n                    <mat-card-subtitle>{{material.createdBy}}</mat-card-subtitle>\n                </mat-card-header>\n\n                <img mat-card-image [src]=\"material.image\">\n\n                <br/>\n                <br/>\n\n                <mat-card-content>\n                    <p>{{material.description}}</p>\n                    <p style=\"color: dodgerblue; font-size: small; font-weight: bold\">{{material.keywordList}}</p>\n                </mat-card-content>\n                <mat-card-actions>\n                    <button  mat-flat-button color=\"warn\" style=\"width:100%\" (click)=\"seeDetail(material.materialId)\" [disabled]=\"info.token==null\">TAKE</button>\n                </mat-card-actions>\n            </mat-card>\n        </div>\n\n</div>"
+module.exports = "<div class=\"container\">\n        <mat-form-field class=\"search-form\">\n            <input matInput placeholder=\"Search Materials\" type=\"text\" [(ngModel)]=\"searchKey\">\n        </mat-form-field>\n        <button mat-stroked-button color=\"warn\" (click)=\"searchMaterialsByKeyword()\"  style=\"margin-left: 5px\">🔎 Search</button>\n        <br/>\n        <br/>\n        <p *ngIf=\"materials.length==0\">{{searchMessage}}</p>\n        <div fxLayout=\"row wrap\"  fxLayoutGap=\"32px\" fxLayoutAlign=\"flex-start\">\n            <mat-card class=\"material-card\" fxFlex=\"0 1 calc(50% - 32px)\"\n                      *ngFor=\"let material of materials\">\n\n\n                <mat-card-header>\n                    <mat-card-title>{{material.materialName}}</mat-card-title>\n                    <mat-card-subtitle>{{material.detail}}</mat-card-subtitle>\n                    <mat-card-subtitle>{{material.createdBy}}</mat-card-subtitle>\n                </mat-card-header>\n\n                <img mat-card-image [src]=\"material.image\">\n\n                <br/>\n                <br/>\n\n                <mat-card-content>\n                    <p>{{material.description}}</p>\n                    <p style=\"color: dodgerblue; font-size: small; font-weight: bold\">{{material.keywordList}}</p>\n                </mat-card-content>\n                <mat-card-actions>\n                    <button  mat-flat-button color=\"warn\" style=\"width:100%\" (click)=\"seeDetail(material.materialId)\" [disabled]=\"info.token==null\">TAKE</button>\n                </mat-card-actions>\n            </mat-card>\n        </div>\n\n</div>"
 
 /***/ }),
 
@@ -616,7 +561,7 @@ var HomeComponent = /** @class */ (function () {
             username: this.token.getUsername(),
             authorities: this.token.getAuthorities()
         };
-        this.searchService.getAllMaterialSummaries().subscribe(function (data) {
+        this.searchService.getAllMaterialSummaries(this.info.username).subscribe(function (data) {
             console.log(data);
             _this.materials = data;
         }, function (error) {
@@ -1394,8 +1339,8 @@ var SearchService = /** @class */ (function () {
         this.searchContents = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl + '/search/content/';
         this.searchMaterialsUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl + '/search/keyword/';
     }
-    SearchService.prototype.getAllMaterialSummaries = function () {
-        return this.http.get(this.searchUrl, { responseType: 'json' });
+    SearchService.prototype.getAllMaterialSummaries = function (username) {
+        return this.http.get(this.searchUrl + username, { responseType: 'json' });
     };
     SearchService.prototype.getCreatedByMaterials = function () {
         return this.http.get(this.searchCreatedBy + this.token.getUsername(), httpOptions);
@@ -1529,854 +1474,6 @@ var UserService = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], UserService);
     return UserService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/teach/create/create.component.css":
-/*!***************************************************!*\
-  !*** ./src/app/teach/create/create.component.css ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".mat-tab-nav-bar{\n    background: #ffdd57;\n}\n\n.mat-tab-link{\n    color: #000;\n}\n\n.container{\n    width: 90%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhY2gvY3JlYXRlL2NyZWF0ZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksbUJBQW1CO0FBQ3ZCOztBQUVBO0lBQ0ksV0FBVztBQUNmOztBQUVBO0lBQ0ksVUFBVTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvdGVhY2gvY3JlYXRlL2NyZWF0ZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hdC10YWItbmF2LWJhcntcbiAgICBiYWNrZ3JvdW5kOiAjZmZkZDU3O1xufVxuXG4ubWF0LXRhYi1saW5re1xuICAgIGNvbG9yOiAjMDAwO1xufVxuXG4uY29udGFpbmVye1xuICAgIHdpZHRoOiA5MCU7XG59Il19 */"
-
-/***/ }),
-
-/***/ "./src/app/teach/create/create.component.html":
-/*!****************************************************!*\
-  !*** ./src/app/teach/create/create.component.html ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"container\">\n\n   <br/>\n\n   <nav mat-tab-nav-bar>\n      <a mat-tab-link [routerLink]=\"['/teach/create/material']\">Create Material</a>\n      <a mat-tab-link [routerLink]=\"['/teach/create/content']\">Create Content</a>\n      <a mat-tab-link [routerLink]=\"['/teach/create/question']\">Create Question</a>\n   </nav>\n\n\n   <router-outlet></router-outlet>\n\n\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/teach/create/create.component.ts":
-/*!**************************************************!*\
-  !*** ./src/app/teach/create/create.component.ts ***!
-  \**************************************************/
-/*! exports provided: CreateComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateComponent", function() { return CreateComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
-
-
-
-var CreateComponent = /** @class */ (function () {
-    function CreateComponent(token) {
-        this.token = token;
-    }
-    CreateComponent.prototype.ngOnInit = function () {
-        this.info = {
-            token: this.token.getToken(),
-            username: this.token.getUsername(),
-            authorities: this.token.getAuthorities()
-        };
-    };
-    CreateComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-create-multi-steps',
-            template: __webpack_require__(/*! ./create.component.html */ "./src/app/teach/create/create.component.html"),
-            styles: [__webpack_require__(/*! ./create.component.css */ "./src/app/teach/create/create.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"]])
-    ], CreateComponent);
-    return CreateComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/teach/create/material/material.component.css":
-/*!**************************************************************!*\
-  !*** ./src/app/teach/create/material/material.component.css ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".container{\n     width: 90%;\n }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhY2gvY3JlYXRlL21hdGVyaWFsL21hdGVyaWFsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7S0FDSyxVQUFVO0NBQ2QiLCJmaWxlIjoic3JjL2FwcC90ZWFjaC9jcmVhdGUvbWF0ZXJpYWwvbWF0ZXJpYWwuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXJ7XG4gICAgIHdpZHRoOiA5MCU7XG4gfSJdfQ== */"
-
-/***/ }),
-
-/***/ "./src/app/teach/create/material/material.component.html":
-/*!***************************************************************!*\
-  !*** ./src/app/teach/create/material/material.component.html ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngIf=\"info.token\">\n\n    <div class=\"container\">\n\n        <br/>\n\n        <h2>Material Information</h2>\n        <br/>\n\n        <form name=\"form\" (ngSubmit)=\"f.form.valid && onSubmit()\" #f=\"ngForm\" novalidate>\n\n            <div class=\"form-group\">\n                <input id=\"title\" name=\"title\" class=\"form-control\" placeholder=\"Title\"\n                       required [(ngModel)]=\"data.title\" #title=\"ngModel\"/>\n                <div *ngIf=\"title.invalid && (title.dirty || title.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"title.errors.required\">Material title is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"description\" name=\"description\" class=\"form-control\" placeholder=\"Description\"\n                       required [(ngModel)]=\"data.description\" #description=\"ngModel\"/>\n                <div *ngIf=\"description.invalid && (description.dirty || description.touched)\"\n                     class=\"alert alert-danger\">\n                    <div *ngIf=\"description.errors.required\">Material description is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"image\" name=\"image\" class=\"form-control\" placeholder=\"Image\"\n                       required [(ngModel)]=\"data.image\" #image=\"ngModel\"/>\n                <div *ngIf=\"image.invalid && (image.dirty || image.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"image.errors.required\">Material image is required.</div>\n                </div>\n            </div>\n\n\n            <div class=\"form-group\">\n                <button class=\"btn btn-primary\" style=\"width:100%\" [disabled]=\"f.form.pristine || f.form.invalid\">Create\n                    Material\n                </button>\n            </div>\n\n            <br/>\n            <h6 style=\"color: #3e5e9a\">{{message}}</h6>\n\n\n        </form>\n    </div>\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/teach/create/material/material.component.ts":
-/*!*************************************************************!*\
-  !*** ./src/app/teach/create/material/material.component.ts ***!
-  \*************************************************************/
-/*! exports provided: MaterialComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaterialComponent", function() { return MaterialComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
-/* harmony import */ var _services_teach_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/teach.service */ "./src/app/services/teach.service.ts");
-
-
-
-
-var MaterialComponent = /** @class */ (function () {
-    function MaterialComponent(token, teachService) {
-        this.token = token;
-        this.teachService = teachService;
-        this.data = {};
-    }
-    MaterialComponent.prototype.ngOnInit = function () {
-        this.info = {
-            token: this.token.getToken(),
-            username: this.token.getUsername(),
-            authorities: this.token.getAuthorities()
-        };
-    };
-    MaterialComponent.prototype.onSubmit = function () {
-        var _this = this;
-        this.data.createdBy = this.info.username;
-        this.teachService.createMaterial(this.data).subscribe(function (data) {
-            console.log(data);
-            _this.message = data.message;
-        }, function (error) {
-            console.log(error);
-        });
-    };
-    MaterialComponent.prototype.cleanFields = function () {
-        this.data.title = null;
-        this.data.description = null;
-        this.data.image = null;
-    };
-    MaterialComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-material',
-            template: __webpack_require__(/*! ./material.component.html */ "./src/app/teach/create/material/material.component.html"),
-            styles: [__webpack_require__(/*! ./material.component.css */ "./src/app/teach/create/material/material.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"], _services_teach_service__WEBPACK_IMPORTED_MODULE_3__["TeachService"]])
-    ], MaterialComponent);
-    return MaterialComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/teach/create/question/question.component.css":
-/*!**************************************************************!*\
-  !*** ./src/app/teach/create/question/question.component.css ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".container{\n    width: 90%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhY2gvY3JlYXRlL3F1ZXN0aW9uL3F1ZXN0aW9uLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxVQUFVO0FBQ2QiLCJmaWxlIjoic3JjL2FwcC90ZWFjaC9jcmVhdGUvcXVlc3Rpb24vcXVlc3Rpb24uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXJ7XG4gICAgd2lkdGg6IDkwJTtcbn0iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/teach/create/question/question.component.html":
-/*!***************************************************************!*\
-  !*** ./src/app/teach/create/question/question.component.html ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngIf=\"info.token\">\n\n  <div class=\"container\">\n\n    <br/>\n    <h2>Question Information</h2>\n    <br/>\n\n    <form name=\"form\" (ngSubmit)=\"f.form.valid\" #f=\"ngForm\" novalidate>\n\n      <div class=\"form-group\">\n        <mat-select [(ngModel)]=\"selectedMaterial\" name=\"material\" required #material=\"ngModel\"\n                    placeholder=\"Select Material\" (selectionChange)=\"onChange()\">\n          <mat-option *ngFor=\"let material of materials\" [value]=\"material.materialId\">\n            {{material.materialName}}\n          </mat-option>\n        </mat-select>\n        <div *ngIf=\"material.invalid && (material.dirty || material.touched) \" class=\"alert alert-danger\">\n          <div *ngIf=\"material.errors.required\">Material is required.</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <mat-select [(ngModel)]=\"selectedContent\" name=\"content\" required #content=\"ngModel\"\n                    placeholder=\"Select Content\">\n          <mat-option *ngFor=\"let content of contents\" [value]=\"content.id\">\n            {{content.title}}\n          </mat-option>\n        </mat-select>\n        <div *ngIf=\"content.invalid && (content.dirty || content.touched) \" class=\"alert alert-danger\">\n          <div *ngIf=\"content.errors.required\">Content is required.</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <input id=\"questionText\" name=\"questionText\" class=\"form-control\" placeholder=\"Question Text\"\n               required [(ngModel)]=\"question.questionText\" #questionText=\"ngModel\"/>\n        <div *ngIf=\"questionText.invalid && (questionText.dirty || questionText.touched)\" class=\"alert alert-danger\">\n          <div *ngIf=\"questionText.errors.required\">Question Text is required.</div>\n        </div>\n      </div>\n\n\n      <section style=\"background-color: #dddddd; padding: 1em\">\n        <mat-form-field>\n          <input matInput placeholder=\"Option Text\" name=\"option\" [(ngModel)]=\"selectedOption.optionText\">\n        </mat-form-field>\n        <mat-checkbox name=\"value\" [(ngModel)]=\"selectedOption.isAnswer\">Is correct answer?</mat-checkbox>\n        <button mat-button (click)=\"addOption()\">➕ Add Option</button>\n\n        <br/>\n        <li *ngFor=\"let option of optionList\">{{option.optionText}} - {{option.isAnswer}}</li>\n      </section>\n\n      <br/>\n      <br/>\n\n      <div class=\"form-group\">\n        <button class=\"btn btn-primary\" style=\"width:100%\" (click)=\"createQuestion()\" [disabled]=\"f.form.pristine || f.form.invalid\">Create Question</button>\n      </div>\n\n      <br/>\n      <h6 style=\"color: #3e5e9a\">{{message}}</h6>\n\n    </form>\n\n\n  </div>\n\n  <br/>\n\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/teach/create/question/question.component.ts":
-/*!*************************************************************!*\
-  !*** ./src/app/teach/create/question/question.component.ts ***!
-  \*************************************************************/
-/*! exports provided: QuestionComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuestionComponent", function() { return QuestionComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
-/* harmony import */ var _services_teach_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/teach.service */ "./src/app/services/teach.service.ts");
-/* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/search.service */ "./src/app/services/search.service.ts");
-/* harmony import */ var _model_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../model/material */ "./src/app/model/material.ts");
-
-
-
-
-
-
-var QuestionComponent = /** @class */ (function () {
-    function QuestionComponent(token, teachService, searchService) {
-        this.token = token;
-        this.teachService = teachService;
-        this.searchService = searchService;
-        this.question = new _model_material__WEBPACK_IMPORTED_MODULE_5__["Question"]();
-        this.contents = new Array();
-        this.materials = new Array();
-        this.optionList = new Array();
-        this.selectedOption = new _model_material__WEBPACK_IMPORTED_MODULE_5__["Option"]();
-    }
-    QuestionComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.info = {
-            token: this.token.getToken(),
-            username: this.token.getUsername(),
-            authorities: this.token.getAuthorities()
-        };
-        this.searchService.getCreatedByMaterials().subscribe(function (data) {
-            _this.materials = data;
-        }, function (error) {
-            console.log(error);
-        });
-    };
-    QuestionComponent.prototype.onChange = function () {
-        var _this = this;
-        this.searchService.getContentsByMaterial(this.selectedMaterial).subscribe(function (data) {
-            _this.contents = data;
-        }, function (error) {
-            console.log(error);
-        });
-    };
-    QuestionComponent.prototype.createQuestion = function () {
-        var _this = this;
-        this.question.options = this.optionList;
-        console.log(this.question);
-        this.teachService.createQuestion(this.question, this.selectedContent).subscribe(function (data) {
-            console.log(data);
-            _this.message = data.message;
-        }, function (error) {
-            console.log(error);
-        });
-    };
-    QuestionComponent.prototype.addOption = function () {
-        console.log(this.selectedOption);
-        this.optionList.push(this.selectedOption);
-        this.selectedOption = new _model_material__WEBPACK_IMPORTED_MODULE_5__["Option"]();
-    };
-    QuestionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-question',
-            template: __webpack_require__(/*! ./question.component.html */ "./src/app/teach/create/question/question.component.html"),
-            styles: [__webpack_require__(/*! ./question.component.css */ "./src/app/teach/create/question/question.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"], _services_teach_service__WEBPACK_IMPORTED_MODULE_3__["TeachService"], _services_search_service__WEBPACK_IMPORTED_MODULE_4__["SearchService"]])
-    ], QuestionComponent);
-    return QuestionComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/teach/create/topic/topic.component.css":
-/*!********************************************************!*\
-  !*** ./src/app/teach/create/topic/topic.component.css ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".container{\n    width: 90%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhY2gvY3JlYXRlL3RvcGljL3RvcGljLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxVQUFVO0FBQ2QiLCJmaWxlIjoic3JjL2FwcC90ZWFjaC9jcmVhdGUvdG9waWMvdG9waWMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXJ7XG4gICAgd2lkdGg6IDkwJTtcbn0iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/teach/create/topic/topic.component.html":
-/*!*********************************************************!*\
-  !*** ./src/app/teach/create/topic/topic.component.html ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngIf=\"info.token\">\n\n    <div class=\"container\">\n\n        <br/>\n        <h2>Content Information</h2>\n        <br/>\n\n        <form name=\"form\" (ngSubmit)=\"f.form.valid\" #f=\"ngForm\" novalidate>\n\n            <div class=\"form-group\">\n                <mat-select [(ngModel)]=\"selectedMaterial\" name=\"material\" required #material=\"ngModel\" placeholder=\"Select Material\" >\n                    <mat-option *ngFor=\"let material of materials\" [value]=\"material.materialId\">\n                        {{material.materialName}}\n                    </mat-option>\n                </mat-select>\n                <div *ngIf=\"material.invalid && (material.dirty || material.touched) \" class=\"alert alert-danger\">\n                    <div *ngIf=\"material.errors.required\">Material is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"title\" name=\"title\" class=\"form-control\" placeholder=\"Title\"\n                       required [(ngModel)]=\"content.title\" #title=\"ngModel\"/>\n                <div *ngIf=\"title.invalid && (title.dirty || title.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"title.errors.required\">Content title is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"image\" name=\"image\" class=\"form-control\" placeholder=\"Image\"\n                       required [(ngModel)]=\"content.image\" #image=\"ngModel\"/>\n                <div *ngIf=\"image.invalid && (image.dirty || image.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"image.errors.required\">Content image is required.</div>\n                </div>\n            </div>\n\n            <section style=\"background-color: #dddddd; padding: 1em\">\n                <mat-form-field>\n                    <input matInput placeholder=\"Keyword\" name=\"keyword\" [(ngModel)]=\"keyword\">\n                </mat-form-field>\n                <button mat-button (click)=\"searchWiki(keyword)\">🔎 Search Wikidata</button>\n\n                <mat-select id=\"foundWikis\" [(ngModel)]=\"selectedKeyword\" name=\"selectedWiki\" placeholder=\"Select keyword from wikidata\">\n                    <mat-option *ngFor=\"let wiki of wikis\" [value]=\"wiki\">{{wiki.description}}\n                    </mat-option>\n                </mat-select>\n\n                <br/>\n                <br/>\n                <a *ngIf=\"selectedKeyword\" href=\"{{selectedKeyword.url}}\">{{selectedKeyword.title}}</a>\n\n                <button mat-button (click)=\"addKeyword()\">➕ Add Keyword</button>\n                <li *ngFor=\"let keyword of keywordList\">{{keyword.label}}</li>\n\n            </section>\n\n            <br/>\n\n            <div class=\"form-group\">\n                <app-ngx-editor id=\"explanation\" name=\"explanation\" [placeholder]=\"'Enter explanation here...'\"\n                                [spellcheck]=\"true\"\n                                [(ngModel)]=\"content.explanation\" #explanation=\"ngModel\"></app-ngx-editor>\n            </div>\n\n\n            <br/>\n\n            <div class=\"form-group\">\n                <button class=\"btn btn-primary\" style=\"width:100%\" (click)=\"createTopic()\" [disabled]=\"f.form.pristine || f.form.invalid\">Create Content</button>\n            </div>\n\n            <br/>\n            <h6 style=\"color: #3e5e9a\">{{message}}</h6>\n\n        </form>\n\n\n    </div>\n\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/teach/create/topic/topic.component.ts":
-/*!*******************************************************!*\
-  !*** ./src/app/teach/create/topic/topic.component.ts ***!
-  \*******************************************************/
-/*! exports provided: TopicComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopicComponent", function() { return TopicComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
-/* harmony import */ var _model_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../model/material */ "./src/app/model/material.ts");
-/* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/search.service */ "./src/app/services/search.service.ts");
-/* harmony import */ var _services_teach_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/teach.service */ "./src/app/services/teach.service.ts");
-
-
-
-
-
-
-var TopicComponent = /** @class */ (function () {
-    function TopicComponent(token, teachService, searchService) {
-        this.token = token;
-        this.teachService = teachService;
-        this.searchService = searchService;
-        this.content = new _model_material__WEBPACK_IMPORTED_MODULE_3__["Content"]();
-        this.wikis = new Array();
-        this.selectedKeyword = new _model_material__WEBPACK_IMPORTED_MODULE_3__["Keyword"]();
-        this.keywordList = new Array();
-        this.materials = new Array();
-    }
-    TopicComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.info = {
-            token: this.token.getToken(),
-            username: this.token.getUsername(),
-            authorities: this.token.getAuthorities()
-        };
-        this.searchService.getCreatedByMaterials().subscribe(function (data) {
-            _this.materials = data;
-        }, function (error) {
-            console.log(error);
-        });
-    };
-    TopicComponent.prototype.createTopic = function () {
-        var _this = this;
-        this.content.keywords = this.keywordList;
-        this.content.status = 1;
-        console.log(this.content);
-        this.teachService.createContent(this.content, this.selectedMaterial).subscribe(function (data) {
-            console.log(data);
-            _this.message = data.message;
-        }, function (error) {
-            console.log(error);
-        });
-    };
-    TopicComponent.prototype.searchWiki = function (keyword) {
-        var _this = this;
-        this.teachService.searchWiki(keyword).subscribe(function (data) {
-            console.log(data);
-            _this.wikis = data;
-        }, function (error) {
-            console.log(error);
-        });
-        console.log(keyword + ' selected');
-    };
-    TopicComponent.prototype.addKeyword = function () {
-        console.log(this.selectedKeyword);
-        this.keywordList.push(this.selectedKeyword);
-    };
-    TopicComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-topic',
-            template: __webpack_require__(/*! ./topic.component.html */ "./src/app/teach/create/topic/topic.component.html"),
-            styles: [__webpack_require__(/*! ./topic.component.css */ "./src/app/teach/create/topic/topic.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"], _services_teach_service__WEBPACK_IMPORTED_MODULE_5__["TeachService"], _services_search_service__WEBPACK_IMPORTED_MODULE_4__["SearchService"]])
-    ], TopicComponent);
-    return TopicComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/teach/teach.component.css":
-/*!*******************************************!*\
-  !*** ./src/app/teach/teach.component.css ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".mat-tab-nav-bar{\n    background: black;\n}\n\n.mat-tab-link{\n    color: #fff;\n}\n\n.container{\n    background: #fafafa;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhY2gvdGVhY2guY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLFdBQVc7QUFDZjs7QUFFQTtJQUNJLG1CQUFtQjtBQUN2QiIsImZpbGUiOiJzcmMvYXBwL3RlYWNoL3RlYWNoLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LXRhYi1uYXYtYmFye1xuICAgIGJhY2tncm91bmQ6IGJsYWNrO1xufVxuXG4ubWF0LXRhYi1saW5re1xuICAgIGNvbG9yOiAjZmZmO1xufVxuXG4uY29udGFpbmVye1xuICAgIGJhY2tncm91bmQ6ICNmYWZhZmE7XG59Il19 */"
-
-/***/ }),
-
-/***/ "./src/app/teach/teach.component.html":
-/*!********************************************!*\
-  !*** ./src/app/teach/teach.component.html ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngIf=\"info.token\">\n    <div class=\"container\">\n        <nav mat-tab-nav-bar>\n            <a mat-tab-link [routerLink]=\"['/teach/create']\">Create</a>\n            <a mat-tab-link [routerLink]=\"['/teach/update']\">Update</a>\n        </nav>\n\n\n        <router-outlet></router-outlet>\n\n    </div>\n\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/teach/teach.component.ts":
-/*!******************************************!*\
-  !*** ./src/app/teach/teach.component.ts ***!
-  \******************************************/
-/*! exports provided: TeachComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TeachComponent", function() { return TeachComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
-
-
-
-var TeachComponent = /** @class */ (function () {
-    function TeachComponent(token) {
-        this.token = token;
-    }
-    TeachComponent.prototype.ngOnInit = function () {
-        this.info = {
-            token: this.token.getToken(),
-            username: this.token.getUsername(),
-            authorities: this.token.getAuthorities()
-        };
-    };
-    TeachComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-teach',
-            template: __webpack_require__(/*! ./teach.component.html */ "./src/app/teach/teach.component.html"),
-            styles: [__webpack_require__(/*! ./teach.component.css */ "./src/app/teach/teach.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"]])
-    ], TeachComponent);
-    return TeachComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/teach/update/material-add-dialog.html":
-/*!*******************************************************!*\
-  !*** ./src/app/teach/update/material-add-dialog.html ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h1 mat-dialog-title>Create Material</h1>\n<div mat-dialog-content>\n\n    <div class=\"container\">\n        <br/>\n        <form name=\"form\" (ngSubmit)=\"f.form.valid && onSubmit()\" #f=\"ngForm\" novalidate>\n\n            <div class=\"form-group\">\n                <input id=\"title\" name=\"title\" class=\"form-control\" placeholder=\"Title\"\n                       required [(ngModel)]=\"data.title\" #title=\"ngModel\"/>\n                <div *ngIf=\"title.invalid && (title.dirty || title.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"title.errors.required\">Material title is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"description\" name=\"description\" class=\"form-control\" placeholder=\"Description\"\n                       required [(ngModel)]=\"data.description\" #description=\"ngModel\"/>\n                <div *ngIf=\"description.invalid && (description.dirty || description.touched)\"\n                     class=\"alert alert-danger\">\n                    <div *ngIf=\"description.errors.required\">Material description is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"image\" name=\"image\" class=\"form-control\" placeholder=\"Image\"\n                       required [(ngModel)]=\"data.image\" #image=\"ngModel\"/>\n                <div *ngIf=\"image.invalid && (image.dirty || image.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"image.errors.required\">Material image is required.</div>\n                </div>\n            </div>\n\n\n            <div class=\"form-group\">\n                <button class=\"btn btn-primary\" style=\"width:100%\"\n                        [disabled]=\"f.form.pristine || f.form.invalid\">\n                    Create\n                </button>\n            </div>\n\n            <br/>\n            <h6 style=\"color: #3e5e9a\">{{message}}</h6>\n\n\n        </form>\n    </div>\n\n</div>\n<div mat-dialog-actions>\n    <button mat-icon-button (click)=\"onNoClick()\">\n        <mat-icon>close</mat-icon>\n    </button>\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/teach/update/material-delete-dialog.html":
-/*!**********************************************************!*\
-  !*** ./src/app/teach/update/material-delete-dialog.html ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h1 mat-dialog-title>Delete Material</h1>\n<div mat-dialog-content>\n    <p>Are you sure to delete the material?</p>\n    <p>{{dialogData.material.materialName}}</p>\n    <p style=\"color: red;\">{{message}}</p>\n</div>\n<div mat-dialog-actions>\n    <div mat-dialog-actions>\n        <button mat-icon-button (click)=\"onDeleteClick()\">\n            <mat-icon>delete</mat-icon>\n        </button>\n        <button style=\"float: right\" mat-icon-button (click)=\"onNoClick()\">\n            <mat-icon>close</mat-icon>\n        </button>\n    </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/teach/update/material-update-dialog.html":
-/*!**********************************************************!*\
-  !*** ./src/app/teach/update/material-update-dialog.html ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h1 mat-dialog-title>Update Material</h1>\n<div mat-dialog-content>\n\n    <div class=\"container\">\n        <br/>\n        <form name=\"form\" (ngSubmit)=\"f.form.valid && onSubmit()\" #f=\"ngForm\" novalidate>\n\n            <div class=\"form-group\">\n                <input id=\"title\" name=\"title\" class=\"form-control\"\n                       required [(ngModel)]=\"dialogData.material.title\" #title=\"ngModel\"/>\n                <div *ngIf=\"title.invalid && (title.dirty || title.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"title.errors.required\">Material title is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"description\" name=\"description\" class=\"form-control\"\n                       required [(ngModel)]=\"dialogData.material.description\" #description=\"ngModel\"/>\n                <div *ngIf=\"description.invalid && (description.dirty || description.touched)\"\n                     class=\"alert alert-danger\">\n                    <div *ngIf=\"description.errors.required\">Material description is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"image\" name=\"image\" class=\"form-control\" placeholder=\"{{dialogData.material.image}}\"\n                       required [(ngModel)]=\"dialogData.material.image\" #image=\"ngModel\"/>\n                <div *ngIf=\"image.invalid && (image.dirty || image.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"image.errors.required\">Material image is required.</div>\n                </div>\n            </div>\n\n\n            <div class=\"form-group\">\n                <button class=\"btn btn-primary\" style=\"width:100%\"\n                        [disabled]=\"f.form.pristine || f.form.invalid\">\n                    Update\n                </button>\n            </div>\n\n            <br/>\n            <h6 style=\"color: #3e5e9a\">{{message}}</h6>\n\n\n        </form>\n    </div>\n\n</div>\n<div mat-dialog-actions>\n    <button mat-icon-button (click)=\"onNoClick()\">\n        <mat-icon>close</mat-icon>\n    </button>\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/teach/update/update-content/update-content.component.css":
-/*!**************************************************************************!*\
-  !*** ./src/app/teach/update/update-content/update-content.component.css ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "p {\n    font-family: Lato;\n}\n\n\n.header-image {\n    background-size: cover;\n}\n\n\n.material-card{\n    margin-bottom: 2%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhY2gvdXBkYXRlL3VwZGF0ZS1jb250ZW50L3VwZGF0ZS1jb250ZW50LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxpQkFBaUI7QUFDckI7OztBQUdBO0lBQ0ksc0JBQXNCO0FBQzFCOzs7QUFFQTtJQUNJLGlCQUFpQjtBQUNyQiIsImZpbGUiOiJzcmMvYXBwL3RlYWNoL3VwZGF0ZS91cGRhdGUtY29udGVudC91cGRhdGUtY29udGVudC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsicCB7XG4gICAgZm9udC1mYW1pbHk6IExhdG87XG59XG5cblxuLmhlYWRlci1pbWFnZSB7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3Zlcjtcbn1cblxuLm1hdGVyaWFsLWNhcmR7XG4gICAgbWFyZ2luLWJvdHRvbTogMiU7XG59Il19 */"
-
-/***/ }),
-
-/***/ "./src/app/teach/update/update-content/update-content.component.html":
-/*!***************************************************************************!*\
-  !*** ./src/app/teach/update/update-content/update-content.component.html ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div fxLayout=\"column\" fxLayoutAlign=\"space-between stretch\" >\n\n  <mat-divider></mat-divider>\n  <br/>\n\n\n  <mat-card class=\"material-card\" *ngFor=\"let content of material.contents \">\n    <mat-card-header>\n      <div mat-card-avatar class=\"header-image\"><img  [src]=\"content.image\"></div>\n      {{content.title}}\n    </mat-card-header>\n    <mat-card-content>\n      {{content.explanation.slice(0,200)}}\n    </mat-card-content>\n    <mat-card-actions>\n      <button style=\"margin-right: 2%\" mat-stroked-button color=\"warn\" (click)=\"seeDetail(content.id)\" [disabled]=\"info.token==null\">Details</button>\n      <button style=\"margin-right: 2%\" mat-stroked-button color=\"info\">Update</button>\n      <button style=\"margin-right: 2%\" mat-stroked-button color=\"info\">Delete</button>\n    </mat-card-actions>\n  </mat-card>\n\n\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/teach/update/update-content/update-content.component.ts":
-/*!*************************************************************************!*\
-  !*** ./src/app/teach/update/update-content/update-content.component.ts ***!
-  \*************************************************************************/
-/*! exports provided: UpdateContentComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateContentComponent", function() { return UpdateContentComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/search.service */ "./src/app/services/search.service.ts");
-/* harmony import */ var _model_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../model/material */ "./src/app/model/material.ts");
-
-
-
-
-
-
-var UpdateContentComponent = /** @class */ (function () {
-    function UpdateContentComponent(token, route, searchService, router) {
-        this.token = token;
-        this.route = route;
-        this.searchService = searchService;
-        this.router = router;
-        this.material = new _model_material__WEBPACK_IMPORTED_MODULE_5__["Material"]();
-    }
-    UpdateContentComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.info = {
-            token: this.token.getToken(),
-            username: this.token.getUsername(),
-            authorities: this.token.getAuthorities()
-        };
-        this.sub = this.route.params.subscribe(function (params) {
-            _this.id = +params['id'];
-        });
-        this.material = this.searchService.getMaterialDetail(this.id).subscribe(function (data) {
-            _this.material = data;
-            _this.material.contents.sort(function (a, b) { return (a.order > b.order) ? 1 : -1; });
-        }, function (error) {
-            console.log(error);
-        });
-    };
-    UpdateContentComponent.prototype.seeDetail = function (id) {
-        this.router.navigate(['update/content', id]);
-    };
-    UpdateContentComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-update-content',
-            template: __webpack_require__(/*! ./update-content.component.html */ "./src/app/teach/update/update-content/update-content.component.html"),
-            styles: [__webpack_require__(/*! ./update-content.component.css */ "./src/app/teach/update/update-content/update-content.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
-            _services_search_service__WEBPACK_IMPORTED_MODULE_4__["SearchService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
-    ], UpdateContentComponent);
-    return UpdateContentComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/teach/update/update-question/update-question.component.css":
-/*!****************************************************************************!*\
-  !*** ./src/app/teach/update/update-question/update-question.component.css ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RlYWNoL3VwZGF0ZS91cGRhdGUtcXVlc3Rpb24vdXBkYXRlLXF1ZXN0aW9uLmNvbXBvbmVudC5jc3MifQ== */"
-
-/***/ }),
-
-/***/ "./src/app/teach/update/update-question/update-question.component.html":
-/*!*****************************************************************************!*\
-  !*** ./src/app/teach/update/update-question/update-question.component.html ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div fxLayout=\"column\" fxLayoutAlign=\"space-between stretch\" >\n\n  <mat-divider></mat-divider>\n  <br/>\n\n\n  <mat-card class=\"material-card\" *ngFor=\"let question of questions \">\n    <mat-card-header>\n      <div mat-card-avatar class=\"header-image\">❓</div>\n    </mat-card-header>\n    <mat-card-content>\n      {{question.questionText}}\n    </mat-card-content>\n    <mat-card-actions>\n      <button style=\"margin-right: 2%\" mat-stroked-button color=\"info\">Update</button>\n      <button style=\"margin-right: 2%\" mat-stroked-button color=\"info\">Delete</button>\n    </mat-card-actions>\n  </mat-card>\n\n\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/teach/update/update-question/update-question.component.ts":
-/*!***************************************************************************!*\
-  !*** ./src/app/teach/update/update-question/update-question.component.ts ***!
-  \***************************************************************************/
-/*! exports provided: UpdateQuestionComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateQuestionComponent", function() { return UpdateQuestionComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _services_teach_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/teach.service */ "./src/app/services/teach.service.ts");
-
-
-
-
-
-var UpdateQuestionComponent = /** @class */ (function () {
-    function UpdateQuestionComponent(token, route, teachService, router) {
-        this.token = token;
-        this.route = route;
-        this.teachService = teachService;
-        this.router = router;
-        this.questions = new Array();
-    }
-    UpdateQuestionComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.info = {
-            token: this.token.getToken(),
-            username: this.token.getUsername(),
-            authorities: this.token.getAuthorities()
-        };
-        this.sub = this.route.params.subscribe(function (params) {
-            _this.id = +params['id'];
-        });
-        this.teachService.getQuestions(this.id).subscribe(function (data) {
-            _this.questions = data;
-        }, function (error) {
-            console.log(error);
-        });
-    };
-    UpdateQuestionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-update-question',
-            template: __webpack_require__(/*! ./update-question.component.html */ "./src/app/teach/update/update-question/update-question.component.html"),
-            styles: [__webpack_require__(/*! ./update-question.component.css */ "./src/app/teach/update/update-question/update-question.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
-            _services_teach_service__WEBPACK_IMPORTED_MODULE_4__["TeachService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
-    ], UpdateQuestionComponent);
-    return UpdateQuestionComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/teach/update/update.component.css":
-/*!***************************************************!*\
-  !*** ./src/app/teach/update/update.component.css ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "p {\n    font-family: Lato;\n}\n\n\n.header-image {\n    background-size: cover;\n}\n\n\n.material-card{\n    margin-bottom: 2%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhY2gvdXBkYXRlL3VwZGF0ZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksaUJBQWlCO0FBQ3JCOzs7QUFHQTtJQUNJLHNCQUFzQjtBQUMxQjs7O0FBRUE7SUFDSSxpQkFBaUI7QUFDckIiLCJmaWxlIjoic3JjL2FwcC90ZWFjaC91cGRhdGUvdXBkYXRlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJwIHtcbiAgICBmb250LWZhbWlseTogTGF0bztcbn1cblxuXG4uaGVhZGVyLWltYWdlIHtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xufVxuXG4ubWF0ZXJpYWwtY2FyZHtcbiAgICBtYXJnaW4tYm90dG9tOiAyJTtcbn0iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/teach/update/update.component.html":
-/*!****************************************************!*\
-  !*** ./src/app/teach/update/update.component.html ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div fxLayout=\"column\" fxLayoutAlign=\"space-between stretch\">\n\n    <mat-divider></mat-divider>\n    <br/>\n\n    <button mat-icon-button (click)=\"openAddDialog()\">\n        <mat-icon>add_circle</mat-icon>\n        Add New Material\n    </button>\n\n    <br/>\n\n    <mat-card class=\"material-card\" *ngFor=\"let material of createdMaterials\">\n        <mat-card-header>\n            <div mat-card-avatar class=\"header-image\"><img [src]=\"material.image\"></div>\n            {{material.title}}\n        </mat-card-header>\n        <mat-card-content>\n            {{material.description}}\n        </mat-card-content>\n        <mat-card-actions>\n            <button style=\"margin-right: 2%\" mat-stroked-button color=\"warn\" (click)=\"seeDetail(material.id)\"\n                    [disabled]=\"info.token==null\">Details\n            </button>\n            <button style=\"margin-right: 2%\" mat-stroked-button color=\"info\"\n                    (click)=\"openEditDialog(material)\">Update</button>\n            <button style=\"margin-right: 2%\" mat-stroked-button color=\"info\"\n                    (click)=\"openDeleteDialog(material)\">Delete</button>\n        </mat-card-actions>\n    </mat-card>\n\n\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/teach/update/update.component.ts":
-/*!**************************************************!*\
-  !*** ./src/app/teach/update/update.component.ts ***!
-  \**************************************************/
-/*! exports provided: UpdateComponent, MaterialAddDialog, MaterialUpdateDialog, MaterialDeleteDialog */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateComponent", function() { return UpdateComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaterialAddDialog", function() { return MaterialAddDialog; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaterialUpdateDialog", function() { return MaterialUpdateDialog; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaterialDeleteDialog", function() { return MaterialDeleteDialog; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
-/* harmony import */ var _services_teach_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/teach.service */ "./src/app/services/teach.service.ts");
-/* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/search.service */ "./src/app/services/search.service.ts");
-/* harmony import */ var _model_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../model/material */ "./src/app/model/material.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-
-
-
-
-
-
-
-
-var UpdateComponent = /** @class */ (function () {
-    function UpdateComponent(token, teachService, searchService, router, dialog) {
-        this.token = token;
-        this.teachService = teachService;
-        this.searchService = searchService;
-        this.router = router;
-        this.dialog = dialog;
-        this.createdMaterials = new Array();
-        this.material = new _model_material__WEBPACK_IMPORTED_MODULE_5__["Material"]();
-    }
-    UpdateComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.info = {
-            token: this.token.getToken(),
-            username: this.token.getUsername(),
-            authorities: this.token.getAuthorities()
-        };
-        this.searchService.getCreatedByMaterials().subscribe(function (data) {
-            _this.createdMaterials = data;
-        }, function (error) {
-            console.log(error);
-        });
-    };
-    UpdateComponent.prototype.seeDetail = function (id) {
-        this.router.navigate(['update/material', id]);
-    };
-    UpdateComponent.prototype.openAddDialog = function () {
-        var _this = this;
-        var dialogRef = this.dialog.open(MaterialAddDialog, {
-            width: '500px',
-            data: { username: this.info.username,
-                material: this.material }
-        });
-        dialogRef.afterClosed().subscribe(function (result) {
-            console.log('Material added');
-            _this.material = result;
-        });
-    };
-    UpdateComponent.prototype.openEditDialog = function (material) {
-        var _this = this;
-        var dialogRef = this.dialog.open(MaterialUpdateDialog, {
-            width: '500px',
-            data: { username: this.info.username,
-                material: material }
-        });
-        dialogRef.afterClosed().subscribe(function (result) {
-            console.log('Material edited');
-            _this.material = result;
-        });
-    };
-    UpdateComponent.prototype.openDeleteDialog = function (material) {
-        var dialogRef = this.dialog.open(MaterialDeleteDialog, {
-            width: '300px',
-            data: { username: this.info.username,
-                material: material }
-        });
-        dialogRef.afterClosed().subscribe(function (result) {
-            console.log('Material deleted');
-        });
-    };
-    UpdateComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-update',
-            template: __webpack_require__(/*! ./update.component.html */ "./src/app/teach/update/update.component.html"),
-            styles: [__webpack_require__(/*! ./update.component.css */ "./src/app/teach/update/update.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"],
-            _services_teach_service__WEBPACK_IMPORTED_MODULE_3__["TeachService"],
-            _services_search_service__WEBPACK_IMPORTED_MODULE_4__["SearchService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatDialog"]])
-    ], UpdateComponent);
-    return UpdateComponent;
-}());
-
-var MaterialAddDialog = /** @class */ (function () {
-    function MaterialAddDialog(dialogRef, dialogData, teachService) {
-        this.dialogRef = dialogRef;
-        this.dialogData = dialogData;
-        this.teachService = teachService;
-        this.data = {};
-    }
-    MaterialAddDialog.prototype.onNoClick = function () {
-        this.dialogRef.close();
-    };
-    MaterialAddDialog.prototype.onSubmit = function () {
-        var _this = this;
-        this.data.createdBy = this.dialogData.username;
-        this.teachService.createMaterial(this.data).subscribe(function (data) {
-            console.log(data);
-            _this.message = data.message;
-        }, function (error) {
-            console.log(error);
-        });
-    };
-    MaterialAddDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'material-add-dialog',
-            template: __webpack_require__(/*! ./material-add-dialog.html */ "./src/app/teach/update/material-add-dialog.html"),
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_7__["MAT_DIALOG_DATA"])),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"], Object, _services_teach_service__WEBPACK_IMPORTED_MODULE_3__["TeachService"]])
-    ], MaterialAddDialog);
-    return MaterialAddDialog;
-}());
-
-var MaterialUpdateDialog = /** @class */ (function () {
-    function MaterialUpdateDialog(dialogRef, dialogData, teachService) {
-        this.dialogRef = dialogRef;
-        this.dialogData = dialogData;
-        this.teachService = teachService;
-    }
-    MaterialUpdateDialog.prototype.onNoClick = function () {
-        this.dialogRef.close();
-    };
-    MaterialUpdateDialog.prototype.onSubmit = function () {
-        var _this = this;
-        this.teachService.updateMaterial(this.dialogData.material, this.dialogData.material.id).subscribe(function (data) {
-            console.log(data);
-            _this.message = data.message;
-        }, function (error) {
-            console.log(error);
-        });
-    };
-    MaterialUpdateDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'material-update-dialog',
-            template: __webpack_require__(/*! ./material-update-dialog.html */ "./src/app/teach/update/material-update-dialog.html"),
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_7__["MAT_DIALOG_DATA"])),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"], Object, _services_teach_service__WEBPACK_IMPORTED_MODULE_3__["TeachService"]])
-    ], MaterialUpdateDialog);
-    return MaterialUpdateDialog;
-}());
-
-var MaterialDeleteDialog = /** @class */ (function () {
-    function MaterialDeleteDialog(dialogRef, dialogData, teachService) {
-        this.dialogRef = dialogRef;
-        this.dialogData = dialogData;
-        this.teachService = teachService;
-    }
-    MaterialDeleteDialog.prototype.onNoClick = function () {
-        this.dialogRef.close();
-    };
-    MaterialDeleteDialog.prototype.onDeleteClick = function () {
-        var _this = this;
-        this.teachService.deleteMaterial(this.dialogData.material.id).subscribe(function (data) {
-            _this.message = data.message;
-            console.log(data);
-        }, function (error) {
-            console.log(error);
-        });
-    };
-    MaterialDeleteDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'material-delete-dialog',
-            template: __webpack_require__(/*! ./material-delete-dialog.html */ "./src/app/teach/update/material-delete-dialog.html"),
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_7__["MAT_DIALOG_DATA"])),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"], Object, _services_teach_service__WEBPACK_IMPORTED_MODULE_3__["TeachService"]])
-    ], MaterialDeleteDialog);
-    return MaterialDeleteDialog;
 }());
 
 
@@ -2561,6 +1658,794 @@ var HeaderComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"]])
     ], HeaderComponent);
     return HeaderComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/update/material-add-dialog.html":
+/*!*************************************************!*\
+  !*** ./src/app/update/material-add-dialog.html ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1 mat-dialog-title>Create Material</h1>\n<div mat-dialog-content>\n\n    <div class=\"container\">\n        <br/>\n        <form name=\"form\" (ngSubmit)=\"f.form.valid && onSubmit()\" #f=\"ngForm\" novalidate>\n\n            <div class=\"form-group\">\n                <input id=\"title\" name=\"title\" class=\"form-control\" placeholder=\"Title\"\n                       required [(ngModel)]=\"data.title\" #title=\"ngModel\"/>\n                <div *ngIf=\"title.invalid && (title.dirty || title.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"title.errors.required\">Material title is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"description\" name=\"description\" class=\"form-control\" placeholder=\"Description\"\n                       required [(ngModel)]=\"data.description\" #description=\"ngModel\"/>\n                <div *ngIf=\"description.invalid && (description.dirty || description.touched)\"\n                     class=\"alert alert-danger\">\n                    <div *ngIf=\"description.errors.required\">Material description is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"image\" name=\"image\" class=\"form-control\" placeholder=\"Image\"\n                       required [(ngModel)]=\"data.image\" #image=\"ngModel\"/>\n                <div *ngIf=\"image.invalid && (image.dirty || image.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"image.errors.required\">Material image is required.</div>\n                </div>\n            </div>\n\n\n            <div class=\"form-group\">\n                <button class=\"btn btn-primary\" style=\"width:100%\"\n                        [disabled]=\"f.form.pristine || f.form.invalid\">\n                    Create\n                </button>\n            </div>\n\n            <br/>\n            <h6 style=\"color: #3e5e9a\">{{message}}</h6>\n\n\n        </form>\n    </div>\n\n</div>\n<div mat-dialog-actions>\n    <button mat-icon-button (click)=\"onNoClick()\">\n        <mat-icon>close</mat-icon>\n    </button>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/update/material-delete-dialog.html":
+/*!****************************************************!*\
+  !*** ./src/app/update/material-delete-dialog.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1 mat-dialog-title>Delete Material</h1>\n<div mat-dialog-content>\n    <em>{{dialogData.material.title}}</em>\n    <p>Are you sure to delete the material?</p>\n    <p style=\"color: red;\">{{message}}</p>\n</div>\n<div mat-dialog-actions>\n    <div mat-dialog-actions>\n        <button mat-icon-button (click)=\"onDeleteClick()\">\n            <mat-icon>delete</mat-icon>\n        </button>\n        <button style=\"float: right\" mat-icon-button (click)=\"onNoClick()\">\n            <mat-icon>close</mat-icon>\n        </button>\n    </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/update/material-update-dialog.html":
+/*!****************************************************!*\
+  !*** ./src/app/update/material-update-dialog.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1 mat-dialog-title>Update Material</h1>\n<div mat-dialog-content>\n\n    <div class=\"container\">\n        <br/>\n        <form name=\"form\" (ngSubmit)=\"f.form.valid && onSubmit()\" #f=\"ngForm\" novalidate>\n\n            <div class=\"form-group\">\n                <input id=\"title\" name=\"title\" class=\"form-control\"\n                       required [(ngModel)]=\"dialogData.material.title\" #title=\"ngModel\"/>\n                <div *ngIf=\"title.invalid && (title.dirty || title.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"title.errors.required\">Material title is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"description\" name=\"description\" class=\"form-control\"\n                       required [(ngModel)]=\"dialogData.material.description\" #description=\"ngModel\"/>\n                <div *ngIf=\"description.invalid && (description.dirty || description.touched)\"\n                     class=\"alert alert-danger\">\n                    <div *ngIf=\"description.errors.required\">Material description is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"image\" name=\"image\" class=\"form-control\" placeholder=\"{{dialogData.material.image}}\"\n                       required [(ngModel)]=\"dialogData.material.image\" #image=\"ngModel\"/>\n                <div *ngIf=\"image.invalid && (image.dirty || image.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"image.errors.required\">Material image is required.</div>\n                </div>\n            </div>\n\n\n            <div class=\"form-group\">\n                <button class=\"btn btn-primary\" style=\"width:100%\"\n                        [disabled]=\"f.form.pristine || f.form.invalid\">\n                    Update\n                </button>\n            </div>\n\n            <br/>\n            <h6 style=\"color: #3e5e9a\">{{message}}</h6>\n\n\n        </form>\n    </div>\n\n</div>\n<div mat-dialog-actions>\n    <button mat-icon-button (click)=\"onNoClick()\">\n        <mat-icon>close</mat-icon>\n    </button>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/update/update-content/content-add-dialog.html":
+/*!***************************************************************!*\
+  !*** ./src/app/update/update-content/content-add-dialog.html ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1 mat-dialog-title>Create New Content</h1>\n<div mat-dialog-content>\n\n    <div class=\"container\">\n        <form name=\"form\" (ngSubmit)=\"f.form.valid\" #f=\"ngForm\" novalidate>\n\n            <div class=\"form-group\">\n                <input id=\"title\" name=\"title\" class=\"form-control\" placeholder=\"Title\"\n                       required [(ngModel)]=\"content.title\" #title=\"ngModel\"/>\n                <div *ngIf=\"title.invalid && (title.dirty || title.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"title.errors.required\">Content title is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"image\" name=\"image\" class=\"form-control\" placeholder=\"Image\"\n                       required [(ngModel)]=\"content.image\" #image=\"ngModel\"/>\n                <div *ngIf=\"image.invalid && (image.dirty || image.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"image.errors.required\">Content image is required.</div>\n                </div>\n            </div>\n\n            <section style=\"background-color: #dddddd; padding: 1em\">\n                <mat-form-field>\n                    <input matInput placeholder=\"Keyword\" name=\"keyword\" [(ngModel)]=\"keyword\">\n                </mat-form-field>\n                <button mat-button (click)=\"searchWiki(keyword)\">🔎 Search Wikidata</button>\n\n                <mat-select id=\"foundWikis\" [(ngModel)]=\"selectedKeyword\" name=\"selectedWiki\" placeholder=\"Select keyword from wikidata\">\n                    <mat-option *ngFor=\"let wiki of wikis\" [value]=\"wiki\">{{wiki.description}}\n                    </mat-option>\n                </mat-select>\n\n                <br/>\n                <br/>\n                <a *ngIf=\"selectedKeyword\" href=\"{{selectedKeyword.url}}\">{{selectedKeyword.title}}</a>\n\n                <button mat-button (click)=\"addKeyword()\">➕ Add Keyword</button>\n                <li *ngFor=\"let keyword of keywordList\">{{keyword.label}}</li>\n\n            </section>\n\n            <br/>\n\n            <div class=\"form-group\">\n                <app-ngx-editor id=\"explanation\" name=\"explanation\" [placeholder]=\"'Enter explanation here...'\"\n                                [spellcheck]=\"true\"\n                                [(ngModel)]=\"content.explanation\" #explanation=\"ngModel\"></app-ngx-editor>\n            </div>\n\n\n            <br/>\n\n            <div class=\"form-group\">\n                <button class=\"btn btn-primary\" style=\"width:100%\" (click)=\"createNewContent()\" [disabled]=\"f.form.pristine || f.form.invalid\">Create Content</button>\n            </div>\n\n            <br/>\n            <h6 style=\"color: #3e5e9a\">{{message}}</h6>\n\n        </form>\n\n\n    </div>\n</div>\n<div mat-dialog-actions>\n    <button mat-icon-button (click)=\"onNoClick()\">\n        <mat-icon>close</mat-icon>\n    </button>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/update/update-content/content-delete-dialog.html":
+/*!******************************************************************!*\
+  !*** ./src/app/update/update-content/content-delete-dialog.html ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1 mat-dialog-title>Delete Content</h1>\n<div mat-dialog-content>\n    <p>Are you sure to delete the content?</p>\n    <p>{{dialogData.content.title}}</p>\n    <p style=\"color: red;\">{{message}}</p>\n</div>\n<div mat-dialog-actions>\n    <div mat-dialog-actions>\n        <button mat-icon-button (click)=\"onDeleteClick()\">\n            <mat-icon>delete</mat-icon>\n        </button>\n        <button style=\"float: right\" mat-icon-button (click)=\"onNoClick()\">\n            <mat-icon>close</mat-icon>\n        </button>\n    </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/update/update-content/content-update-dialog.html":
+/*!******************************************************************!*\
+  !*** ./src/app/update/update-content/content-update-dialog.html ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1 mat-dialog-title>Update Content</h1>\n<div mat-dialog-content>\n\n    <div class=\"container\">\n        <form name=\"form\" (ngSubmit)=\"f.form.valid\" #f=\"ngForm\" novalidate>\n\n            <div class=\"form-group\">\n                <input id=\"title\" name=\"title\" class=\"form-control\"\n                       required [(ngModel)]=\"dialogData.content.title\" #title=\"ngModel\"/>\n                <div *ngIf=\"title.invalid && (title.dirty || title.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"title.errors.required\">Content title is required.</div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <input id=\"image\" name=\"image\" class=\"form-control\" placeholder=\"Image\"\n                       required [(ngModel)]=\"dialogData.content.image\" #image=\"ngModel\"/>\n                <div *ngIf=\"image.invalid && (image.dirty || image.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"image.errors.required\">Content image is required.</div>\n                </div>\n            </div>\n\n            <br/>\n\n            <div class=\"form-group\">\n                <app-ngx-editor id=\"explanation\" name=\"explanation\"\n                                [spellcheck]=\"true\"\n                                [(ngModel)]=\"dialogData.content.explanation\" #explanation=\"ngModel\"></app-ngx-editor>\n            </div>\n\n\n            <br/>\n\n            <div class=\"form-group\">\n                <button class=\"btn btn-primary\" style=\"width:100%\"\n                        (click)=\"updateContent()\"\n                        [disabled]=\"f.form.pristine || f.form.invalid\">\n                    Update\n                </button>\n            </div>\n\n\n            <br/>\n            <h6 style=\"color: #3e5e9a\">{{message}}</h6>\n\n        </form>\n\n\n    </div>\n</div>\n<div mat-dialog-actions>\n    <button mat-icon-button (click)=\"onNoClick()\">\n        <mat-icon>close</mat-icon>\n    </button>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/update/update-content/update-content.component.css":
+/*!********************************************************************!*\
+  !*** ./src/app/update/update-content/update-content.component.css ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "p {\n    font-family: Lato;\n}\n\n\n.header-image {\n    background-size: cover;\n}\n\n\n.material-card{\n    margin-bottom: 2%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdXBkYXRlL3VwZGF0ZS1jb250ZW50L3VwZGF0ZS1jb250ZW50LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxpQkFBaUI7QUFDckI7OztBQUdBO0lBQ0ksc0JBQXNCO0FBQzFCOzs7QUFFQTtJQUNJLGlCQUFpQjtBQUNyQiIsImZpbGUiOiJzcmMvYXBwL3VwZGF0ZS91cGRhdGUtY29udGVudC91cGRhdGUtY29udGVudC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsicCB7XG4gICAgZm9udC1mYW1pbHk6IExhdG87XG59XG5cblxuLmhlYWRlci1pbWFnZSB7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3Zlcjtcbn1cblxuLm1hdGVyaWFsLWNhcmR7XG4gICAgbWFyZ2luLWJvdHRvbTogMiU7XG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/update/update-content/update-content.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/update/update-content/update-content.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div fxLayout=\"column\" fxLayoutAlign=\"space-between stretch\" >\n\n  <h5>Contents</h5>\n  <br/>\n  <mat-divider></mat-divider>\n  <button mat-icon-button (click)=\"openAddDialog()\">\n    <mat-icon>add_circle</mat-icon>\n    Add New Content\n  </button>\n\n  <br/>\n\n\n  <mat-card class=\"material-card\" *ngFor=\"let content of material.contents \">\n    <mat-card-header>\n      <div mat-card-avatar class=\"header-image\"><img  [src]=\"content.image\"></div>\n      {{content.title}}\n    </mat-card-header>\n    <mat-card-content>\n      {{content.explanation && content.explanation.slice(0,200)}}\n    </mat-card-content>\n    <mat-card-actions>\n      <button style=\"margin-right: 2%\" mat-stroked-button color=\"warn\" (click)=\"seeDetail(content.id)\" [disabled]=\"info.token==null\">Details</button>\n      <button style=\"margin-right: 2%\" mat-stroked-button color=\"info\" (click)=\"openEditDialog(content)\">Update</button>\n      <button style=\"margin-right: 2%\" mat-stroked-button color=\"info\" (click)=\"openDeleteDialog(content)\">Delete</button>\n    </mat-card-actions>\n  </mat-card>\n\n\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/update/update-content/update-content.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/update/update-content/update-content.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: UpdateContentComponent, ContentAddDialog, ContentUpdateDialog, ContentDeleteDialog */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateContentComponent", function() { return UpdateContentComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContentAddDialog", function() { return ContentAddDialog; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContentUpdateDialog", function() { return ContentUpdateDialog; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContentDeleteDialog", function() { return ContentDeleteDialog; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/search.service */ "./src/app/services/search.service.ts");
+/* harmony import */ var _model_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../model/material */ "./src/app/model/material.ts");
+/* harmony import */ var _services_teach_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../services/teach.service */ "./src/app/services/teach.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+
+
+
+
+
+
+
+
+var UpdateContentComponent = /** @class */ (function () {
+    function UpdateContentComponent(token, route, searchService, router, teachService, dialog) {
+        this.token = token;
+        this.route = route;
+        this.searchService = searchService;
+        this.router = router;
+        this.teachService = teachService;
+        this.dialog = dialog;
+        this.material = new _model_material__WEBPACK_IMPORTED_MODULE_5__["Material"]();
+        this.content = new _model_material__WEBPACK_IMPORTED_MODULE_5__["Content"]();
+    }
+    UpdateContentComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.info = {
+            token: this.token.getToken(),
+            username: this.token.getUsername(),
+            authorities: this.token.getAuthorities()
+        };
+        this.sub = this.route.params.subscribe(function (params) {
+            _this.id = +params['id'];
+        });
+        this.material = this.searchService.getMaterialDetail(this.id).subscribe(function (data) {
+            _this.material = data;
+            _this.material.contents.sort(function (a, b) { return (a.order > b.order) ? 1 : -1; });
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    UpdateContentComponent.prototype.seeDetail = function (id) {
+        this.router.navigate(['update/content', id]);
+    };
+    UpdateContentComponent.prototype.openAddDialog = function () {
+        var _this = this;
+        var dialogRef = this.dialog.open(ContentAddDialog, {
+            width: '95%',
+            height: '80%',
+            data: { username: this.info.username,
+                content: this.content,
+                materialId: this.id }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log('Content added');
+            _this.content = result;
+        });
+    };
+    UpdateContentComponent.prototype.openEditDialog = function (content) {
+        var _this = this;
+        var dialogRef = this.dialog.open(ContentUpdateDialog, {
+            width: '500px',
+            data: { username: this.info.username,
+                content: content,
+                materialId: this.id }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log('Content edited');
+            _this.material = result;
+        });
+    };
+    UpdateContentComponent.prototype.openDeleteDialog = function (content) {
+        var dialogRef = this.dialog.open(ContentDeleteDialog, {
+            width: '300px',
+            data: { username: this.info.username,
+                content: content,
+                materialId: this.id }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log('Content deleted');
+        });
+    };
+    UpdateContentComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-update-content',
+            template: __webpack_require__(/*! ./update-content.component.html */ "./src/app/update/update-content/update-content.component.html"),
+            styles: [__webpack_require__(/*! ./update-content.component.css */ "./src/app/update/update-content/update-content.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _services_search_service__WEBPACK_IMPORTED_MODULE_4__["SearchService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _services_teach_service__WEBPACK_IMPORTED_MODULE_6__["TeachService"], _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatDialog"]])
+    ], UpdateContentComponent);
+    return UpdateContentComponent;
+}());
+
+var ContentAddDialog = /** @class */ (function () {
+    function ContentAddDialog(dialogRef, dialogData, teachService) {
+        this.dialogRef = dialogRef;
+        this.dialogData = dialogData;
+        this.teachService = teachService;
+        this.content = new _model_material__WEBPACK_IMPORTED_MODULE_5__["Content"]();
+        this.wikis = new Array();
+        this.selectedKeyword = new _model_material__WEBPACK_IMPORTED_MODULE_5__["Keyword"]();
+        this.keywordList = new Array();
+    }
+    ContentAddDialog.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    ContentAddDialog.prototype.createNewContent = function () {
+        var _this = this;
+        this.content.keywords = this.keywordList;
+        this.content.status = 1;
+        console.log(this.content);
+        this.teachService.createContent(this.content, this.dialogData.materialId).subscribe(function (data) {
+            console.log(data);
+            _this.message = data.message;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    ContentAddDialog.prototype.searchWiki = function (keyword) {
+        var _this = this;
+        this.teachService.searchWiki(keyword).subscribe(function (data) {
+            console.log(data);
+            _this.wikis = data;
+        }, function (error) {
+            console.log(error);
+        });
+        console.log(keyword + ' selected');
+    };
+    ContentAddDialog.prototype.addKeyword = function () {
+        console.log(this.selectedKeyword);
+        this.keywordList.push(this.selectedKeyword);
+    };
+    ContentAddDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'content-add-dialog',
+            template: __webpack_require__(/*! ./content-add-dialog.html */ "./src/app/update/update-content/content-add-dialog.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_7__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"], Object, _services_teach_service__WEBPACK_IMPORTED_MODULE_6__["TeachService"]])
+    ], ContentAddDialog);
+    return ContentAddDialog;
+}());
+
+var ContentUpdateDialog = /** @class */ (function () {
+    function ContentUpdateDialog(dialogRef, dialogData, teachService) {
+        this.dialogRef = dialogRef;
+        this.dialogData = dialogData;
+        this.teachService = teachService;
+    }
+    ContentUpdateDialog.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    ContentUpdateDialog.prototype.updateContent = function () {
+        var _this = this;
+        this.teachService.updateContent(this.dialogData.content, this.dialogData.content.id).subscribe(function (data) {
+            console.log(data);
+            _this.message = data.message;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    ContentUpdateDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'content-update-dialog',
+            template: __webpack_require__(/*! ./content-update-dialog.html */ "./src/app/update/update-content/content-update-dialog.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_7__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"], Object, _services_teach_service__WEBPACK_IMPORTED_MODULE_6__["TeachService"]])
+    ], ContentUpdateDialog);
+    return ContentUpdateDialog;
+}());
+
+var ContentDeleteDialog = /** @class */ (function () {
+    function ContentDeleteDialog(dialogRef, dialogData, teachService) {
+        this.dialogRef = dialogRef;
+        this.dialogData = dialogData;
+        this.teachService = teachService;
+    }
+    ContentDeleteDialog.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    ContentDeleteDialog.prototype.onDeleteClick = function () {
+        var _this = this;
+        this.teachService.deleteContent(this.dialogData.content.id).subscribe(function (data) {
+            _this.message = data.message;
+            console.log(data);
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    ContentDeleteDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'content-delete-dialog',
+            template: __webpack_require__(/*! ./content-delete-dialog.html */ "./src/app/update/update-content/content-delete-dialog.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_7__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"], Object, _services_teach_service__WEBPACK_IMPORTED_MODULE_6__["TeachService"]])
+    ], ContentDeleteDialog);
+    return ContentDeleteDialog;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/update/update-question/question-add-dialog.html":
+/*!*****************************************************************!*\
+  !*** ./src/app/update/update-question/question-add-dialog.html ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1 mat-dialog-title>Create New Question</h1>\n<div mat-dialog-content>\n\n    <div class=\"container\">\n        <br/>\n\n        <form name=\"form\" (ngSubmit)=\"f.form.valid\" #f=\"ngForm\" novalidate>\n\n            <div class=\"form-group\">\n                <input id=\"questionText\" name=\"questionText\" class=\"form-control\" placeholder=\"Question Text\"\n                       required [(ngModel)]=\"question.questionText\" #questionText=\"ngModel\"/>\n                <div *ngIf=\"questionText.invalid && (questionText.dirty || questionText.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"questionText.errors.required\">Question Text is required.</div>\n                </div>\n            </div>\n\n\n            <section style=\"background-color: #dddddd; padding: 1em\">\n                <mat-form-field>\n                    <input matInput placeholder=\"Option Text\" name=\"option\" [(ngModel)]=\"selectedOption.optionText\">\n                </mat-form-field>\n                <mat-checkbox name=\"value\" [(ngModel)]=\"selectedOption.isAnswer\">Is correct answer?</mat-checkbox>\n                <button mat-button (click)=\"addOption()\">➕ Add Option</button>\n\n                <br/>\n                <li *ngFor=\"let option of optionList\">{{option.optionText}} - {{option.isAnswer}}</li>\n            </section>\n\n            <br/>\n            <br/>\n\n            <div class=\"form-group\">\n                <button class=\"btn btn-primary\" style=\"width:100%\" (click)=\"createQuestion()\" [disabled]=\"f.form.pristine || f.form.invalid\">Create Question</button>\n            </div>\n\n            <br/>\n            <h6 style=\"color: #3e5e9a\">{{message}}</h6>\n\n        </form>\n\n\n    </div>\n\n    <br/>\n\n</div>\n<div mat-dialog-actions>\n    <button mat-icon-button (click)=\"onNoClick()\">\n        <mat-icon>close</mat-icon>\n    </button>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/update/update-question/question-delete-dialog.html":
+/*!********************************************************************!*\
+  !*** ./src/app/update/update-question/question-delete-dialog.html ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1 mat-dialog-title>Delete Question</h1>\n<div mat-dialog-content>\n    <p>Are you sure to delete the question?</p>\n    <p>{{dialogData.question.questionText}}</p>\n    <p style=\"color: red;\">{{message}}</p>\n</div>\n<div mat-dialog-actions>\n    <div mat-dialog-actions>\n        <button mat-icon-button (click)=\"onDeleteClick()\">\n            <mat-icon>delete</mat-icon>\n        </button>\n        <button style=\"float: right\" mat-icon-button (click)=\"onNoClick()\">\n            <mat-icon>close</mat-icon>\n        </button>\n    </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/update/update-question/question-update-dialog.html":
+/*!********************************************************************!*\
+  !*** ./src/app/update/update-question/question-update-dialog.html ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1 mat-dialog-title>Create New Question</h1>\n<div mat-dialog-content>\n\n    <div class=\"container\">\n        <br/>\n\n        <form name=\"form\" (ngSubmit)=\"f.form.valid\" #f=\"ngForm\" novalidate>\n\n            <div class=\"form-group\">\n                <input id=\"questionText\" name=\"questionText\" class=\"form-control\"\n                       required [(ngModel)]=\"dialogData.question.questionText\" #questionText=\"ngModel\"/>\n                <div *ngIf=\"questionText.invalid && (questionText.dirty || questionText.touched)\" class=\"alert alert-danger\">\n                    <div *ngIf=\"questionText.errors.required\">Question Text is required.</div>\n                </div>\n            </div>\n\n            <p>Options:</p>\n            <li *ngFor=\"let option of dialogData.question.options\">\n                {{option.optionText}} - {{option.isAnswer}}\n            </li>\n\n            <br/>\n            <br/>\n\n            <div class=\"form-group\">\n                <button class=\"btn btn-primary\" style=\"width:100%\" (click)=\"updateQuestion()\" [disabled]=\"f.form.pristine || f.form.invalid\">Update</button>\n            </div>\n\n            <br/>\n            <h6 style=\"color: #3e5e9a\">{{message}}</h6>\n\n        </form>\n\n\n    </div>\n\n    <br/>\n\n</div>\n<div mat-dialog-actions>\n    <button mat-icon-button (click)=\"onNoClick()\">\n        <mat-icon>close</mat-icon>\n    </button>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/update/update-question/update-question.component.css":
+/*!**********************************************************************!*\
+  !*** ./src/app/update/update-question/update-question.component.css ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n.header-image {\n    background-size: cover;\n}\n\n.material-card{\n    margin-bottom: 2%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdXBkYXRlL3VwZGF0ZS1xdWVzdGlvbi91cGRhdGUtcXVlc3Rpb24uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0E7SUFDSSxzQkFBc0I7QUFDMUI7O0FBRUE7SUFDSSxpQkFBaUI7QUFDckIiLCJmaWxlIjoic3JjL2FwcC91cGRhdGUvdXBkYXRlLXF1ZXN0aW9uL3VwZGF0ZS1xdWVzdGlvbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4uaGVhZGVyLWltYWdlIHtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xufVxuXG4ubWF0ZXJpYWwtY2FyZHtcbiAgICBtYXJnaW4tYm90dG9tOiAyJTtcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/update/update-question/update-question.component.html":
+/*!***********************************************************************!*\
+  !*** ./src/app/update/update-question/update-question.component.html ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div fxLayout=\"column\" fxLayoutAlign=\"space-between stretch\" >\n\n  <h5>Questions</h5>\n  <br/>\n  <mat-divider></mat-divider>\n  <button mat-icon-button (click)=\"openAddDialog()\">\n    <mat-icon>add_circle</mat-icon>\n    Add New Question\n  </button>\n\n  <br/>\n\n\n  <mat-card class=\"material-card\" *ngFor=\"let question of questions \">\n    <mat-card-header>\n      <div mat-card-avatar class=\"header-image\">❓</div>\n    </mat-card-header>\n    <mat-card-content>\n      {{question.questionText}}\n      <li *ngFor=\"let option of question.options\">\n        {{option.optionText}} - {{option.isAnswer}}\n      </li>\n    </mat-card-content>\n    <mat-card-actions>\n      <button style=\"margin-right: 2%\" mat-stroked-button color=\"info\" (click)=\"openEditDialog(question)\">Update</button>\n      <button style=\"margin-right: 2%\" mat-stroked-button color=\"info\" (click)=\"openDeleteDialog(question)\">Delete</button>\n    </mat-card-actions>\n  </mat-card>\n\n\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/update/update-question/update-question.component.ts":
+/*!*********************************************************************!*\
+  !*** ./src/app/update/update-question/update-question.component.ts ***!
+  \*********************************************************************/
+/*! exports provided: UpdateQuestionComponent, QuestionAddDialog, QuestionUpdateDialog, QuestionDeleteDialog */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateQuestionComponent", function() { return UpdateQuestionComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuestionAddDialog", function() { return QuestionAddDialog; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuestionUpdateDialog", function() { return QuestionUpdateDialog; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuestionDeleteDialog", function() { return QuestionDeleteDialog; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _model_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../model/material */ "./src/app/model/material.ts");
+/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_teach_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../services/teach.service */ "./src/app/services/teach.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+
+
+
+
+
+
+
+var UpdateQuestionComponent = /** @class */ (function () {
+    function UpdateQuestionComponent(token, route, teachService, router, dialog) {
+        this.token = token;
+        this.route = route;
+        this.teachService = teachService;
+        this.router = router;
+        this.dialog = dialog;
+        this.questions = new Array();
+        this.question = new _model_material__WEBPACK_IMPORTED_MODULE_2__["Question"]();
+    }
+    UpdateQuestionComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.info = {
+            token: this.token.getToken(),
+            username: this.token.getUsername(),
+            authorities: this.token.getAuthorities()
+        };
+        this.sub = this.route.params.subscribe(function (params) {
+            _this.id = +params['id'];
+        });
+        this.teachService.getQuestions(this.id).subscribe(function (data) {
+            _this.questions = data;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    UpdateQuestionComponent.prototype.openAddDialog = function () {
+        var _this = this;
+        var dialogRef = this.dialog.open(QuestionAddDialog, {
+            width: '70%',
+            data: { username: this.info.username,
+                question: this.question,
+                contentId: this.id }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log('Question added');
+            _this.question = result;
+        });
+    };
+    UpdateQuestionComponent.prototype.openEditDialog = function (question) {
+        var _this = this;
+        var dialogRef = this.dialog.open(QuestionUpdateDialog, {
+            width: '70%',
+            data: { username: this.info.username,
+                question: question,
+                contentId: this.id }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log('Question edited');
+            _this.question = result;
+        });
+    };
+    UpdateQuestionComponent.prototype.openDeleteDialog = function (question) {
+        var dialogRef = this.dialog.open(QuestionDeleteDialog, {
+            width: '300px',
+            data: { username: this.info.username,
+                question: question,
+                contentId: this.id }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log('Question deleted');
+        });
+    };
+    UpdateQuestionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-update-question',
+            template: __webpack_require__(/*! ./update-question.component.html */ "./src/app/update/update-question/update-question.component.html"),
+            styles: [__webpack_require__(/*! ./update-question.component.css */ "./src/app/update/update-question/update-question.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_3__["TokenStorageService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"],
+            _services_teach_service__WEBPACK_IMPORTED_MODULE_5__["TeachService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDialog"]])
+    ], UpdateQuestionComponent);
+    return UpdateQuestionComponent;
+}());
+
+var QuestionAddDialog = /** @class */ (function () {
+    function QuestionAddDialog(dialogRef, dialogData, teachService) {
+        this.dialogRef = dialogRef;
+        this.dialogData = dialogData;
+        this.teachService = teachService;
+        this.question = new _model_material__WEBPACK_IMPORTED_MODULE_2__["Question"]();
+        this.optionList = new Array();
+        this.selectedOption = new _model_material__WEBPACK_IMPORTED_MODULE_2__["Option"]();
+    }
+    QuestionAddDialog.prototype.createQuestion = function () {
+        var _this = this;
+        this.question.options = this.optionList;
+        console.log(this.question);
+        this.teachService.createQuestion(this.question, this.dialogData.contentId).subscribe(function (data) {
+            console.log(data);
+            _this.message = data.message;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    QuestionAddDialog.prototype.addOption = function () {
+        console.log(this.selectedOption);
+        this.optionList.push(this.selectedOption);
+        this.selectedOption = new _model_material__WEBPACK_IMPORTED_MODULE_2__["Option"]();
+    };
+    QuestionAddDialog.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    QuestionAddDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'question-add-dialog',
+            template: __webpack_require__(/*! ./question-add-dialog.html */ "./src/app/update/update-question/question-add-dialog.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_6__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDialogRef"], Object, _services_teach_service__WEBPACK_IMPORTED_MODULE_5__["TeachService"]])
+    ], QuestionAddDialog);
+    return QuestionAddDialog;
+}());
+
+var QuestionUpdateDialog = /** @class */ (function () {
+    function QuestionUpdateDialog(dialogRef, dialogData, teachService) {
+        this.dialogRef = dialogRef;
+        this.dialogData = dialogData;
+        this.teachService = teachService;
+    }
+    QuestionUpdateDialog.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    QuestionUpdateDialog.prototype.updateQuestion = function () {
+        var _this = this;
+        this.teachService.updateQuestion(this.dialogData.question, this.dialogData.question.id).subscribe(function (data) {
+            console.log(data);
+            _this.message = data.message;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    QuestionUpdateDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'question-update-dialog',
+            template: __webpack_require__(/*! ./question-update-dialog.html */ "./src/app/update/update-question/question-update-dialog.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_6__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDialogRef"], Object, _services_teach_service__WEBPACK_IMPORTED_MODULE_5__["TeachService"]])
+    ], QuestionUpdateDialog);
+    return QuestionUpdateDialog;
+}());
+
+var QuestionDeleteDialog = /** @class */ (function () {
+    function QuestionDeleteDialog(dialogRef, dialogData, teachService) {
+        this.dialogRef = dialogRef;
+        this.dialogData = dialogData;
+        this.teachService = teachService;
+    }
+    QuestionDeleteDialog.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    QuestionDeleteDialog.prototype.onDeleteClick = function () {
+        var _this = this;
+        this.teachService.deleteQuestion(this.dialogData.question.id).subscribe(function (data) {
+            _this.message = data.message;
+            console.log(data);
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    QuestionDeleteDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'question-delete-dialog',
+            template: __webpack_require__(/*! ./question-delete-dialog.html */ "./src/app/update/update-question/question-delete-dialog.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_6__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDialogRef"], Object, _services_teach_service__WEBPACK_IMPORTED_MODULE_5__["TeachService"]])
+    ], QuestionDeleteDialog);
+    return QuestionDeleteDialog;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/update/update.component.css":
+/*!*********************************************!*\
+  !*** ./src/app/update/update.component.css ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "p {\n    font-family: Lato;\n}\n\n\n.header-image {\n    background-size: cover;\n}\n\n\n.material-card{\n    margin-bottom: 2%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdXBkYXRlL3VwZGF0ZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksaUJBQWlCO0FBQ3JCOzs7QUFHQTtJQUNJLHNCQUFzQjtBQUMxQjs7O0FBRUE7SUFDSSxpQkFBaUI7QUFDckIiLCJmaWxlIjoic3JjL2FwcC91cGRhdGUvdXBkYXRlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJwIHtcbiAgICBmb250LWZhbWlseTogTGF0bztcbn1cblxuXG4uaGVhZGVyLWltYWdlIHtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xufVxuXG4ubWF0ZXJpYWwtY2FyZHtcbiAgICBtYXJnaW4tYm90dG9tOiAyJTtcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/update/update.component.html":
+/*!**********************************************!*\
+  !*** ./src/app/update/update.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div fxLayout=\"column\" fxLayoutAlign=\"space-between stretch\">\n\n    <h5>Materials</h5>\n    <br/>\n    <mat-divider></mat-divider>\n    <br/>\n\n    <button mat-icon-button (click)=\"openAddDialog()\">\n        <mat-icon>add_circle</mat-icon>\n        Add New Material\n    </button>\n\n    <br/>\n\n    <mat-card class=\"material-card\" *ngFor=\"let material of createdMaterials\">\n        <mat-card-header>\n            <div mat-card-avatar class=\"header-image\"><img [src]=\"material.image\"></div>\n            {{material.title}}\n        </mat-card-header>\n        <mat-card-content>\n            {{material.description}}\n        </mat-card-content>\n        <mat-card-actions>\n            <button style=\"margin-right: 2%\" mat-stroked-button color=\"warn\" (click)=\"seeDetail(material.id)\"\n                    [disabled]=\"info.token==null\">Details\n            </button>\n            <button style=\"margin-right: 2%\" mat-stroked-button color=\"info\"\n                    (click)=\"openEditDialog(material)\">Update</button>\n            <button style=\"margin-right: 2%\" mat-stroked-button color=\"info\"\n                    (click)=\"openDeleteDialog(material)\">Delete</button>\n        </mat-card-actions>\n    </mat-card>\n\n\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/update/update.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/update/update.component.ts ***!
+  \********************************************/
+/*! exports provided: UpdateComponent, MaterialAddDialog, MaterialUpdateDialog, MaterialDeleteDialog */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateComponent", function() { return UpdateComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaterialAddDialog", function() { return MaterialAddDialog; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaterialUpdateDialog", function() { return MaterialUpdateDialog; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaterialDeleteDialog", function() { return MaterialDeleteDialog; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
+/* harmony import */ var _services_teach_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/teach.service */ "./src/app/services/teach.service.ts");
+/* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/search.service */ "./src/app/services/search.service.ts");
+/* harmony import */ var _model_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../model/material */ "./src/app/model/material.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+
+
+
+
+
+
+
+
+var UpdateComponent = /** @class */ (function () {
+    function UpdateComponent(token, teachService, searchService, router, dialog) {
+        this.token = token;
+        this.teachService = teachService;
+        this.searchService = searchService;
+        this.router = router;
+        this.dialog = dialog;
+        this.createdMaterials = new Array();
+        this.material = new _model_material__WEBPACK_IMPORTED_MODULE_5__["Material"]();
+    }
+    UpdateComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.info = {
+            token: this.token.getToken(),
+            username: this.token.getUsername(),
+            authorities: this.token.getAuthorities()
+        };
+        this.searchService.getCreatedByMaterials().subscribe(function (data) {
+            _this.createdMaterials = data;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    UpdateComponent.prototype.seeDetail = function (id) {
+        this.router.navigate(['update/material', id]);
+    };
+    UpdateComponent.prototype.openAddDialog = function () {
+        var _this = this;
+        var dialogRef = this.dialog.open(MaterialAddDialog, {
+            width: '500px',
+            data: { username: this.info.username,
+                material: this.material }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log('Material added');
+            _this.material = result;
+        });
+    };
+    UpdateComponent.prototype.openEditDialog = function (material) {
+        var _this = this;
+        var dialogRef = this.dialog.open(MaterialUpdateDialog, {
+            width: '500px',
+            data: { username: this.info.username,
+                material: material }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log('Material edited');
+            _this.material = result;
+        });
+    };
+    UpdateComponent.prototype.openDeleteDialog = function (material) {
+        var dialogRef = this.dialog.open(MaterialDeleteDialog, {
+            width: '300px',
+            data: { username: this.info.username,
+                material: material }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log('Material deleted');
+        });
+    };
+    UpdateComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-update',
+            template: __webpack_require__(/*! ./update.component.html */ "./src/app/update/update.component.html"),
+            styles: [__webpack_require__(/*! ./update.component.css */ "./src/app/update/update.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"],
+            _services_teach_service__WEBPACK_IMPORTED_MODULE_3__["TeachService"],
+            _services_search_service__WEBPACK_IMPORTED_MODULE_4__["SearchService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatDialog"]])
+    ], UpdateComponent);
+    return UpdateComponent;
+}());
+
+var MaterialAddDialog = /** @class */ (function () {
+    function MaterialAddDialog(dialogRef, dialogData, teachService) {
+        this.dialogRef = dialogRef;
+        this.dialogData = dialogData;
+        this.teachService = teachService;
+        this.data = {};
+    }
+    MaterialAddDialog.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    MaterialAddDialog.prototype.onSubmit = function () {
+        var _this = this;
+        this.data.createdBy = this.dialogData.username;
+        this.teachService.createMaterial(this.data).subscribe(function (data) {
+            console.log(data);
+            _this.message = data.message;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    MaterialAddDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'material-add-dialog',
+            template: __webpack_require__(/*! ./material-add-dialog.html */ "./src/app/update/material-add-dialog.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_7__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"], Object, _services_teach_service__WEBPACK_IMPORTED_MODULE_3__["TeachService"]])
+    ], MaterialAddDialog);
+    return MaterialAddDialog;
+}());
+
+var MaterialUpdateDialog = /** @class */ (function () {
+    function MaterialUpdateDialog(dialogRef, dialogData, teachService) {
+        this.dialogRef = dialogRef;
+        this.dialogData = dialogData;
+        this.teachService = teachService;
+    }
+    MaterialUpdateDialog.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    MaterialUpdateDialog.prototype.onSubmit = function () {
+        var _this = this;
+        this.teachService.updateMaterial(this.dialogData.material, this.dialogData.material.id).subscribe(function (data) {
+            console.log(data);
+            _this.message = data.message;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    MaterialUpdateDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'material-update-dialog',
+            template: __webpack_require__(/*! ./material-update-dialog.html */ "./src/app/update/material-update-dialog.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_7__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"], Object, _services_teach_service__WEBPACK_IMPORTED_MODULE_3__["TeachService"]])
+    ], MaterialUpdateDialog);
+    return MaterialUpdateDialog;
+}());
+
+var MaterialDeleteDialog = /** @class */ (function () {
+    function MaterialDeleteDialog(dialogRef, dialogData, teachService) {
+        this.dialogRef = dialogRef;
+        this.dialogData = dialogData;
+        this.teachService = teachService;
+    }
+    MaterialDeleteDialog.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    MaterialDeleteDialog.prototype.onDeleteClick = function () {
+        var _this = this;
+        this.teachService.deleteMaterial(this.dialogData.material.id).subscribe(function (data) {
+            _this.message = data.message;
+            console.log(data);
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    MaterialDeleteDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'material-delete-dialog',
+            template: __webpack_require__(/*! ./material-delete-dialog.html */ "./src/app/update/material-delete-dialog.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_7__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"], Object, _services_teach_service__WEBPACK_IMPORTED_MODULE_3__["TeachService"]])
+    ], MaterialDeleteDialog);
+    return MaterialDeleteDialog;
 }());
 
 
