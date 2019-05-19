@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {TokenStorageService} from '../auth/token-storage.service';
+import {Material} from '../model/material';
+import {SearchService} from '../services/search.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -10,8 +13,10 @@ import {TokenStorageService} from '../auth/token-storage.service';
 export class LearnComponent implements OnInit {
 
   info: any;
+  completedMaterials : Array<Material>  = new Array<Material>();
+  inProgressMaterials : Array<Material> = new Array<Material>();
 
-    constructor(private token: TokenStorageService) {
+    constructor(private token: TokenStorageService,private searchService: SearchService, private router: Router) {
     }
 
     ngOnInit() {
@@ -20,6 +25,32 @@ export class LearnComponent implements OnInit {
             username: this.token.getUsername(),
             authorities: this.token.getAuthorities()
         };
+
+        this.searchService.getCompletedMaterials().subscribe(
+            data => {
+                this.completedMaterials = data;
+            } , error => {
+                console.log(error);
+            }
+        )
+
+        this.searchService.getInProgressMaterials().subscribe(
+            data => {
+                this.inProgressMaterials = data;
+            } , error => {
+                console.log(error);
+            }
+        )
+
     }
+
+
+    seeDetail(id:number){
+        this.router.navigate(['detail',id]);
+    }
+
+
+
+
 
 }

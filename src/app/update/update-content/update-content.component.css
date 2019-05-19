@@ -1,0 +1,12 @@
+p {
+    font-family: Lato;
+}
+
+
+.header-image {
+    background-size: cover;
+}
+
+.material-card{
+    margin-bottom: 2%;
+}

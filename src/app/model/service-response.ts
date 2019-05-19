@@ -1,4 +1,4 @@
 export class ServiceResponse{
-    isSuccess: boolean;
+    success: boolean;
     message: object;
 }

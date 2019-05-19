@@ -14,10 +14,8 @@ import {httpInterceptorProviders} from './auth/auth-interceptor';
 import {UserService} from './services/user.service';
 import {TokenStorageService} from './auth/token-storage.service';
 import {AuthService} from './auth/auth.service';
-import {TeachComponent} from './teach/teach.component';
 import {TrackComponent} from './track/track.component';
 import {LearnComponent} from './learn/learn.component';
-import {CreateComponent} from './teach/create/create.component';
 
 import {
     MatButtonModule,
@@ -26,22 +24,45 @@ import {
     MatFormFieldModule,
     MatInputModule,
     MatToolbarModule,
-    MatTabsModule, MatDialogModule, MatSelectModule, MatOptionModule, MatCheckboxModule, MatStepperModule, MatRadioModule
+    MatTabsModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatCheckboxModule,
+    MatStepperModule,
+    MatRadioModule,
+    MatTooltipModule,
+    MatSnackBarModule, MatDividerModule
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HeaderComponent} from './ui/header/header.component';
 import {FooterComponent} from './ui/footer/footer.component';
 import {SearchService} from './services/search.service';
-import { UpdateComponent } from './teach/update/update.component';
-import { MaterialComponent } from './teach/create/material/material.component';
+import {MaterialAddDialog, MaterialDeleteDialog, MaterialUpdateDialog, UpdateComponent} from './update/update.component';
 import {NgxEditorModule} from 'ngx-editor';
 import {TooltipModule} from 'ngx-bootstrap';
-import {KeywordDetailDialog, MaterialDetailComponent} from './material-detail/material-detail.component';
-import { QuestionComponent } from './teach/create/question/question.component';
-import {TopicComponent} from './teach/create/topic/topic.component';
+import {
+    ContentResultCompletedComponent,
+    ContentResultFailComponent,
+    ContentResultSuccessComponent,
+    KeywordDetailDialog,
+    MaterialDetailComponent
+} from './material-detail/material-detail.component';
 import {LearnService} from './services/learn.service';
 import {TeachService} from './services/teach.service';
+import {
+    ContentAddDialog,
+    ContentDeleteDialog,
+    ContentUpdateDialog,
+    UpdateContentComponent
+} from './update/update-content/update-content.component';
+import {
+    QuestionAddDialog,
+    QuestionDeleteDialog,
+    QuestionUpdateDialog,
+    UpdateQuestionComponent
+} from './update/update-question/update-question.component';
 
 
 
@@ -51,18 +72,17 @@ import {TeachService} from './services/teach.service';
         LoginComponent,
         RegisterComponent,
         HomeComponent,
-        TeachComponent,
         TrackComponent,
         LearnComponent,
-        CreateComponent,
         HeaderComponent,
         FooterComponent,
-        TopicComponent,
         UpdateComponent,
-        MaterialComponent,
         MaterialDetailComponent,
-        QuestionComponent,
-        KeywordDetailDialog
+        KeywordDetailDialog, MaterialAddDialog, MaterialUpdateDialog, MaterialDeleteDialog,
+        ContentResultSuccessComponent, ContentResultFailComponent, ContentResultCompletedComponent,
+        UpdateContentComponent, UpdateQuestionComponent,
+        ContentAddDialog,ContentUpdateDialog,ContentDeleteDialog,
+        QuestionAddDialog,QuestionUpdateDialog,QuestionDeleteDialog
     ],
     imports: [
         BrowserModule, BrowserAnimationsModule,
@@ -71,7 +91,8 @@ import {TeachService} from './services/teach.service';
         HttpClientModule,
         MatButtonModule, MatIconModule, MatCardModule, MatToolbarModule, MatFormFieldModule,
         MatInputModule, MatTabsModule, MatDialogModule, MatSelectModule, MatOptionModule,
-        MatCheckboxModule, MatStepperModule,MatRadioModule,
+        MatCheckboxModule, MatStepperModule,MatRadioModule, MatIconModule, MatTooltipModule,
+        MatSnackBarModule, MatDividerModule,
         FlexLayoutModule,
         NgxEditorModule,
         TooltipModule.forRoot()
@@ -79,7 +100,10 @@ import {TeachService} from './services/teach.service';
     providers: [httpInterceptorProviders, UserService, TokenStorageService, AuthService, SearchService,
         LearnService, TeachService],
     bootstrap: [AppComponent],
-    entryComponents: [KeywordDetailDialog]
+    entryComponents: [KeywordDetailDialog,MaterialAddDialog, MaterialUpdateDialog, MaterialDeleteDialog,
+        ContentResultFailComponent,ContentResultSuccessComponent, ContentResultCompletedComponent,
+        ContentAddDialog,ContentUpdateDialog,ContentDeleteDialog,
+        QuestionAddDialog,QuestionUpdateDialog,QuestionDeleteDialog]
 })
 export class AppModule {
 }

@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
             authorities: this.token.getAuthorities()
         };
 
-        this.searchService.getAllMaterialSummaries().subscribe(
+        this.searchService.getAllMaterialSummaries(this.info.username).subscribe(
             data => {
                 console.log(data);
                 this.materials = data;

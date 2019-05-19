@@ -37,5 +37,32 @@ export class TeachService {
         return this.http.post<ServiceResponse>(this.teachUrl + 'create/question/' + contentId, question, httpOptions);
     }
 
+    getQuestions(id: number): Observable<any> {
+        return this.http.get(this.teachUrl + 'questions/' + id, httpOptions);
+    }
+
+    updateMaterial(material: Material, id:number){
+        return this.http.put<ServiceResponse>(this.teachUrl + 'update/material/' + id, material, httpOptions);
+    }
+
+    updateContent(content: Content, id:number){
+        return this.http.put<ServiceResponse>(this.teachUrl + 'update/content/' + id, content, httpOptions);
+    }
+
+    updateQuestion(question: Question, id:number){
+        return this.http.put<ServiceResponse>(this.teachUrl + 'update/question/' + id, question, httpOptions);
+    }
+
+    deleteMaterial(id:number){
+        return this.http.delete<ServiceResponse>(this.teachUrl + 'delete/material/' + id, httpOptions);
+    }
+
+    deleteContent(id:number){
+        return this.http.delete<ServiceResponse>(this.teachUrl + 'delete/content/' + id, httpOptions);
+    }
+
+    deleteQuestion(id:number){
+        return this.http.delete<ServiceResponse>(this.teachUrl + 'delete/question/' + id, httpOptions);
+    }
 
 }

@@ -8,11 +8,13 @@ import {TeachComponent} from './teach/teach.component';
 import {TrackComponent} from './track/track.component';
 import {LearnComponent} from './learn/learn.component';
 import {CreateComponent} from './teach/create/create.component';
-import {UpdateComponent} from './teach/update/update.component';
+import {UpdateComponent} from './update/update.component';
 import {MaterialComponent} from './teach/create/material/material.component';
 import {TopicComponent} from './teach/create/topic/topic.component';
 import {QuestionComponent} from './teach/create/question/question.component';
 import {MaterialDetailComponent} from './material-detail/material-detail.component';
+import {UpdateContentComponent} from './update/update-content/update-content.component';
+import {UpdateQuestionComponent} from './update/update-question/update-question.component';
 
 const routes: Routes = [
     {
@@ -34,42 +36,7 @@ const routes: Routes = [
     },
     {
         path: 'teach',
-        component: TeachComponent,
-        children: [
-            {
-                path: '',
-                redirectTo: 'create',
-                pathMatch: 'full'
-            },
-            {
-                path: 'create',
-                component: CreateComponent,
-                children: [
-                    {
-                        path: '',
-                        redirectTo: 'material',
-                        pathMatch: 'full'
-                    },
-                    {
-                        path: 'material',
-                        component: MaterialComponent
-                    },
-                    {
-                        path: 'content',
-                        component: TopicComponent
-                    },
-                    {
-                        path: 'question',
-                        component: QuestionComponent
-                    }
-                ]
-
-            },
-            {
-                path: 'update',
-                component: UpdateComponent
-            },
-        ]
+        component: UpdateComponent
     },
     {
         path: 'track',
@@ -82,7 +49,15 @@ const routes: Routes = [
     {
         path: 'detail/:id',
         component: MaterialDetailComponent
-    }
+    },
+    {
+        path: 'update/material/:id',
+        component: UpdateContentComponent
+    },
+    {
+        path: 'update/content/:id',
+        component: UpdateQuestionComponent
+    },
 ];
 
 @NgModule({

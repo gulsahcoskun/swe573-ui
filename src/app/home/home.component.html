@@ -2,8 +2,7 @@
         <mat-form-field class="search-form">
             <input matInput placeholder="Search Materials" type="text" [(ngModel)]="searchKey">
         </mat-form-field>
-        <button mat-stroked-button color="warn" (click)="searchMaterialsByKeyword()"  style="margin-left: 5px"
-                [disabled]="info.token==null">🔎 Search</button>
+        <button mat-stroked-button color="warn" (click)="searchMaterialsByKeyword()"  style="margin-left: 5px">🔎 Search</button>
         <br/>
         <br/>
         <p *ngIf="materials.length==0">{{searchMessage}}</p>

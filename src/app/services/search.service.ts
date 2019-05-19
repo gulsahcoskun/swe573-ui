@@ -20,8 +20,8 @@ export class SearchService {
     constructor(private http: HttpClient,private token: TokenStorageService) {
     }
 
-    getAllMaterialSummaries(): Observable<any> {
-        return this.http.get(this.searchUrl, { responseType: 'json' });
+    getAllMaterialSummaries(username:string): Observable<any> {
+        return this.http.get(this.searchUrl + username, { responseType: 'json' });
     }
 
     getCreatedByMaterials(): any {

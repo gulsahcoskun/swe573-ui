@@ -1,0 +1,35 @@
+<div fxLayout="column" fxLayoutAlign="space-between stretch">
+
+    <h5>Materials</h5>
+    <br/>
+    <mat-divider></mat-divider>
+    <br/>
+
+    <button mat-icon-button (click)="openAddDialog()">
+        <mat-icon>add_circle</mat-icon>
+        Add New Material
+    </button>
+
+    <br/>
+
+    <mat-card class="material-card" *ngFor="let material of createdMaterials">
+        <mat-card-header>
+            <div mat-card-avatar class="header-image"><img [src]="material.image"></div>
+            {{material.title}}
+        </mat-card-header>
+        <mat-card-content>
+            {{material.description}}
+        </mat-card-content>
+        <mat-card-actions>
+            <button style="margin-right: 2%" mat-stroked-button color="warn" (click)="seeDetail(material.id)"
+                    [disabled]="info.token==null">Details
+            </button>
+            <button style="margin-right: 2%" mat-stroked-button color="info"
+                    (click)="openEditDialog(material)">Update</button>
+            <button style="margin-right: 2%" mat-stroked-button color="info"
+                    (click)="openDeleteDialog(material)">Delete</button>
+        </mat-card-actions>
+    </mat-card>
+
+
+</div>

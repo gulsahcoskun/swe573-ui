@@ -1,23 +1,8 @@
-<div *ngIf="info.token">
+<h1 mat-dialog-title>Create New Content</h1>
+<div mat-dialog-content>
 
     <div class="container">
-
-        <br/>
-        <h2>Content Information</h2>
-        <br/>
-
         <form name="form" (ngSubmit)="f.form.valid" #f="ngForm" novalidate>
-
-            <div class="form-group">
-                <mat-select [(ngModel)]="selectedMaterial" name="material" required #material="ngModel" placeholder="Select Material" >
-                    <mat-option *ngFor="let material of materials" [value]="material.materialId">
-                        {{material.materialName}}
-                    </mat-option>
-                </mat-select>
-                <div *ngIf="material.invalid && (material.dirty || material.touched) " class="alert alert-danger">
-                    <div *ngIf="material.errors.required">Material is required.</div>
-                </div>
-            </div>
 
             <div class="form-group">
                 <input id="title" name="title" class="form-control" placeholder="Title"
@@ -67,7 +52,7 @@
             <br/>
 
             <div class="form-group">
-                <button class="btn btn-primary" style="width:100%" (click)="createTopic()" [disabled]="f.form.pristine || f.form.invalid">Create Content</button>
+                <button class="btn btn-primary" style="width:100%" (click)="createNewContent()" [disabled]="f.form.pristine || f.form.invalid">Create Content</button>
             </div>
 
             <br/>
@@ -77,5 +62,9 @@
 
 
     </div>
-
+</div>
+<div mat-dialog-actions>
+    <button mat-icon-button (click)="onNoClick()">
+        <mat-icon>close</mat-icon>
+    </button>
 </div>

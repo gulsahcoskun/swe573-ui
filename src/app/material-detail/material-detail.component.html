@@ -2,14 +2,27 @@
 
     <div class="container">
 
-        <h3>{{material.title}}</h3>
+        <div>
+            <button class="material-header" mat-icon-button color="warn" matTooltip="Material is completed before"
+                    *ngIf="userMaterialStatus.isCompleted">
+                <mat-icon aria-label="Example icon-button with a heart icon">check
+                </mat-icon>
+            </button>
+            <h4 >{{material.title}} </h4>
+        </div>
+
+        <br/>
 
         <mat-horizontal-stepper [linear]="true" #stepper>
-            <ng-template matStepperIcon="edit" let-index="index"> {{index + 1}} </ng-template>
+            <ng-template matStepperIcon="edit" let-index="index">
+                {{index + 1}}
+            </ng-template>
 
             <mat-step *ngFor="let content of material.contents">
 
-                <ng-template matStepLabel>{{content.title}}</ng-template>
+                <ng-template matStepLabel>
+                    {{content.title}}
+                </ng-template>
 
                 <img [src]="content.image" style="width: 100%;">
 
@@ -17,7 +30,7 @@
 
                 <h4>{{content.title}}</h4>
 
-                <em>Author: {{material.createdBy}} , {{material.dateCreated | date:'fullDate'}}</em>
+                <em>Author: {{material.createdBy}}</em>
 
                 <br/><br/>
 

@@ -1,12 +1,8 @@
-<div *ngIf="info.token">
+<h1 mat-dialog-title>Create Material</h1>
+<div mat-dialog-content>
 
     <div class="container">
-
         <br/>
-
-        <h2>Material Information</h2>
-        <br/>
-
         <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
 
             <div class="form-group">
@@ -36,8 +32,9 @@
 
 
             <div class="form-group">
-                <button class="btn btn-primary" style="width:100%" [disabled]="f.form.pristine || f.form.invalid">Create
-                    Material
+                <button class="btn btn-primary" style="width:100%"
+                        [disabled]="f.form.pristine || f.form.invalid">
+                    Create
                 </button>
             </div>
 
@@ -47,4 +44,10 @@
 
         </form>
     </div>
+
+</div>
+<div mat-dialog-actions>
+    <button mat-icon-button (click)="onNoClick()">
+        <mat-icon>close</mat-icon>
+    </button>
 </div>

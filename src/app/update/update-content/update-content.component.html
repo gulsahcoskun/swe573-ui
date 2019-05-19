@@ -1,0 +1,30 @@
+<div fxLayout="column" fxLayoutAlign="space-between stretch" >
+
+  <h5>Contents</h5>
+  <br/>
+  <mat-divider></mat-divider>
+  <button mat-icon-button (click)="openAddDialog()">
+    <mat-icon>add_circle</mat-icon>
+    Add New Content
+  </button>
+
+  <br/>
+
+
+  <mat-card class="material-card" *ngFor="let content of material.contents ">
+    <mat-card-header>
+      <div mat-card-avatar class="header-image"><img  [src]="content.image"></div>
+      {{content.title}}
+    </mat-card-header>
+    <mat-card-content>
+      {{content.explanation && content.explanation.slice(0,200)}}
+    </mat-card-content>
+    <mat-card-actions>
+      <button style="margin-right: 2%" mat-stroked-button color="warn" (click)="seeDetail(content.id)" [disabled]="info.token==null">Details</button>
+      <button style="margin-right: 2%" mat-stroked-button color="info" (click)="openEditDialog(content)">Update</button>
+      <button style="margin-right: 2%" mat-stroked-button color="info" (click)="openDeleteDialog(content)">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+</div>

@@ -1,14 +1,68 @@
 <div *ngIf="info.token">
     <div class="container">
-        <h1>My Materials</h1>
+        <h3>My Materials</h3>
 
-        <br/>
+        <mat-divider></mat-divider>
 
-        <h4>In Progress</h4>
+        <h5>In Progress Materials</h5>
 
-        <br/>
+        <div fxLayout="row wrap"  fxLayoutGap="32px" fxLayoutAlign="flex-start">
+            <mat-card class="material-card" fxFlex="0 1 calc(50% - 32px)"
+                      *ngFor="let material of inProgressMaterials">
 
-        <h4>Completed</h4>
+
+                <mat-card-header>
+                    <mat-card-title>{{material.materialName}}</mat-card-title>
+                    <mat-card-subtitle>{{material.detail}}</mat-card-subtitle>
+                    <mat-card-subtitle>{{material.createdBy}}</mat-card-subtitle>
+                </mat-card-header>
+
+                <img mat-card-image [src]="material.image">
+
+                <br/>
+                <br/>
+
+                <mat-card-content>
+                    <p>{{material.description}}</p>
+                    <p style="color: dodgerblue; font-size: small; font-weight: bold">{{material.keywordList}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button  mat-flat-button color="warn" style="width:100%" (click)="seeDetail(material.materialId)" [disabled]="info.token==null">CONTINUE</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <h5>Completed Materials</h5>
+
+        <br/><br/>
+
+        <div fxLayout="row wrap"  fxLayoutGap="32px" fxLayoutAlign="flex-start">
+            <mat-card class="material-card" fxFlex="0 1 calc(50% - 32px)"
+                      *ngFor="let material of completedMaterials">
+
+
+                <mat-card-header>
+                    <mat-card-title>{{material.materialName}}</mat-card-title>
+                    <mat-card-subtitle>{{material.detail}}</mat-card-subtitle>
+                    <mat-card-subtitle>{{material.createdBy}}</mat-card-subtitle>
+                </mat-card-header>
+
+                <img mat-card-image [src]="material.image">
+
+                <br/>
+                <br/>
+
+                <mat-card-content>
+                    <p>{{material.description}}</p>
+                    <p style="color: dodgerblue; font-size: small; font-weight: bold">{{material.keywordList}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button  mat-flat-button color="warn" style="width:100%" (click)="seeDetail(material.materialId)" [disabled]="info.token==null">TAKE AGAIN</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
 
         <br/>
     </div>
