@@ -6,7 +6,7 @@
         <br/>
         <br/>
         <p *ngIf="materials.length==0">{{searchMessage}}</p>
-        <div fxLayout="row wrap"  fxLayoutGap="32px" fxLayoutAlign="flex-start">
+        <div fxLayout="row wrap"  fxLayoutGap="32px" fxLayoutAlign="flex-start" style="position: relative">
             <mat-card class="material-card" fxFlex="0 1 calc(50% - 32px)"
                       *ngFor="let material of materials">
 
@@ -22,12 +22,13 @@
                 <br/>
                 <br/>
 
-                <mat-card-content>
+                <mat-card-content style="margin-bottom: 40px">
                     <p>{{material.description}}</p>
                     <p style="color: dodgerblue; font-size: small; font-weight: bold">{{material.keywordList}}</p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button  mat-flat-button color="warn" style="width:100%" (click)="seeDetail(material.materialId)" [disabled]="info.token==null">TAKE</button>
+                    <button  mat-stroked-button color="warn" style="position: absolute; width: 30%; bottom: 20px; right: 20px" (click)="seeDetail(material.materialId)"
+                             [disabled]="info.token==null" >EXPLORE</button>
                 </mat-card-actions>
             </mat-card>
         </div>

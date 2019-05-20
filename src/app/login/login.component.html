@@ -1,5 +1,5 @@
 <div *ngIf="isLoggedIn; else loggedOut">
-    Welcome {{username}}x :)
+    {{router.navigateByUrl('/home')}}
 </div>
 
 <ng-template #loggedOut>
