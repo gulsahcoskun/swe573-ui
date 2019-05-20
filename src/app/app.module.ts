@@ -63,6 +63,8 @@ import {
     QuestionUpdateDialog,
     UpdateQuestionComponent
 } from './update/update-question/update-question.component';
+import {ChartsModule} from 'ng2-charts';
+import {TrackService} from './services/track.service';
 
 
 
@@ -82,7 +84,7 @@ import {
         ContentResultSuccessComponent, ContentResultFailComponent, ContentResultCompletedComponent,
         UpdateContentComponent, UpdateQuestionComponent,
         ContentAddDialog,ContentUpdateDialog,ContentDeleteDialog,
-        QuestionAddDialog,QuestionUpdateDialog,QuestionDeleteDialog
+        QuestionAddDialog,QuestionUpdateDialog,QuestionDeleteDialog,
     ],
     imports: [
         BrowserModule, BrowserAnimationsModule,
@@ -93,12 +95,12 @@ import {
         MatInputModule, MatTabsModule, MatDialogModule, MatSelectModule, MatOptionModule,
         MatCheckboxModule, MatStepperModule,MatRadioModule, MatIconModule, MatTooltipModule,
         MatSnackBarModule, MatDividerModule,
-        FlexLayoutModule,
+        FlexLayoutModule, ChartsModule,
         NgxEditorModule,
         TooltipModule.forRoot()
     ],
     providers: [httpInterceptorProviders, UserService, TokenStorageService, AuthService, SearchService,
-        LearnService, TeachService],
+        LearnService, TeachService, TrackService],
     bootstrap: [AppComponent],
     entryComponents: [KeywordDetailDialog,MaterialAddDialog, MaterialUpdateDialog, MaterialDeleteDialog,
         ContentResultFailComponent,ContentResultSuccessComponent, ContentResultCompletedComponent,

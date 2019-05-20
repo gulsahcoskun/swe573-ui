@@ -1,5 +1,292 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
+/***/ "./node_modules/moment/locale sync recursive ^\\.\\/.*$":
+/*!**************************************************!*\
+  !*** ./node_modules/moment/locale sync ^\.\/.*$ ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "./node_modules/moment/locale/af.js",
+	"./af.js": "./node_modules/moment/locale/af.js",
+	"./ar": "./node_modules/moment/locale/ar.js",
+	"./ar-dz": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "./node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "./node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "./node_modules/moment/locale/ar.js",
+	"./az": "./node_modules/moment/locale/az.js",
+	"./az.js": "./node_modules/moment/locale/az.js",
+	"./be": "./node_modules/moment/locale/be.js",
+	"./be.js": "./node_modules/moment/locale/be.js",
+	"./bg": "./node_modules/moment/locale/bg.js",
+	"./bg.js": "./node_modules/moment/locale/bg.js",
+	"./bm": "./node_modules/moment/locale/bm.js",
+	"./bm.js": "./node_modules/moment/locale/bm.js",
+	"./bn": "./node_modules/moment/locale/bn.js",
+	"./bn.js": "./node_modules/moment/locale/bn.js",
+	"./bo": "./node_modules/moment/locale/bo.js",
+	"./bo.js": "./node_modules/moment/locale/bo.js",
+	"./br": "./node_modules/moment/locale/br.js",
+	"./br.js": "./node_modules/moment/locale/br.js",
+	"./bs": "./node_modules/moment/locale/bs.js",
+	"./bs.js": "./node_modules/moment/locale/bs.js",
+	"./ca": "./node_modules/moment/locale/ca.js",
+	"./ca.js": "./node_modules/moment/locale/ca.js",
+	"./cs": "./node_modules/moment/locale/cs.js",
+	"./cs.js": "./node_modules/moment/locale/cs.js",
+	"./cv": "./node_modules/moment/locale/cv.js",
+	"./cv.js": "./node_modules/moment/locale/cv.js",
+	"./cy": "./node_modules/moment/locale/cy.js",
+	"./cy.js": "./node_modules/moment/locale/cy.js",
+	"./da": "./node_modules/moment/locale/da.js",
+	"./da.js": "./node_modules/moment/locale/da.js",
+	"./de": "./node_modules/moment/locale/de.js",
+	"./de-at": "./node_modules/moment/locale/de-at.js",
+	"./de-at.js": "./node_modules/moment/locale/de-at.js",
+	"./de-ch": "./node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "./node_modules/moment/locale/de-ch.js",
+	"./de.js": "./node_modules/moment/locale/de.js",
+	"./dv": "./node_modules/moment/locale/dv.js",
+	"./dv.js": "./node_modules/moment/locale/dv.js",
+	"./el": "./node_modules/moment/locale/el.js",
+	"./el.js": "./node_modules/moment/locale/el.js",
+	"./en-SG": "./node_modules/moment/locale/en-SG.js",
+	"./en-SG.js": "./node_modules/moment/locale/en-SG.js",
+	"./en-au": "./node_modules/moment/locale/en-au.js",
+	"./en-au.js": "./node_modules/moment/locale/en-au.js",
+	"./en-ca": "./node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "./node_modules/moment/locale/en-ca.js",
+	"./en-gb": "./node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "./node_modules/moment/locale/en-gb.js",
+	"./en-ie": "./node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "./node_modules/moment/locale/en-ie.js",
+	"./en-il": "./node_modules/moment/locale/en-il.js",
+	"./en-il.js": "./node_modules/moment/locale/en-il.js",
+	"./en-nz": "./node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "./node_modules/moment/locale/en-nz.js",
+	"./eo": "./node_modules/moment/locale/eo.js",
+	"./eo.js": "./node_modules/moment/locale/eo.js",
+	"./es": "./node_modules/moment/locale/es.js",
+	"./es-do": "./node_modules/moment/locale/es-do.js",
+	"./es-do.js": "./node_modules/moment/locale/es-do.js",
+	"./es-us": "./node_modules/moment/locale/es-us.js",
+	"./es-us.js": "./node_modules/moment/locale/es-us.js",
+	"./es.js": "./node_modules/moment/locale/es.js",
+	"./et": "./node_modules/moment/locale/et.js",
+	"./et.js": "./node_modules/moment/locale/et.js",
+	"./eu": "./node_modules/moment/locale/eu.js",
+	"./eu.js": "./node_modules/moment/locale/eu.js",
+	"./fa": "./node_modules/moment/locale/fa.js",
+	"./fa.js": "./node_modules/moment/locale/fa.js",
+	"./fi": "./node_modules/moment/locale/fi.js",
+	"./fi.js": "./node_modules/moment/locale/fi.js",
+	"./fo": "./node_modules/moment/locale/fo.js",
+	"./fo.js": "./node_modules/moment/locale/fo.js",
+	"./fr": "./node_modules/moment/locale/fr.js",
+	"./fr-ca": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "./node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "./node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "./node_modules/moment/locale/fr.js",
+	"./fy": "./node_modules/moment/locale/fy.js",
+	"./fy.js": "./node_modules/moment/locale/fy.js",
+	"./ga": "./node_modules/moment/locale/ga.js",
+	"./ga.js": "./node_modules/moment/locale/ga.js",
+	"./gd": "./node_modules/moment/locale/gd.js",
+	"./gd.js": "./node_modules/moment/locale/gd.js",
+	"./gl": "./node_modules/moment/locale/gl.js",
+	"./gl.js": "./node_modules/moment/locale/gl.js",
+	"./gom-latn": "./node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "./node_modules/moment/locale/gom-latn.js",
+	"./gu": "./node_modules/moment/locale/gu.js",
+	"./gu.js": "./node_modules/moment/locale/gu.js",
+	"./he": "./node_modules/moment/locale/he.js",
+	"./he.js": "./node_modules/moment/locale/he.js",
+	"./hi": "./node_modules/moment/locale/hi.js",
+	"./hi.js": "./node_modules/moment/locale/hi.js",
+	"./hr": "./node_modules/moment/locale/hr.js",
+	"./hr.js": "./node_modules/moment/locale/hr.js",
+	"./hu": "./node_modules/moment/locale/hu.js",
+	"./hu.js": "./node_modules/moment/locale/hu.js",
+	"./hy-am": "./node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "./node_modules/moment/locale/hy-am.js",
+	"./id": "./node_modules/moment/locale/id.js",
+	"./id.js": "./node_modules/moment/locale/id.js",
+	"./is": "./node_modules/moment/locale/is.js",
+	"./is.js": "./node_modules/moment/locale/is.js",
+	"./it": "./node_modules/moment/locale/it.js",
+	"./it-ch": "./node_modules/moment/locale/it-ch.js",
+	"./it-ch.js": "./node_modules/moment/locale/it-ch.js",
+	"./it.js": "./node_modules/moment/locale/it.js",
+	"./ja": "./node_modules/moment/locale/ja.js",
+	"./ja.js": "./node_modules/moment/locale/ja.js",
+	"./jv": "./node_modules/moment/locale/jv.js",
+	"./jv.js": "./node_modules/moment/locale/jv.js",
+	"./ka": "./node_modules/moment/locale/ka.js",
+	"./ka.js": "./node_modules/moment/locale/ka.js",
+	"./kk": "./node_modules/moment/locale/kk.js",
+	"./kk.js": "./node_modules/moment/locale/kk.js",
+	"./km": "./node_modules/moment/locale/km.js",
+	"./km.js": "./node_modules/moment/locale/km.js",
+	"./kn": "./node_modules/moment/locale/kn.js",
+	"./kn.js": "./node_modules/moment/locale/kn.js",
+	"./ko": "./node_modules/moment/locale/ko.js",
+	"./ko.js": "./node_modules/moment/locale/ko.js",
+	"./ku": "./node_modules/moment/locale/ku.js",
+	"./ku.js": "./node_modules/moment/locale/ku.js",
+	"./ky": "./node_modules/moment/locale/ky.js",
+	"./ky.js": "./node_modules/moment/locale/ky.js",
+	"./lb": "./node_modules/moment/locale/lb.js",
+	"./lb.js": "./node_modules/moment/locale/lb.js",
+	"./lo": "./node_modules/moment/locale/lo.js",
+	"./lo.js": "./node_modules/moment/locale/lo.js",
+	"./lt": "./node_modules/moment/locale/lt.js",
+	"./lt.js": "./node_modules/moment/locale/lt.js",
+	"./lv": "./node_modules/moment/locale/lv.js",
+	"./lv.js": "./node_modules/moment/locale/lv.js",
+	"./me": "./node_modules/moment/locale/me.js",
+	"./me.js": "./node_modules/moment/locale/me.js",
+	"./mi": "./node_modules/moment/locale/mi.js",
+	"./mi.js": "./node_modules/moment/locale/mi.js",
+	"./mk": "./node_modules/moment/locale/mk.js",
+	"./mk.js": "./node_modules/moment/locale/mk.js",
+	"./ml": "./node_modules/moment/locale/ml.js",
+	"./ml.js": "./node_modules/moment/locale/ml.js",
+	"./mn": "./node_modules/moment/locale/mn.js",
+	"./mn.js": "./node_modules/moment/locale/mn.js",
+	"./mr": "./node_modules/moment/locale/mr.js",
+	"./mr.js": "./node_modules/moment/locale/mr.js",
+	"./ms": "./node_modules/moment/locale/ms.js",
+	"./ms-my": "./node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "./node_modules/moment/locale/ms-my.js",
+	"./ms.js": "./node_modules/moment/locale/ms.js",
+	"./mt": "./node_modules/moment/locale/mt.js",
+	"./mt.js": "./node_modules/moment/locale/mt.js",
+	"./my": "./node_modules/moment/locale/my.js",
+	"./my.js": "./node_modules/moment/locale/my.js",
+	"./nb": "./node_modules/moment/locale/nb.js",
+	"./nb.js": "./node_modules/moment/locale/nb.js",
+	"./ne": "./node_modules/moment/locale/ne.js",
+	"./ne.js": "./node_modules/moment/locale/ne.js",
+	"./nl": "./node_modules/moment/locale/nl.js",
+	"./nl-be": "./node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "./node_modules/moment/locale/nl-be.js",
+	"./nl.js": "./node_modules/moment/locale/nl.js",
+	"./nn": "./node_modules/moment/locale/nn.js",
+	"./nn.js": "./node_modules/moment/locale/nn.js",
+	"./pa-in": "./node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "./node_modules/moment/locale/pa-in.js",
+	"./pl": "./node_modules/moment/locale/pl.js",
+	"./pl.js": "./node_modules/moment/locale/pl.js",
+	"./pt": "./node_modules/moment/locale/pt.js",
+	"./pt-br": "./node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "./node_modules/moment/locale/pt-br.js",
+	"./pt.js": "./node_modules/moment/locale/pt.js",
+	"./ro": "./node_modules/moment/locale/ro.js",
+	"./ro.js": "./node_modules/moment/locale/ro.js",
+	"./ru": "./node_modules/moment/locale/ru.js",
+	"./ru.js": "./node_modules/moment/locale/ru.js",
+	"./sd": "./node_modules/moment/locale/sd.js",
+	"./sd.js": "./node_modules/moment/locale/sd.js",
+	"./se": "./node_modules/moment/locale/se.js",
+	"./se.js": "./node_modules/moment/locale/se.js",
+	"./si": "./node_modules/moment/locale/si.js",
+	"./si.js": "./node_modules/moment/locale/si.js",
+	"./sk": "./node_modules/moment/locale/sk.js",
+	"./sk.js": "./node_modules/moment/locale/sk.js",
+	"./sl": "./node_modules/moment/locale/sl.js",
+	"./sl.js": "./node_modules/moment/locale/sl.js",
+	"./sq": "./node_modules/moment/locale/sq.js",
+	"./sq.js": "./node_modules/moment/locale/sq.js",
+	"./sr": "./node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "./node_modules/moment/locale/sr.js",
+	"./ss": "./node_modules/moment/locale/ss.js",
+	"./ss.js": "./node_modules/moment/locale/ss.js",
+	"./sv": "./node_modules/moment/locale/sv.js",
+	"./sv.js": "./node_modules/moment/locale/sv.js",
+	"./sw": "./node_modules/moment/locale/sw.js",
+	"./sw.js": "./node_modules/moment/locale/sw.js",
+	"./ta": "./node_modules/moment/locale/ta.js",
+	"./ta.js": "./node_modules/moment/locale/ta.js",
+	"./te": "./node_modules/moment/locale/te.js",
+	"./te.js": "./node_modules/moment/locale/te.js",
+	"./tet": "./node_modules/moment/locale/tet.js",
+	"./tet.js": "./node_modules/moment/locale/tet.js",
+	"./tg": "./node_modules/moment/locale/tg.js",
+	"./tg.js": "./node_modules/moment/locale/tg.js",
+	"./th": "./node_modules/moment/locale/th.js",
+	"./th.js": "./node_modules/moment/locale/th.js",
+	"./tl-ph": "./node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "./node_modules/moment/locale/tl-ph.js",
+	"./tlh": "./node_modules/moment/locale/tlh.js",
+	"./tlh.js": "./node_modules/moment/locale/tlh.js",
+	"./tr": "./node_modules/moment/locale/tr.js",
+	"./tr.js": "./node_modules/moment/locale/tr.js",
+	"./tzl": "./node_modules/moment/locale/tzl.js",
+	"./tzl.js": "./node_modules/moment/locale/tzl.js",
+	"./tzm": "./node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "./node_modules/moment/locale/tzm.js",
+	"./ug-cn": "./node_modules/moment/locale/ug-cn.js",
+	"./ug-cn.js": "./node_modules/moment/locale/ug-cn.js",
+	"./uk": "./node_modules/moment/locale/uk.js",
+	"./uk.js": "./node_modules/moment/locale/uk.js",
+	"./ur": "./node_modules/moment/locale/ur.js",
+	"./ur.js": "./node_modules/moment/locale/ur.js",
+	"./uz": "./node_modules/moment/locale/uz.js",
+	"./uz-latn": "./node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "./node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "./node_modules/moment/locale/uz.js",
+	"./vi": "./node_modules/moment/locale/vi.js",
+	"./vi.js": "./node_modules/moment/locale/vi.js",
+	"./x-pseudo": "./node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "./node_modules/moment/locale/x-pseudo.js",
+	"./yo": "./node_modules/moment/locale/yo.js",
+	"./yo.js": "./node_modules/moment/locale/yo.js",
+	"./zh-cn": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-tw": "./node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "./node_modules/moment/locale/zh-tw.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) { // check for number or string
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return id;
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /*!**********************************************************!*\
   !*** ./src/$$_lazy_route_resource lazy namespace object ***!
@@ -223,6 +510,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_teach_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./services/teach.service */ "./src/app/services/teach.service.ts");
 /* harmony import */ var _update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./update/update-content/update-content.component */ "./src/app/update/update-content/update-content.component.ts");
 /* harmony import */ var _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./update/update-question/update-question.component */ "./src/app/update/update-question/update-question.component.ts");
+/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/fesm5/ng2-charts.js");
+/* harmony import */ var _services_track_service__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./services/track.service */ "./src/app/services/track.service.ts");
+
+
 
 
 
@@ -273,7 +564,7 @@ var AppModule = /** @class */ (function () {
                 _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__["ContentResultSuccessComponent"], _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__["ContentResultFailComponent"], _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__["ContentResultCompletedComponent"],
                 _update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_28__["UpdateContentComponent"], _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_29__["UpdateQuestionComponent"],
                 _update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_28__["ContentAddDialog"], _update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_28__["ContentUpdateDialog"], _update_update_content_update_content_component__WEBPACK_IMPORTED_MODULE_28__["ContentDeleteDialog"],
-                _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_29__["QuestionAddDialog"], _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_29__["QuestionUpdateDialog"], _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_29__["QuestionDeleteDialog"]
+                _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_29__["QuestionAddDialog"], _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_29__["QuestionUpdateDialog"], _update_update_question_update_question_component__WEBPACK_IMPORTED_MODULE_29__["QuestionDeleteDialog"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_17__["BrowserAnimationsModule"],
@@ -284,12 +575,12 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatTabsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatDialogModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatOptionModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatCheckboxModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatStepperModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatRadioModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatTooltipModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatSnackBarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatDividerModule"],
-                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_18__["FlexLayoutModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_18__["FlexLayoutModule"], ng2_charts__WEBPACK_IMPORTED_MODULE_30__["ChartsModule"],
                 ngx_editor__WEBPACK_IMPORTED_MODULE_23__["NgxEditorModule"],
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_24__["TooltipModule"].forRoot()
             ],
             providers: [_auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_10__["httpInterceptorProviders"], _services_user_service__WEBPACK_IMPORTED_MODULE_11__["UserService"], _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_12__["TokenStorageService"], _auth_auth_service__WEBPACK_IMPORTED_MODULE_13__["AuthService"], _services_search_service__WEBPACK_IMPORTED_MODULE_21__["SearchService"],
-                _services_learn_service__WEBPACK_IMPORTED_MODULE_26__["LearnService"], _services_teach_service__WEBPACK_IMPORTED_MODULE_27__["TeachService"]],
+                _services_learn_service__WEBPACK_IMPORTED_MODULE_26__["LearnService"], _services_teach_service__WEBPACK_IMPORTED_MODULE_27__["TeachService"], _services_track_service__WEBPACK_IMPORTED_MODULE_31__["TrackService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]],
             entryComponents: [_material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__["KeywordDetailDialog"], _update_update_component__WEBPACK_IMPORTED_MODULE_22__["MaterialAddDialog"], _update_update_component__WEBPACK_IMPORTED_MODULE_22__["MaterialUpdateDialog"], _update_update_component__WEBPACK_IMPORTED_MODULE_22__["MaterialDeleteDialog"],
                 _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__["ContentResultFailComponent"], _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__["ContentResultSuccessComponent"], _material_detail_material_detail_component__WEBPACK_IMPORTED_MODULE_25__["ContentResultCompletedComponent"],
@@ -522,7 +813,7 @@ module.exports = ".mat-card-image {\n    width: 100%;\n    margin: 0%;\n}\n\n.ma
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n        <mat-form-field class=\"search-form\">\n            <input matInput placeholder=\"Search Materials\" type=\"text\" [(ngModel)]=\"searchKey\">\n        </mat-form-field>\n        <button mat-stroked-button color=\"warn\" (click)=\"searchMaterialsByKeyword()\"  style=\"margin-left: 5px\">🔎 Search</button>\n        <br/>\n        <br/>\n        <p *ngIf=\"materials.length==0\">{{searchMessage}}</p>\n        <div fxLayout=\"row wrap\"  fxLayoutGap=\"32px\" fxLayoutAlign=\"flex-start\">\n            <mat-card class=\"material-card\" fxFlex=\"0 1 calc(50% - 32px)\"\n                      *ngFor=\"let material of materials\">\n\n\n                <mat-card-header>\n                    <mat-card-title>{{material.materialName}}</mat-card-title>\n                    <mat-card-subtitle>{{material.detail}}</mat-card-subtitle>\n                    <mat-card-subtitle>{{material.createdBy}}</mat-card-subtitle>\n                </mat-card-header>\n\n                <img mat-card-image [src]=\"material.image\">\n\n                <br/>\n                <br/>\n\n                <mat-card-content>\n                    <p>{{material.description}}</p>\n                    <p style=\"color: dodgerblue; font-size: small; font-weight: bold\">{{material.keywordList}}</p>\n                </mat-card-content>\n                <mat-card-actions>\n                    <button  mat-flat-button color=\"warn\" style=\"width:100%\" (click)=\"seeDetail(material.materialId)\" [disabled]=\"info.token==null\">TAKE</button>\n                </mat-card-actions>\n            </mat-card>\n        </div>\n\n</div>"
+module.exports = "<div class=\"container\">\n        <mat-form-field class=\"search-form\">\n            <input matInput placeholder=\"Search Materials\" type=\"text\" [(ngModel)]=\"searchKey\">\n        </mat-form-field>\n        <button mat-stroked-button color=\"warn\" (click)=\"searchMaterialsByKeyword()\"  style=\"margin-left: 5px\">🔎 Search</button>\n        <br/>\n        <br/>\n        <p *ngIf=\"materials.length==0\">{{searchMessage}}</p>\n        <div fxLayout=\"row wrap\"  fxLayoutGap=\"32px\" fxLayoutAlign=\"flex-start\" style=\"position: relative\">\n            <mat-card class=\"material-card\" fxFlex=\"0 1 calc(50% - 32px)\"\n                      *ngFor=\"let material of materials\">\n\n\n                <mat-card-header>\n                    <mat-card-title>{{material.materialName}}</mat-card-title>\n                    <mat-card-subtitle>{{material.detail}}</mat-card-subtitle>\n                    <mat-card-subtitle>{{material.createdBy}}</mat-card-subtitle>\n                </mat-card-header>\n\n                <img mat-card-image [src]=\"material.image\">\n\n                <br/>\n                <br/>\n\n                <mat-card-content style=\"margin-bottom: 40px\">\n                    <p>{{material.description}}</p>\n                    <p style=\"color: dodgerblue; font-size: small; font-weight: bold\">{{material.keywordList}}</p>\n                </mat-card-content>\n                <mat-card-actions>\n                    <button  mat-stroked-button color=\"warn\" style=\"position: absolute; width: 30%; bottom: 20px; right: 20px\" (click)=\"seeDetail(material.materialId)\"\n                             [disabled]=\"info.token==null\" >EXPLORE</button>\n                </mat-card-actions>\n            </mat-card>\n        </div>\n\n</div>"
 
 /***/ }),
 
@@ -700,7 +991,7 @@ module.exports = ".register-container{\n    margin-top: 15em;\n}\n/*# sourceMapp
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"isLoggedIn; else loggedOut\">\n    Welcome {{username}}x :)\n</div>\n\n<ng-template #loggedOut>\n    <div class=\"row col-sm-6\" style=\"max-width:350px;\">\n        <form name=\"form\" (ngSubmit)=\"f.form.valid && onSubmit()\" #f=\"ngForm\" novalidate>\n            <div class=\"form-group\">\n                <label for=\"username\">Username</label>\n                <input type=\"text\" class=\"form-control\" name=\"username\" [(ngModel)]=\"form.username\" #username=\"ngModel\"\n                       required/>\n                <div *ngIf=\"f.submitted && username.invalid\">\n                    <div *ngIf=\"username.errors.required\">Username is required</div>\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"password\">Password</label>\n                <input type=\"password\" class=\"form-control\" name=\"password\" [(ngModel)]=\"form.password\"\n                       #password=\"ngModel\"\n                       required minlength=\"6\"/>\n                <div *ngIf=\"f.submitted && password.invalid\">\n                    <div *ngIf=\"password.errors.required\">Password is required</div>\n                    <div *ngIf=\"password.errors.minlength\">Password must be at least 6 characters</div>\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <button class=\"btn btn-primary\">Login</button>\n                <div *ngIf=\"f.submitted && isLoginFailed\" class=\"alert alert-danger\">\n                    Login failed: {{errorMessage}}\n                </div>\n            </div>\n        </form>\n    </div>\n        <br/>\n        <div class=\"register-container\">\n            <p>Don't have an account?</p>\n            <br/>\n            <a href=\"signup\" class=\"btn btn-success\">Sign Up</a>\n        </div>\n\n</ng-template>\n"
+module.exports = "<div *ngIf=\"isLoggedIn; else loggedOut\">\n    {{router.navigateByUrl('/home')}}\n</div>\n\n<ng-template #loggedOut>\n    <div class=\"row col-sm-6\" style=\"max-width:350px;\">\n        <form name=\"form\" (ngSubmit)=\"f.form.valid && onSubmit()\" #f=\"ngForm\" novalidate>\n            <div class=\"form-group\">\n                <label for=\"username\">Username</label>\n                <input type=\"text\" class=\"form-control\" name=\"username\" [(ngModel)]=\"form.username\" #username=\"ngModel\"\n                       required/>\n                <div *ngIf=\"f.submitted && username.invalid\">\n                    <div *ngIf=\"username.errors.required\">Username is required</div>\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"password\">Password</label>\n                <input type=\"password\" class=\"form-control\" name=\"password\" [(ngModel)]=\"form.password\"\n                       #password=\"ngModel\"\n                       required minlength=\"6\"/>\n                <div *ngIf=\"f.submitted && password.invalid\">\n                    <div *ngIf=\"password.errors.required\">Password is required</div>\n                    <div *ngIf=\"password.errors.minlength\">Password must be at least 6 characters</div>\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <button class=\"btn btn-primary\">Login</button>\n                <div *ngIf=\"f.submitted && isLoginFailed\" class=\"alert alert-danger\">\n                    Login failed: {{errorMessage}}\n                </div>\n            </div>\n        </form>\n    </div>\n        <br/>\n        <div class=\"register-container\">\n            <p>Don't have an account?</p>\n            <br/>\n            <a href=\"signup\" class=\"btn btn-success\">Sign Up</a>\n        </div>\n\n</ng-template>\n"
 
 /***/ }),
 
@@ -1443,6 +1734,54 @@ var TeachService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/track.service.ts":
+/*!*******************************************!*\
+  !*** ./src/app/services/track.service.ts ***!
+  \*******************************************/
+/*! exports provided: TrackService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TrackService", function() { return TrackService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
+
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({ 'Content-Type': 'application/json' })
+};
+var TrackService = /** @class */ (function () {
+    function TrackService(http, token) {
+        this.http = http;
+        this.token = token;
+        this.searchUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl + '/track/';
+    }
+    TrackService.prototype.getStudentTrackData = function (username) {
+        return this.http.get(this.searchUrl + 'student/' + username, { responseType: 'json' });
+    };
+    TrackService.prototype.getTeacherTrackData = function (username) {
+        return this.http.get(this.searchUrl + 'teacher/' + username, { responseType: 'json' });
+    };
+    TrackService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_4__["TokenStorageService"]])
+    ], TrackService);
+    return TrackService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/user.service.ts":
 /*!******************************************!*\
   !*** ./src/app/services/user.service.ts ***!
@@ -1487,7 +1826,7 @@ var UserService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RyYWNrL3RyYWNrLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = ".example-stretched-tabs {\n    max-width: 100%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdHJhY2svdHJhY2suY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGVBQWU7QUFDbkIiLCJmaWxlIjoic3JjL2FwcC90cmFjay90cmFjay5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmV4YW1wbGUtc3RyZXRjaGVkLXRhYnMge1xuICAgIG1heC13aWR0aDogMTAwJTtcbn1cbiJdfQ== */"
 
 /***/ }),
 
@@ -1498,7 +1837,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n    <p>\n        track works!\n    </p>\n</div>\n"
+module.exports = "<div *ngIf=\"isLoggedIn; else loggedOut\">\n    <mat-tab-group mat-stretch-tabs class=\"example-stretched-tabs mat-elevation-z4\">\n\n        <mat-tab label=\"Track As Student\">\n            <h6 style=\"text-align:center; margin-top: 2%\">Material Name - Completion Ratio</h6>\n\n            <div style=\"display: block\" class=\"chart\">\n                <canvas baseChart\n                        [data]=\"studentCompletionRatio\"\n                        [labels]=\"studentMaterialNames\"\n                        [chartType]=\"pieChartType\"\n                        [colors]=\"colors\">\n\n                </canvas>\n            </div>\n        </mat-tab>\n\n        <mat-tab label=\"Track As Teacher\">\n            <h6 style=\"text-align:center; margin-top: 2%\">Material Name - Enrolled Student Count</h6>\n\n            <div style=\"display: block\" class=\"chart\">\n                <canvas baseChart\n                        [data]=\"teacherStudentCounts\"\n                        [labels]=\"teacherMaterialNames\"\n                        [chartType]=\"pieChartType\"\n                        [colors]=\"colors\">\n\n                </canvas>\n            </div>\n        </mat-tab>\n    </mat-tab-group>\n</div>\n\n<ng-template #loggedOut>\n    {{router.navigateByUrl('/auth/login')}}\n</ng-template>"
 
 /***/ }),
 
@@ -1514,12 +1853,60 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TrackComponent", function() { return TrackComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../auth/token-storage.service */ "./src/app/auth/token-storage.service.ts");
+/* harmony import */ var _services_track_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/track.service */ "./src/app/services/track.service.ts");
+
+
 
 
 var TrackComponent = /** @class */ (function () {
-    function TrackComponent() {
+    function TrackComponent(token, trackService) {
+        this.token = token;
+        this.trackService = trackService;
+        this.isLoggedIn = false;
+        this.studentTrackData = new Array();
+        this.teacherTrackData = new Array();
+        this.studentMaterialNames = [];
+        this.studentCompletionRatio = [];
+        this.teacherMaterialNames = [];
+        this.teacherStudentCounts = [];
+        this.pieChartType = 'pie';
+        this.colors = [
+            {
+                backgroundColor: ['rgba(255,0,0,0.3)', 'rgba(0,255,0,0.3)', 'rgba(0,0,255,0.3)'],
+            },
+        ];
     }
     TrackComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.info = {
+            token: this.token.getToken(),
+            username: this.token.getUsername(),
+            authorities: this.token.getAuthorities()
+        };
+        if (this.token.getToken()) {
+            this.isLoggedIn = true;
+        }
+        this.trackService.getStudentTrackData(this.info.username).subscribe(function (data) {
+            _this.studentTrackData = data;
+            for (var _i = 0, _a = _this.studentTrackData; _i < _a.length; _i++) {
+                var trackData = _a[_i];
+                _this.studentMaterialNames.push(trackData.materialName);
+                _this.studentCompletionRatio.push(trackData.completionRatio);
+            }
+        }, function (error) {
+            console.log(error);
+        });
+        this.trackService.getTeacherTrackData(this.info.username).subscribe(function (data) {
+            _this.teacherTrackData = data;
+            for (var _i = 0, _a = _this.teacherTrackData; _i < _a.length; _i++) {
+                var trackData = _a[_i];
+                _this.teacherMaterialNames.push(trackData.materialName);
+                _this.teacherStudentCounts.push(trackData.numberOfStudents);
+            }
+        }, function (error) {
+            console.log(error);
+        });
     };
     TrackComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1527,7 +1914,7 @@ var TrackComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./track.component.html */ "./src/app/track/track.component.html"),
             styles: [__webpack_require__(/*! ./track.component.css */ "./src/app/track/track.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_token_storage_service__WEBPACK_IMPORTED_MODULE_2__["TokenStorageService"], _services_track_service__WEBPACK_IMPORTED_MODULE_3__["TrackService"]])
     ], TrackComponent);
     return TrackComponent;
 }());

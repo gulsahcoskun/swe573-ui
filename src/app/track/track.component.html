@@ -1,5 +1,36 @@
-<div>
-    <p>
-        track works!
-    </p>
+<div *ngIf="isLoggedIn; else loggedOut">
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+
+        <mat-tab label="Track As Student">
+            <h6 style="text-align:center; margin-top: 2%">Material Name - Completion Ratio</h6>
+
+            <div style="display: block" class="chart">
+                <canvas baseChart
+                        [data]="studentCompletionRatio"
+                        [labels]="studentMaterialNames"
+                        [chartType]="pieChartType"
+                        [colors]="colors">
+
+                </canvas>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="Track As Teacher">
+            <h6 style="text-align:center; margin-top: 2%">Material Name - Enrolled Student Count</h6>
+
+            <div style="display: block" class="chart">
+                <canvas baseChart
+                        [data]="teacherStudentCounts"
+                        [labels]="teacherMaterialNames"
+                        [chartType]="pieChartType"
+                        [colors]="colors">
+
+                </canvas>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
 </div>
+
+<ng-template #loggedOut>
+    {{router.navigateByUrl('/auth/login')}}
+</ng-template>
