@@ -3,7 +3,7 @@
 </div>
 
 <ng-template #loggedOut>
-    <div class="row col-sm-6" style="max-width:350px;">
+    <div class="row col-sm-6" style="left:40%">
         <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
             <div class="form-group">
                 <label for="username">Username</label>
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <button class="btn btn-primary">Login</button>
+                <button class="btn btn-primary" style="width: 100%">Login</button>
                 <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger">
                     Login failed: {{errorMessage}}
                 </div>
@@ -33,9 +33,9 @@
     </div>
         <br/>
         <div class="register-container">
-            <p>Don't have an account?</p>
+            <p style="text-align: center" >Don't have an account?</p>
             <br/>
-            <a href="signup" class="btn btn-success">Sign Up</a>
+            <a href="signup" class="btn btn-success" style="left:40%; width: 22%">Sign Up</a>
         </div>
 
 </ng-template>
