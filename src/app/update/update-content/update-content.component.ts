@@ -19,7 +19,7 @@ export class UpdateContentComponent implements OnInit {
     private sub: any;
     id: number;
     material: Material = new Material();
-    content: Content = new Content();
+    public content: Content = new Content();
 
     constructor(private token: TokenStorageService, private route: ActivatedRoute,
                 private searchService: SearchService, private router: Router,
@@ -110,10 +110,11 @@ export class ContentAddDialog {
         private teachService: TeachService) {}
 
     message : any;
-    private content: Content = new Content();
+    content: Content = new Content();
     wikis: Array<Keyword> = new Array<Keyword>();
     selectedKeyword: Keyword = new Keyword();
     keywordList: Array<Keyword> = new Array<Keyword>();
+    keyword: Keyword = new Keyword();
 
     onNoClick(): void {
         this.dialogRef.close();
