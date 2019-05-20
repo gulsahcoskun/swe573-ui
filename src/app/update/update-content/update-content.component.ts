@@ -114,7 +114,7 @@ export class ContentAddDialog {
     wikis: Array<Keyword> = new Array<Keyword>();
     selectedKeyword: Keyword = new Keyword();
     keywordList: Array<Keyword> = new Array<Keyword>();
-    keyword: Keyword = new Keyword();
+    keyword: any;
 
     onNoClick(): void {
         this.dialogRef.close();
