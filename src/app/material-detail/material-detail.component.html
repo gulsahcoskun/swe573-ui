@@ -3,12 +3,12 @@
     <div class="container">
 
         <div>
-            <button class="material-header" mat-icon-button color="warn" matTooltip="Material is completed before"
+            <button style="margin-left: 49%" class="material-header" mat-icon-button color="warn" matTooltip="Material is completed"
                     *ngIf="userMaterialStatus.isCompleted">
                 <mat-icon aria-label="Example icon-button with a heart icon">check
                 </mat-icon>
             </button>
-            <h4 >{{material.title}} </h4>
+            <h5 style="text-align: center" >{{material.title}} </h5>
         </div>
 
         <br/>
@@ -20,43 +20,60 @@
 
             <mat-step *ngFor="let content of material.contents">
 
+                <br/>
                 <ng-template matStepLabel>
                     {{content.title}}
                 </ng-template>
 
-                <img [src]="content.image" style="width: 100%;">
+                <h6>{{content.title}}</h6>
+                <br/>
 
-                <br/><br/>
+                <table>
+                    <tr>
+                        <td>
+                            <img [src]="content.image" style="width: 65%; height: 350px">
+                        </td>
+                        <td>
+                            <ul>
+                                <li *ngFor="let keyword of content.keywords">
+                                    <button style="margin-bottom: 10px"
+                                            mat-raised-button color="primary" (click)="openKeywordDialog(keyword)">
+                                        {{keyword.label}}
+                                    </button>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
 
-                <h4>{{content.title}}</h4>
+                </table>
+
+                <br/>
+
 
                 <em>Author: {{material.createdBy}}</em>
 
-                <br/><br/>
+                <br/><br/><br/>
 
                 <div [innerHTML]="content.explanation"></div>
 
-                <ul>
-                    <li *ngFor="let keyword of content.keywords" style="margin-left: 5px">
-                        <button mat-raised-button (click)="openKeywordDialog(keyword)">{{keyword.label}}</button>
-                    </li>
-                </ul>
+                <br/><br/>
 
-                <section style="background-color: whitesmoke">
-                    <ol style="font-weight: bold">
+                <p *ngIf="content.questions.length>0" style="font-style: oblique">Please answer the questions below to complete this material.</p>
+                <section style="background-color: #fafafa">
+                    <ul style="font-weight: normal">
                         <li *ngFor="let question of content.questions">
-                            <label id="option-radio-group-label">{{question.questionText}}</label>
+                            <label style="font-weight: normal"  id="option-radio-group-label">{{question.questionText}}</label>
                             <mat-radio-group
                                     aria-labelledby="option-radio-group-label"
                                     class="option-radio-group">
-                                <mat-radio-button class="option-radio-button" *ngFor="let option of question.options"
+                                <mat-radio-button style="font-style: normal" class="option-radio-button" *ngFor="let option of question.options"
                                                   [value]="option" (change)="onSelectionChange(question.id,option.id)">
                                     {{option.optionText}}
                                 </mat-radio-button>
                             </mat-radio-group>
 
                         </li>
-                    </ol>
+                    </ul>
 
                 </section>
 
@@ -64,7 +81,7 @@
                 <br/><br/>
 
                 <div>
-                    <button mat-button (click)="complete(material.id,content.id)" style="width: 100%"
+                    <button mat-button (click)="complete(material.id,content.id)" style="width: 30%; float: right"
                             mat-raised-button color="warn">
                         COMPLETE
                     </button>

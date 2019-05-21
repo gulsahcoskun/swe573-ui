@@ -1,18 +1,18 @@
+<button mat-icon-button (click)="onNoClick()" style="float:right">
+    <mat-icon>close</mat-icon>
+</button>
 <h1 mat-dialog-title>Delete Material</h1>
 <div mat-dialog-content>
     <div *ngIf="message" class="alert alert-info">
         {{message}}
     </div>
-    <em>{{dialogData.material.title}}</em>
     <p>Are you sure to delete the material?</p>
+    <p style="font-style: oblique">{{dialogData.material.title}}</p>
 </div>
-<div mat-dialog-actions>
+<div mat-dialog-actions style="float: right; margin-bottom: 5px">
     <div mat-dialog-actions>
         <button mat-icon-button (click)="onDeleteClick()">
             <mat-icon>delete</mat-icon>
-        </button>
-        <button style="float: right" mat-icon-button (click)="onNoClick()">
-            <mat-icon>close</mat-icon>
         </button>
     </div>
 </div>

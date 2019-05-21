@@ -23,13 +23,13 @@
             </mat-card-content>
             <mat-card-actions>
                 <button style="margin-right: 2%" mat-stroked-button color="warn" (click)="seeDetail(material.id)"
-                        [disabled]="info.token==null">Details
+                        [disabled]="info.token==null && info.token != material.createdBy">Details
                 </button>
                 <button style="margin-right: 2%" mat-stroked-button color="info"
-                        (click)="openEditDialog(material)">Update
+                        [disabled]="info.token==null && info.token != material.createdBy" (click)="openEditDialog(material)">Update
                 </button>
                 <button style="margin-right: 2%" mat-stroked-button color="info"
-                        (click)="openDeleteDialog(material)">Delete
+                        [disabled]="info.token==null && info.token != material.createdBy" (click)="openDeleteDialog(material)">Delete
                 </button>
             </mat-card-actions>
         </mat-card>

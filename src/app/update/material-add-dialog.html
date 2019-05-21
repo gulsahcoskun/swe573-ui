@@ -1,6 +1,12 @@
-<h1 mat-dialog-title>Create Material</h1>
-<div mat-dialog-content>
 
+<button mat-icon-button (click)="onNoClick()" style="float:right">
+    <mat-icon>close</mat-icon>
+</button>
+
+<h5 mat-dialog-title>Create Material</h5>
+
+
+<div mat-dialog-content>
     <div class="container">
         <br/>
         <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
@@ -47,9 +53,4 @@
         </form>
     </div>
 
-</div>
-<div mat-dialog-actions>
-    <button mat-icon-button (click)="onNoClick()">
-        <mat-icon>close</mat-icon>
-    </button>
 </div>
