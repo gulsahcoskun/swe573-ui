@@ -1,4 +1,4 @@
-<div *ngIf="info.token">
+<div *ngIf="isLoggedIn; else loggedOut">
 
     <div class="container">
 
@@ -78,3 +78,7 @@
 
 
 </div>
+
+<ng-template #loggedOut>
+    {{router.navigateByUrl('/auth/login')}}
+</ng-template>

@@ -48,7 +48,7 @@ export class UpdateQuestionComponent implements OnInit {
 
     openAddDialog(): void {
         const dialogRef = this.dialog.open(QuestionAddDialog, {
-            width: '70%',
+            width: '50%',
             data: {username: this.info.username,
                 question: this.question,
                 contentId: this.id}
@@ -62,7 +62,7 @@ export class UpdateQuestionComponent implements OnInit {
 
     openEditDialog(question: Question): void {
         const dialogRef = this.dialog.open(QuestionUpdateDialog, {
-            width: '70%',
+            width: '50%',
             data: {username: this.info.username,
                 question: question,
                 contentId: this.id}
@@ -129,8 +129,12 @@ export class QuestionAddDialog {
 
     onNoClick(): void {
         this.dialogRef.close();
+        window.location.reload();
     }
 
+    onDeleteClick(){
+        this.optionList.pop();
+    }
 
 }
 
@@ -149,6 +153,7 @@ export class QuestionUpdateDialog {
 
     onNoClick(): void {
         this.dialogRef.close();
+        window.location.reload();
     }
 
     updateQuestion() {
@@ -180,6 +185,7 @@ export class QuestionDeleteDialog {
 
     onNoClick(): void {
         this.dialogRef.close();
+        window.location.reload();
     }
 
     onDeleteClick(): void {

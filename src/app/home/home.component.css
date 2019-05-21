@@ -19,3 +19,8 @@ ul li{
     display: inline;
 }
 
+img {
+    width: 90%;
+    height: 250px;
+}
+

@@ -2,3 +2,30 @@ mat-divider{
     margin-top: 5%;
     margin-bottom: 5%;
 }
+
+.mat-card-image {
+    width: 100%;
+    margin: 0%;
+}
+
+.material-card {
+    width: 23%;
+    margin-bottom: 2%;
+}
+.container {
+    min-height: 100%;
+    width: 100%;
+}
+.search-form {
+    width: 85%;
+}
+
+ul li{
+    display: inline;
+}
+
+img {
+    width: 90%;
+    height: 250px;
+}
+

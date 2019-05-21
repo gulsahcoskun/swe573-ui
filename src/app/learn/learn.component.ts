@@ -15,6 +15,7 @@ export class LearnComponent implements OnInit {
   info: any;
   completedMaterials : Array<Material>  = new Array<Material>();
   inProgressMaterials : Array<Material> = new Array<Material>();
+  isLoggedIn = false;
 
     constructor(private token: TokenStorageService,private searchService: SearchService, private router: Router) {
     }
@@ -25,6 +26,10 @@ export class LearnComponent implements OnInit {
             username: this.token.getUsername(),
             authorities: this.token.getAuthorities()
         };
+
+        if (this.token.getToken()) {
+            this.isLoggedIn = true;
+        }
 
         this.searchService.getCompletedMaterials().subscribe(
             data => {

@@ -14,6 +14,7 @@ import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 export class UpdateComponent implements OnInit {
 
     info: any;
+    isLoggedIn = false;
     createdMaterials:Array<Material>  = new Array<Material>();
     material : Material = new Material();
 
@@ -30,6 +31,11 @@ export class UpdateComponent implements OnInit {
             username: this.token.getUsername(),
             authorities: this.token.getAuthorities()
         };
+
+        if (this.token.getToken()) {
+            this.isLoggedIn = true;
+        }
+
 
         this.searchService.getCreatedByMaterials().subscribe(
             data => {
@@ -101,6 +107,7 @@ export class MaterialAddDialog {
 
     onNoClick(): void {
         this.dialogRef.close();
+        window.location.reload();
     }
 
 
@@ -134,6 +141,7 @@ export class MaterialUpdateDialog {
 
     onNoClick(): void {
         this.dialogRef.close();
+        window.location.reload();
     }
 
     onSubmit() {
@@ -165,6 +173,7 @@ export class MaterialDeleteDialog {
 
     onNoClick(): void {
         this.dialogRef.close();
+        window.location.reload();
     }
 
     onDeleteClick(): void {

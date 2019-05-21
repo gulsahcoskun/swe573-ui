@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
     info: any;
     materials: Array<MaterialSummary> = new Array<MaterialSummary>();
     searchKey: string;
-    searchMessage: string = 'Material you are looking for cannot be found.';
+    searchMessage: string = 'The material you are looking for cannot be found.';
 
     constructor(private token: TokenStorageService, private searchService: SearchService, private router: Router) {
     }

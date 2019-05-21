@@ -118,6 +118,7 @@ export class ContentAddDialog {
 
     onNoClick(): void {
         this.dialogRef.close();
+        window.location.reload();
     }
 
 
@@ -153,6 +154,9 @@ export class ContentAddDialog {
         this.keywordList.push(this.selectedKeyword);
     }
 
+    onDeleteClick(){
+        this.keywordList.pop();
+    }
 
 }
 
@@ -171,6 +175,7 @@ export class ContentUpdateDialog {
 
     onNoClick(): void {
         this.dialogRef.close();
+        window.location.reload();
     }
 
     updateContent() {
@@ -202,6 +207,7 @@ export class ContentDeleteDialog {
 
     onNoClick(): void {
         this.dialogRef.close();
+        window.location.reload();
     }
 
     onDeleteClick(): void {

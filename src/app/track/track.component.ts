@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {TokenStorageService} from '../auth/token-storage.service';
 import {StudentTrackData, TeacherTrackData} from '../model/track-data';
 import {TrackService} from '../services/track.service';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-track',
@@ -25,7 +26,8 @@ export class TrackComponent implements OnInit {
         },
     ];
 
-    constructor(private token: TokenStorageService, private trackService : TrackService) {
+    constructor(private token: TokenStorageService, private trackService : TrackService,
+                private router: Router) {
     }
 
     ngOnInit() {

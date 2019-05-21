@@ -1,7 +1,7 @@
 import {Component, Inject, OnInit, ViewChild} from '@angular/core';
 import {TokenStorageService} from '../auth/token-storage.service';
 import {Answer, Content, Keyword, Material, Option, Question} from '../model/material';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {SearchService} from '../services/search.service';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef, MatHorizontalStepper, MatSnackBar} from '@angular/material';
 import {LearnService} from '../services/learn.service';
@@ -28,12 +28,13 @@ export class MaterialDetailComponent implements OnInit {
     orderedStatus : Array<Boolean> = new Array<Boolean>();
     orderedContents: Array<Content> = new Array<Content>();
     durationInSeconds = 2;
+    isLoggedIn = false;
 
     @ViewChild(MatHorizontalStepper) stepper: MatHorizontalStepper;
 
     constructor(private token: TokenStorageService, private route: ActivatedRoute,
                 private searchService: SearchService, public dialog: MatDialog,
-                private learnService: LearnService,
+                private learnService: LearnService,private router: Router,
                 private snackBar: MatSnackBar) {
     }
 
@@ -43,6 +44,10 @@ export class MaterialDetailComponent implements OnInit {
             username: this.token.getUsername(),
             authorities: this.token.getAuthorities()
         };
+
+        if (this.token.getToken()) {
+            this.isLoggedIn = true;
+        }
 
         this.sub = this.route.params.subscribe(params => {
             this.id = +params['id'];
