@@ -31,7 +31,7 @@
                 <table>
                     <tr>
                         <td>
-                            <img [src]="content.image" style="width: 65%; height: 350px">
+                            <img [src]="content.image" style="width: 90%; height: 400px">
                         </td>
                         <td>
                             <ul>
@@ -58,7 +58,7 @@
 
                 <br/><br/>
 
-                <p *ngIf="content.questions.length>0" style="font-style: oblique">Please answer the questions below to complete this material.</p>
+                <p *ngIf="content.questions.length>0" style="font-style: oblique">Please answer the questions below to complete this content.</p>
                 <section style="background-color: #fafafa">
                     <ul style="font-weight: normal">
                         <li *ngFor="let question of content.questions">
