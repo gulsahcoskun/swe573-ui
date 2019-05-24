@@ -17,6 +17,7 @@ export class UpdateQuestionComponent implements OnInit {
     info: any;
     private sub: any;
     id: number;
+    isLoggedIn = false;
     questions: Array<Question> = new Array<Question>();
     question: Question = new Question();
 
@@ -35,6 +36,11 @@ export class UpdateQuestionComponent implements OnInit {
         this.sub = this.route.params.subscribe(params => {
             this.id = +params['id'];
         });
+
+        if (this.token.getToken()) {
+            this.isLoggedIn = true;
+        }
+
 
         this.teachService.getQuestions(this.id).subscribe(
             data => {

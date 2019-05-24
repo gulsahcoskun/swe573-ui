@@ -18,6 +18,7 @@ export class UpdateContentComponent implements OnInit {
     info: any;
     private sub: any;
     id: number;
+    isLoggedIn = false;
     material: Material = new Material();
     public content: Content = new Content();
 
@@ -36,6 +37,11 @@ export class UpdateContentComponent implements OnInit {
         this.sub = this.route.params.subscribe(params => {
             this.id = +params['id'];
         });
+
+        if (this.token.getToken()) {
+            this.isLoggedIn = true;
+        }
+
 
         this.material = this.searchService.getMaterialDetail(this.id).subscribe(
             data => {
