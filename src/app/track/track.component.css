@@ -1,3 +1,20 @@
 .example-stretched-tabs {
     max-width: 100%;
 }
+
+
+.mat-row:nth-child(odd){
+    background-color:ghostwhite;
+}
+
+
+.mat-form-field {
+    font-size: 14px;
+    width: 95%;
+    margin : 20px;
+}
+
+table{
+    width: 95%;
+    margin : 20px;
+}

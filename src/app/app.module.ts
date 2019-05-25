@@ -32,7 +32,7 @@ import {
     MatStepperModule,
     MatRadioModule,
     MatTooltipModule,
-    MatSnackBarModule, MatDividerModule, MatChipsModule
+    MatSnackBarModule, MatDividerModule, MatChipsModule, MatTableModule, MatPaginatorModule
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -94,7 +94,7 @@ import {TrackService} from './services/track.service';
         MatButtonModule, MatIconModule, MatCardModule, MatToolbarModule, MatFormFieldModule,
         MatInputModule, MatTabsModule, MatDialogModule, MatSelectModule, MatOptionModule,
         MatCheckboxModule, MatStepperModule,MatRadioModule, MatIconModule, MatTooltipModule,
-        MatSnackBarModule, MatDividerModule, MatChipsModule,
+        MatSnackBarModule, MatDividerModule, MatChipsModule, MatTableModule, MatPaginatorModule,
         FlexLayoutModule, ChartsModule,
         NgxEditorModule,
         TooltipModule.forRoot()
